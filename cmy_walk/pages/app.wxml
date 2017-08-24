@@ -1,0 +1,24 @@
+<view class="navition" style="opacity:{{navition_opacity}};display:{{navition_display}}">
+  <image src="https://raw.githubusercontent.com/fengquangithub/fqgeek/gh-pages/Demo/Walk/images/index.png" class="bg" />
+  <image src="https://raw.githubusercontent.com/fengquangithub/fqgeek/gh-pages/Demo/Walk/images/logo.png" class="logo" /> 
+  <div class="layer"></div>
+</view> 
+
+<view class="login">
+		<image src="https://raw.githubusercontent.com/fengquangithub/fqgeek/gh-pages/Demo/Walk/images/logo.png" class="logo" />
+		<div class="login_layer"></div> 
+		 <div class="user">
+			<image src="https://raw.githubusercontent.com/fengquangithub/fqgeek/gh-pages/Demo/Walk/images/user.png" alt="" />
+			<input type="text" name="" placeholder="User Name" id="user" value="{{nickname}}"/>
+		</div> 
+		 <div class="password">
+			<image src="https://raw.githubusercontent.com/fengquangithub/fqgeek/gh-pages/Demo/Walk/images/password.png" alt=""/>
+			<input type="password" name="" placeholder="User Password" id="password"/>
+		</div> 
+		 <button  type="button">登录</button> -->
+		<a href="javascript:;" class="forget_password">忘记密码？</a>
+		<div class="hr"></div>  
+		<image src="https://raw.githubusercontent.com/fengquangithub/fqgeek/gh-pages/Demo/Walk/images/qq.png" alt="" class="qq"/>
+		<image src="https://raw.githubusercontent.com/fengquangithub/fqgeek/gh-pages/Demo/Walk/images/wechat.png" alt="" class="wechat"/>
+		<image src="https://raw.githubusercontent.com/fengquangithub/fqgeek/gh-pages/Demo/Walk/images/sina.png" alt="" class="sina"/> 
+</view>

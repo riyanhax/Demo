@@ -1,0 +1,167 @@
+
+		a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+		.navition{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			transition: opacity 1.5s ease;
+			-webkit-transition: opacity 1.5s ease;
+			z-index: 99;
+		}
+		.layer{
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,.75);
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		.logo{
+			top: 212rpx;
+			left: 244rpx;
+			position: absolute;
+			z-index: 99;
+			animation: slideUp 1s ease-in-out;
+			-webkit-animation: slideUp 1s ease-in-out;
+			 width: 266rpx; 
+       height: 92rpx;
+		}
+		.bg{
+			width: 100%;
+			height: 100%;
+			animation: scaleOut 5s ease-in-out;
+			-webkit-animation: scaleOut 5s ease;
+		}
+		.login{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background: url(https://raw.githubusercontent.com/fengquangithub/fqgeek/gh-pages/Demo/Walk/images/login_bg.png) center center no-repeat;
+			background-size: cover;
+			position: absolute;
+			z-index: 98;
+		}
+		.login_layer{
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.68);
+			position: absolute;
+			top:0;
+			left: 0;
+		}
+		.user{
+			width: 600rpx;
+			height: 100rpx;
+			background: rgba(0,0,0,.5);
+			position: absolute;
+			top: 496rpx;
+			left: 75rpx;
+			border-radius: 5rpx;
+		}
+		.password{
+			width: 600rpx;
+			height: 100rpx;
+			background: rgba(0,0,0,.5);
+			position: absolute;
+			top: 640rpx;
+			left: 75rpx;
+			border-radius: 5rpx;
+		}
+		.user image,
+		.password image{
+			width: 47rpx;
+      height: 54rpx;
+			margin-left: 35rpx;
+			margin-top: 24rpx;
+      float: left;
+
+		}
+		.user input,
+		.password input{
+			width: 440rpx;
+			height: 42rpx;
+			margin-left: 55rpx;
+			margin-top: 32rpx;
+			line-height: 42rpx;
+			color: #fff;
+			background: transparent;
+			border: none;
+			outline: none;
+			font-size: 34rpx;
+			vertical-align: top;
+      float: left;
+		}
+		.login button{
+			width: 450rpx;
+			height: 110rpx;
+      line-height:120rpx;
+			background: rgba(219,221,34,0.2);
+			border-radius: 55rpx;
+			position: absolute;
+			top: 817rpx;
+			left: 150rpx;
+			font-size: 34rpx;
+			border: none;
+			outline: none;
+			transition: all 1s ease;
+			-webkit-transition: all 1s ease;
+		}
+		.login button.login_btn{
+			background: rgba(219,221,34,1);
+		}
+		.hr{
+			width: 600rpx;
+			height: 1rpx;
+			background: rgba(255,255,255,.25);
+			position: absolute;
+			top: 1140rpx;
+			left: 75rpx;
+		}
+		.forget_password{
+			text-align: center;
+			position: absolute;
+			top: 963rpx;
+      left: 0;
+			font-size: 26rpx;
+			color: #fff;
+			z-index: 98;
+			width: 100%;
+			text-decoration:none;
+		}
+		.qq,.sina,.wechat{
+			position: absolute;
+			bottom: 40rpx;
+			width: 97rpx;
+      height: 97rpx;
+		}
+		.qq{
+			left: 124rpx;
+		}
+		.wechat{
+			left: 330rpx;
+		}
+		.sina{
+			left: 537rpx;
+		}
+   @keyframes slideUp{
+			from{
+				opacity: 0;
+				top: 250rpx;
+			}
+			to{
+				opacity: 1;
+				top: 212rpx;
+			}
+		}
+
+		@keyframes scaleOut{
+			from{
+				transform: scale(1.2);
+			}
+			to{
+				transform: scale(1);
+			}
+		}
+	
