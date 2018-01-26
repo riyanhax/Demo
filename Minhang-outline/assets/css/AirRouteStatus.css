@@ -1,0 +1,19 @@
+.routeInfo{
+	font-size: 20px;
+	width: 352px;
+	position: absolute;
+	left: 82px;
+	top: 157px;
+	color: #8bcad1;
+	display: none;
+}
+.routeInfo span{
+	vertical-align: middle;
+}
+.routeInfo span[class^="infoNum"]{
+	font-size: 40px;
+	color: #cc731f;
+	text-align: right;
+	width: 70px;
+	display: inline-block;
+}

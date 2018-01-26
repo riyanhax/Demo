@@ -1,0 +1,269 @@
+/**
+ * airport operationSituation and meteorologicalInfor
+ */
+.airportSwitchScene,
+.airportSwitchControl
+{
+	position:absolute;
+	width:141px;
+	height:80px;
+	margin-left: calc(100% - 250px);
+}
+.airportSwitchScene .operationSituation,
+.airportSwitchControl .operationControl
+{
+	position: relative;
+	height:40px;
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
+.airportSwitchScene .meteorologicalInfor,
+.airportSwitchControl .meteorologicalControl
+{
+	position: relative;
+	height:40px;
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
+.airportSwitchControl{
+	display: none;
+}
+
+.airportLeftMenu
+{
+	position:absolute;
+	/* min-width:460px; */
+	height: 800px;
+	margin-left: 70px;
+	background-color: rgba(0,0,0,.9);
+	background-repeat: no-repeat;
+	background-size: auto;
+	display: none;
+}
+.airportLeftMenu .leftItem
+{
+	position: relative;
+	width: 420px;
+	height:40px;
+	left: 20px;
+	margin-top: 15px;
+}
+
+.airportLeftMenu .leftIcon
+{
+	position:absolute;
+	float: left;
+	width:33px;
+	height: 16px;
+	margin-top:13px;
+	background-image: url(../img/airplane.png);
+}
+
+.airportLeftMenu .middleText
+{
+	float: left;
+	margin-left: 40px;
+	width: 240px;
+	height: 40px;
+	color:#55befa;
+	font-size: 26px;
+	line-height: 40px;
+}
+.airportLeftMenu .rightNum
+{
+	float: left;
+	width:100px;
+	height: 40px;
+	color: #ffd236;
+	font-size: 24px;
+	text-align: right;
+	line-height: 40px;
+}
+
+.airportLeftMenu .allText
+{
+	float: left;
+	margin-left: 30px;
+	width:100px;
+	height: 40px;
+	color:#a7d3eb;
+	font-size: 22px;
+}
+.airportLeftMenu .allNum
+{
+	float: left;
+	width:100px;
+	height: 60px;
+	color: #ffd236;
+	font-size: 32px;
+	text-align: center;
+	margin-top: -10px;
+}
+
+
+.airportLeftMenu .detailed_leftText
+{
+	float: left;
+	margin-left: 40px;
+	width:180px;
+	height: 30px;
+	color:rgba(84,190,251,0.8);
+	font-size: 22px;
+}
+.airportLeftMenu .detailed_upText
+{
+	float: left;
+	margin-left: 20px;
+	width:80px;
+	height:30px;
+	color:#b7e5ff;
+	font-size: 16px;
+	line-height: 30px;
+}
+.airportLeftMenu .detailed_downText
+{
+	float: left;
+	margin-left: 240px;
+	width:80px;
+	height:30px;
+	color:#b7e5ff;
+	font-size: 16px;
+	line-height: 30px;
+}
+.airportLeftMenu .detailed_upNum
+{
+	float: left;
+	width:80px;
+	height:30px;
+	color: #ffd236;
+	text-align: right;
+	font-size: 20px;
+	margin-left: -20px;
+}
+.airportLeftMenu .detailed_downNum
+{
+	float: left;
+	width:80px;
+	height:30px;
+	color: #ffd236;
+	text-align: right;
+	font-size: 20px;
+	margin-left: -20px;
+}
+
+.airportRightLegend,
+.airrouteRightLegend
+{
+	position:absolute;
+	width:156px;
+	height:278px;
+	margin-left: calc(100% - 250px);
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
+.airportRightLegend .checkbox,
+.airrouteRightLegend .checkbox
+{
+	float：left
+	width:23px;
+	height:23px;
+	margin-left: -5px;
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
+.airrouteRightLegend .checkbox{
+	margin-left: 5px;
+}
+
+.airportRightLegend .oper_selected,
+.airrouteRightLegend .oper_selected
+{
+	float：left
+	width:23px;
+	height:23px;
+	margin-left: -5px;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background: url(../img/oper_selected.png);
+}
+.airportRightLegend .oper_unselected,
+.airrouteRightLegend .oper_unselected
+{
+	float：left
+	width:23px;
+	height:23px;
+	margin-left: -5px;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background: url(../img/oper_unselected.png);
+}
+.airportRightLegend .mete_selected,
+.airrouteRightLegend .mete_selected
+{
+	float：left
+	width:23px;
+	height:23px;
+	margin-left: -5px;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background: url(../img/mete_selected.png);
+}
+
+.airportRightLegend .mete_unselected,
+.airrouteRightLegend .mete_unselected
+{
+	float：left
+	width:23px;
+	height:23px;
+	margin-left: -5px;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background: url(../img/mete_unselected.png);
+}
+
+
+
+.airportLeftMenu .hline
+{
+	position: relative;
+	width: 380px;
+	height: 1px;
+	left: 20px;
+	margin-top:15px;
+	background-color: #244d76;
+}
+.airportMainSceneIcon
+{
+	position:absolute;
+	float:left;
+	width:20px;
+	height:20px;
+	background-color: rgba(0,255,0,0.2);
+	/*background-image: url(../img/test.png);*/
+	/*background-repeat: no-repeat;
+	background-size: auto;*/
+}
+
+.controlInfo{
+	font-size: 20px;
+	width: 352px;
+	position: absolute;
+	left: 82px;
+	top: 157px;
+	color: #8bcad1;
+	display: none;
+}
+.controlInfo span{
+	vertical-align: top;
+}
+.controlInfo .infoNum{
+	font-size: 40px;
+	color: #cc731f;
+	text-align: right;
+	width: 70px;
+	display: inline-block;
+}

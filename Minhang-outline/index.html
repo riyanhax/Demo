@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>民航项目</title>
+    <link rel="stylesheet" href="assets/libs/cesium/Widgets/widgets.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/airportOperSituAndMeteoInfoScene.css" />
+    <link rel="stylesheet" href="assets/css/AirRouteStatus.css">
+</head>
+
+<body>
+    <script>
+    if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }
+    </script>
+    <script src="assets/libs/cesium/Cesium.js"></script>
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/core/Preload.js"></script>
+    <script src="assets/js/core/Director.js"></script>
+    <script src="assets/js/util/ParseData.js"></script>
+    <script src="assets/js/util/MyGeoJsonDataSource.js"></script>
+    <script src="assets/js/util/location2coordinate.js"></script>
+    <script src="assets/js/controller/SwitchSceneController.js"></script>
+    <script src="assets/js/scenes/AirportOperSituAndMeteoInfoScene.js"></script>
+    <script src="assets/js/scenes/AirrouteOperSituScene.js"></script>
+    <script src="assets/js/scenes/AirportControlAreaScene.js"></script>
+    <script src="assets/js/scenes/AirportRouteStatusScene.js"></script>
+    <script src="assets/js/scenes/MapScene.js"></script>
+    <script src="assets/js/core/App.js"></script>
+    <script>
+    if (window.module) module = window.module;
+    </script>
+    <div id="container"></div>
+    <div id="uiContainer">
+        <div class="topLogo"></div>
+        <div class="date"></div>
+        <div class="title"></div>
+    </div>
+    <div class="airport_info_layer">
+        <div class="airport">
+            <div class="title">机场</div>
+            <ul>
+                <li>
+                    <div class="name">名称</div>
+                    <div class="desc"></div>
+                </li>
+                <li>
+                    <div class="name">容量</div>
+                    <div class="desc">
+                        <strong></strong>架/每小时
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="sorties">
+            <div class="title">飞行架次</div>
+            <ul>
+                <li>
+                    <div class="name">实际飞行</div>
+                    <div class="desc">
+                        <strong></strong>架
+                    </div>
+                </li>
+                <li>
+                    <div class="name">飞行计划</div>
+                    <div class="desc">
+                        <strong></strong>架
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="weather">
+            <div class="title">气象信息</div>
+            <ul>
+                <li>
+                    <div class="name">天气现象</div>
+                    <div class="desc">
+                        <strong></strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">能见度</div>
+                    <div class="desc">
+                        <strong></strong>米
+                    </div>
+                </li>
+                <li>
+                    <div class="name">风向风速</div>
+                    <div class="desc">
+                        <strong></strong>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="working">
+            <div class="title">前1小时运行效率</div>
+            <ul>
+                <li>
+                    <div class="name">实际起飞</div>
+                    <div class="desc">
+                        <strong></strong>架
+                    </div>
+                    <div class="name2">实际降落</div>
+                    <div class="desc2">
+                        <strong></strong>架
+                    </div>
+                </li>
+                <li>
+                    <div class="name">平均出港延误时间</div>
+                    <div class="desc">
+                        <strong></strong>分钟
+                    </div>
+                </li>
+                <li>
+                    <div class="name">平均出港滑行时间</div>
+                    <div class="desc">
+                        <strong></strong>分钟
+                    </div>
+                </li>
+                <li>
+                    <div class="name">平均进港滑行时间</div>
+                    <div class="desc">
+                        <strong></strong>分钟
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="notice">
+        <div class="horn">
+            <img src="./assets/img/airport/notice.png" alt="">
+        </div>
+        <div class="content"></div>
+    </div>
+</body>
+
+</html>

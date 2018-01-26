@@ -1,0 +1,17 @@
+{
+  "name": "minhang",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "packager": "electron-packager ./ minhang --platform=win32 --arch=x64 --out ../ --version 1.6.10 --overwrite --icon=./app.ico --asar"
+  },
+  "devDependencies": {
+    "ws": "^3.2.0"
+  },
+  "dependencies": {
+    "lowdb": "^1.0.0",
+    "request": "^2.83.0",
+    "ws": "^3.3.2"
+  }
+}

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-precomposed.png" />
+    <link rel="stylesheet" href="assets/libs/date-select/zepto.mdatetimer.css">
+    <link rel="stylesheet" href="assets/css/control.css">
+    <title>中国民航总局运行监控中心大屏幕控制系统</title>
+</head>
+
+<body>
+    <div class="alert_layer hide">
+        <div class="dialog">
+            <h2 class="title">矩阵配置</h2>
+            <h3>全屏模式</h3>
+            <input type="text" value="" class="fullscreen_model_1">
+            <input type="text" value="" class="fullscreen_model_2">
+            <h3>分屏模式</h3>
+            <input type="text" value="" class="partscreen_model_1">
+            <input type="text" value="" class="partscreen_model_2">
+            <div class="confirm_box_btn">确认</div>
+            <div class="close_box_btn">关闭</div>
+        </div>
+    </div>
+    <audio src="./assets/audio/type.mp3" id="audio">
+    </audio>
+    <!-- 登录页面  开始 -->
+    <div class="login">
+        <div class="top">
+            <img src="assets/img/logo.png" alt="">
+        </div>
+        <div class="login-box">
+            <div class="text">
+                <span>登录IP:</span>
+                <input id="login_ip" type="text">
+            </div>
+            <div class="text">
+                <span>端口号:</span>
+                <input id="login_port" type="text">
+            </div>
+            <div class="btn">
+                <button id="login_btn">登录系统</button>
+            </div>
+        </div>
+    </div>
+    <!-- 登录页面  结束 -->
+    <div class="system hide">
+        <!--顶部logo-->
+        <div class="top">
+            <img src="assets/img/logo.png" alt="">
+            <div class="btn-box">
+                <div id="matrix" class="fullscreen">退出程序</div>
+                <div id="fullscreen" class="fullscreen">全屏模式</div>
+                <div id="partscreen" class="partscreen">分屏模式</div>
+            </div>
+        </div>
+        <!--选项卡按钮-->
+        <ul class="menu">
+            <li class="active">
+                欢迎词
+                <span id="welcome_on" class="open">开启</span>
+                <span id="welcome_off" class="close">关闭</span>
+            </li>
+            <li>
+                宣传片
+                <span id="video_on" class="open">开启</span>
+                <span id="video_off" class="close">关闭</span>
+            </li>
+            <li>
+                大屏幕
+                <span id="largeScreen_on" class="open">开启</span>
+                <span id="largeScreen_off" class="close">关闭</span>
+            </li>
+        </ul>
+        <!--首页-->
+        <div class="welcome box">
+            <div class="style-box">
+                <div id="welcomeStyle_1" class="style1">样式一</div>
+                <div id="welcomeStyle_2" class="style2">样式二</div>
+            </div>
+            <div class="welcome-box">
+                <div class="txt">欢迎词</div>
+                <input id="welcome_text" type="text">
+                <button id="welcomeText_confirm">确认</button>
+            </div>
+            <button id="welcomeText_save" class="save-btn">保存</button>
+        </div>
+        <!--调节音量结构-->
+        <div class="video box">
+            <div class="vedio-btn">
+                <div id="video_play" class="pause-btn">
+                    <img src="assets/img/pause.png" alt="">
+                </div>
+                <div id="video_pause" class="play-btn">
+                    <img src="assets/img/play.png" alt="">
+                </div>
+            </div>
+            <div class="volume">
+                <div class="icon"></div>
+                <input id="video_volume" type="range" max="100" min="0">
+            </div>
+        </div>
+        <!--第三选项卡大屏-->
+        <div class="bigScreen box">
+            <!--上方屏幕-->
+            <div id="screen" class="screen">
+                <ul class="left-screen">
+                    <li class="screen_select" data-num="4" data-selected="leftT">
+                        <span class="corner"></span>
+                        <div class="operation-box">
+                            <div>
+                                <div class="hide rate-screen-control">
+                                    <input type="radio" id="rate" name="screen-view" value="rate">
+                                    <label for="rate">正常率</label>
+                                </div>
+                                <div class="hide section-screen-control">
+                                    <input type="radio" id="ctrlarea" name="screen-view" value="controlarea">
+                                    <label for="ctrlarea">扇区</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="screen_select" data-num="6" data-selected="leftT1">
+                        <span class="corner"></span>
+                        <div class="operation-box">
+                            <div>
+                                <div>
+                                    <input type="radio" id="situation" name="screen-view" value="situation">
+                                    <label for="situation">态势</label>
+                                </div>
+                                <div class="hide rate-screen-control">
+                                    <input type="radio" id="rate" name="screen-view" value="rate">
+                                    <label for="rate">正常率</label>
+                                </div>
+                                <div class="hide section-screen-control">
+                                    <input type="radio" id="ctrlarea" name="screen-view" value="controlarea">
+                                    <label for="ctrlarea">扇区</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="screen_select" data-num="5" data-selected="leftB">
+                        <span class="corner"></span>
+                        <div class="operation-box">
+                            <div>
+                                <div class="hide rate-screen-control">
+                                    <input type="radio" id="rate" name="screen-view" value="rate">
+                                    <label for="rate">正常率</label>
+                                </div>
+                                <div class="hide section-screen-control">
+                                    <input type="radio" id="ctrlarea" name="screen-view" value="controlarea">
+                                    <label for="ctrlarea">扇区</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="screen_select" data-num="7" data-selected="leftB1">
+                        <span class="corner"></span>
+                        <div class="operation-box">
+                            <div>
+                                <div class="hide rate-screen-control">
+                                    <input type="radio" id="rate" name="screen-view" value="rate">
+                                    <label for="rate">正常率</label>
+                                </div>
+                                <div class="hide section-screen-control">
+                                    <input type="radio" id="ctrlarea" name="screen-view" value="controlarea">
+                                    <label for="ctrlarea">扇区</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="middle-screen active screen_select selected" data-num="2" data-selected="leftM">
+                    <div class="loop-screen-btn">循环播放</div>
+                    <span class="corner"></span>
+                    <div class="operation-box">
+                        <div>
+                            <div class="hide rate-screen-control">
+                                <input type="radio" id="rate" name="screen-view" value="rate">
+                                <label for="rate">正常率</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <input type="radio" id="airport" name="screen-view" value="airport">
+                                <label for="airport">机场</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="weather" name="screen-view" value="weather">
+                                <label for="weather">天气</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="device" name="screen-view" value="device">
+                                <label for="device">设备</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <input type="radio" id="ctrlarea" name="screen-view" value="controlarea" data-middle="middle">
+                                <label for="ctrlarea">扇区</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="airroute" name="screen-view" value="airroute" data-middle="middle">
+                                <label for="airroute">航路</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="reset" name="screen-view" hidden value="seat">
+                                <label for="reset">矩阵操作</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="right-screen">
+                    <li class="screen_select" data-num="8" data-selected="rightT">
+                        <span class="corner"></span>
+                        <div class="operation-box">
+                            <div>
+                                <div>
+                                    <input type="radio" id="airroute" name="screen-view" value="airroute">
+                                    <label for="airroute">航路</label>
+                                </div>
+                                <div class="hide rate-screen-control">
+                                    <input type="radio" id="rate" name="screen-view" value="rate">
+                                    <label for="rate">正常率</label>
+                                </div>
+                                <div class="hide section-screen-control">
+                                    <input type="radio" id="ctrlarea" name="screen-view" value="controlarea">
+                                    <label for="ctrlarea">扇区</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="screen_select" data-num="10" data-selected="rightT1">
+                        <span class="corner"></span>
+                        <div class="operation-box">
+                            <div>
+                                <div class="hide rate-screen-control">
+                                    <input type="radio" id="rate" name="screen-view" value="rate">
+                                    <label for="rate">正常率</label>
+                                </div>
+                                <div class="hide section-screen-control">
+                                    <input type="radio" id="ctrlarea" name="screen-view" value="controlarea">
+                                    <label for="ctrlarea">扇区</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="screen_select" data-num="9" data-selected="rightB">
+                        <span class="corner"></span>
+                        <div class="operation-box">
+                            <div>
+                                <div class="hide rate-screen-control">
+                                    <input type="radio" id="rate" name="screen-view" value="rate">
+                                    <label for="rate">正常率</label>
+                                </div>
+                                <div class="hide section-screen-control">
+                                    <input type="radio" id="ctrlarea" name="screen-view" value="controlarea">
+                                    <label for="ctrlarea">扇区</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="screen_select" data-num="11" data-selected="rightB1">
+                        <span class="corner"></span>
+                        <div class="operation-box">
+                            <div>
+                                <div class="hide rate-screen-control">
+                                    <input type="radio" id="rate" name="screen-view" value="rate">
+                                    <label for="rate">正常率</label>
+                                </div>
+                                <div class="hide section-screen-control">
+                                    <input type="radio" id="ctrlarea" name="screen-view" value="controlarea">
+                                    <label for="ctrlarea">扇区</label>
+                                </div>
+                            </div> 
+                        </div>
+                    </li>
+                </ul>
+                <!-- 选区边框 -->
+                <div class="screen-border"></div>
+            </div>
+            <!--下面屏幕对应的盒子-->
+            <div class="seat-box operation-active">
+                <div class="line line1">
+                    <ul class="group1">
+                        <li class="seat_select" data-num="1">
+
+                            <span>1</span>
+                        </li>
+                        <li class="seat_select" data-num="2">
+                            <span>2</span>
+                        </li>
+                        <li class="seat_select" data-num="3">
+                            <span>3</span>
+                        </li>
+                        <li class="seat_select" data-num="4">
+                            <span>4</span>
+                        </li>
+                    </ul>
+                    <ul class="group2">
+                        <li class="seat_select" data-num="5">
+                            <span>5</span>
+                        </li>
+                        <li class="seat_select" data-num="6">
+                            <span>6</span>
+                        </li>
+                        <li class="seat_select" data-num="7">
+                            <span>7</span>
+                        </li>
+                        <li class="seat_select" data-num="8">
+                            <span>8</span>
+                        </li>
+                    </ul>
+                    <ul class="group3">
+                        <li class="seat_select" data-num="9">
+                            <span>9</span>
+                        </li>
+                        <li class="seat_select" data-num="10">
+                            <span>10</span>
+                        </li>
+                        <li class="seat_select" data-num="11">
+                            <span>11</span>
+                        </li>
+                        <li class="seat_select" data-num="12">
+                            <span>12</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="line line2">
+                    <ul class="group1">
+                        <li class="seat_select" data-num="13">
+                            <span>13</span>
+                        </li>
+                        <li class="seat_select" data-num="14">
+                            <span>14</span>
+                        </li>
+                        <li class="seat_select" data-num="15">
+                            <span>15</span>
+                        </li>
+                        <li class="seat_select" data-num="16">
+                            <span>16</span>
+                        </li>
+                    </ul>
+                    <ul class="group2">
+                        <li class="seat_select" data-num="17">
+                            <span>17</span>
+                        </li>
+                        <li class="seat_select" data-num="18">
+                            <span>18</span>
+                        </li>
+                        <li class="seat_select" data-num="19">
+                            <span>19</span>
+                        </li>
+                        <li class="seat_select" data-num="20">
+                            <span>20</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="line line3">
+                    <ul class="group1">
+                        <li class="seat_select" data-num="21">
+                            <span>21</span>
+                        </li>
+                        <li class="seat_select" data-num="22">
+                            <span>22</span>
+                        </li>
+                        <li class="seat_select" data-num="23">
+                            <span>23</span>
+                        </li>
+                        <li class="seat_select" data-num="24">
+                            <span>24</span>
+                        </li>
+                    </ul>
+                    <ul class="group2">
+                        <li class="seat_select" data-num="25">
+                            <span>25</span>
+                        </li>
+                    </ul>
+                    <ul class="group3">
+                        <li class="seat_select" data-num="26">
+                            <span>26</span>
+                        </li>
+                        <li class="seat_select" data-num="27">
+                            <span>27</span>
+                        </li>
+                        <li class="seat_select" data-num="28">
+                            <span>28</span>
+                        </li>
+                        <li class="seat_select" data-num="29">
+                            <span>29</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="line line4">
+                    <div class="wrap">
+                        <div class="seat_select" data-num="39">
+                            <span>39</span>
+                            <b>航班运行态势</b>
+                        </div>
+                        <div class="seat_select" data-num="40">
+                            <span>40</span>
+                            <b>机场运行态势</b>
+                        </div>
+                        <div class="seat_select" data-num="41">
+                            <span>41</span>
+                            <b>航路运行态势</b>
+                        </div>
+                        <div class="seat_select" data-num="49">
+                            <span>49</span>
+                            <b>正常率</b>
+                        </div>
+                        <div class="seat_select" data-num="50">
+                            <span>50</span>
+                            <b>扇区运行态势</b>
+                        </div>
+                    </div>
+                </div>
+                <span id="bigScreen_confirm" class="confirm ">确认</span>
+                <span id="bigScreen_cancel" class="cancel ">取消</span>
+            </div>
+            <!-- 机场选项 -->
+            <div class="airport-box">
+                <div class="type">
+                    <h2 class="name">机场分类显示：</h2>
+                    <ul>
+                        <li class="active" data-index="0">三千万级</li>
+                        <li class="active" data-index="1">两千万级</li>
+                        <li class="" data-index="2">一千万级</li>
+                        <li class="" data-index="3">其他</li>
+                    </ul>
+                    <div class="show-default active" id="showDefault">显示默认机场</div>
+                </div>
+                <div class="search-box">
+                    <div class="search">
+                        <div>关舱门等待时间</div>
+                        <select id="time_set" style="width:92%">
+                            <option value="0">30分钟以上</option>
+                            <option value="1">1小时以上</option>
+                            <option value="2" selected>2小时以上</option>
+                        </select>
+                        <div class="show_all_btn">打开高空扇区</div>
+                    </div>
+                    <div class="search">
+                        <div>机场/航空公司名称</div>
+                        <input id="search_world" type="text">
+                        <button id="search_airport" type="button" name="button">搜索</button>
+                    </div>
+                    <div class="result">
+                        <div id="search_result_box" class="left-result">
+                        </div>
+                        <div id="search_result_selected_box" class="right-result"></div>
+                    </div>
+                </div>
+                <div id="airport_open" class="confirm">打开</div>
+                <div id="airport_close" class="cancel">关闭</div>
+            </div>
+            <!-- 航路选项 -->
+            <div class="airroute-box">
+                <div class="type">
+                    <h2 class="name">显示航路分类</h2>
+                    <ul>
+                        <li class="active" data-index="ABGRLMNPWYV">国际航路</li>
+                        <li class="active" data-index="HZJX">国内航路</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 设备选项 -->
+            <div class="device-box">
+                <div class="type">
+                    <h2 class="name">显示设备分类</h2>
+                    <ul>
+                        <li class="active device" data-index="radar">雷达</li>
+                        <li class="active device" data-index="VOR">VOR</li>
+                        <li class="active device" data-index="NDB">NDB</li>
+                    </ul>
+                </div>
+                <div class="type">
+                    <h2 class="name">异常设备</h2>
+                    <ul>
+                        <li class="device_err" data-index="err_radar">雷达</li>
+                        <li class="device_err" data-index="err_VOR">VOR</li>
+                        <li class="device_err" data-index="err_NDB">NDB</li>
+                        <li class="device_err" data-index="err_ALL" class="active err_ALL">全部</li>
+                    </ul>
+                </div>
+                <div class="btn-box">
+                    <div id="device_open" class="open-btn">确认</div>
+
+                </div>
+            </div>
+            <!-- 管制区选项 -->
+            <div class="controlarea-box">
+                <div class="type">
+                    <h2 class="name">显示管制区分类</h2>
+                    <ul>
+                        <li class="active controlarea_height">高空管制区</li>
+                        <li class="controlarea_low">中低空管制区</li>
+                    </ul>
+                </div>
+                <div class="highctrlarea-list ctrlarea-list">
+                    <div class="ctrl-title">
+                        高空管制区
+                    </div>
+                    <form id="highctrlarea-form">
+                        <ul>
+
+                        </ul>
+                    </form>
+                    <!-- 屏蔽区域 -->
+                    <div class="highctrlarea-shield-list">
+                        <div class="ctrl-title">
+                            <!-- 高空管制区 -->
+                            可选显示区域
+
+                        </div>
+                        <form id="highctrlarea-shield-form">
+                            <ul>
+
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div class="lowctrlarea-list ctrlarea-list hide">
+                    <div class="ctrl-title">
+                        低空管制区
+                    </div>
+                    <form id="lowctrlarea-form">
+                        <ul></ul>
+                    </form>
+                    <!-- 屏蔽区域 -->
+                    <div class="lowctrlarea-shield-list ">
+                        <div class="ctrl-title">
+                            <!-- 低空管制区 -->
+                            可选显示区域
+                            <div class="save_lowctrlarea_list hide">
+                                <input type="checkbox" name="beijing" id="save_lowctrlarea_list" value="贵阳">
+                                <label for="svae_lowctrlarea_list">是否保存</label>
+                            </div>
+                        </div>
+                        <form id="lowctrlarea-shield-form">
+                            <ul>
+
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <div id="controlarea_open" class="open-btn">打开</div>
+                    <div id="controlarea_close" class="close-btn">关闭</div>
+                    <div id="controlarea_reset" class="close-btn">重置</div>
+                </div>
+            </div>
+            <!--循环播放-->
+            <div class="loop-box">
+              <div class="range">
+                  <span>1分钟</span>
+                  <input type="range" name="interval" value="1" min="1" max="5" step="1">
+                  <span>5分钟</span>
+              </div>
+              <div class="btn confirm">启动</div>
+              <div class="btn cancel">停止</div>
+            </div>
+             <!-- 天气选项 -->
+             <div class="weather-box">
+                 <div class="type">
+                    <h2 class="name">天气分类显示：</h2>
+                    <ul>
+                        <li class="active" data-index="1">三千万级</li>
+                        <li class="active" data-index="2">两千万级</li>
+                        <li class="active" data-index="3">一千万级</li>
+                        <li class="active" data-index="4">其他</li>
+                    </ul>
+                </div>
+             </div>
+            <!--机场运行态势选项-->
+            <div class="situation-box">
+                <div class="search-box">
+                    <div class="search">
+                        <div>机场/航空公司名称</div>
+                        <input type="text">
+                        <button type="button" name="situation">搜索</button>
+                    </div>
+                    <div class="result">
+                        <div class="left-result">
+                        </div>
+                        <div class="right-result"></div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <div class="range">
+                        <span>5秒</span>
+                        <input type="range" name="interval" value="5" min="1" max="60" step="1">
+                        <span>60秒</span>
+                    </div>
+                    <div class="all">
+                        <input type="checkbox" id="all_airport" value="ALL">
+                        <label for="all_airport">全国机场</label>
+                    </div>
+                    <input type="date" id="date_select" placeholder="请输入日期" value="2018-01-23">
+                    <input type="radio" id="fixed_show" value="0" name="chart_show" checked>
+                    <label for="fixed_show">固定显示</label>
+                    <input type="radio" id="loop_show" value="1" name="chart_show">
+                    <label for="loop_show">轮询显示</label>
+                    <div class="btn confirm_btn">确定</div>
+                    <div class="btn close_btn">取消</div>
+                </div>
+            </div>
+            <!--机场正常率-->
+            <div class="rate-box">
+                <div class="search-box">
+                    <div class="search">
+                        <div>机场/航空公司名称</div>
+                        <input type="text">
+                        <button type="button" name="rate">搜索</button>
+                    </div>
+                    <div class="result">
+                        <div class="left-result">
+                        </div>
+                        <div class="right-result"></div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <div class="range">
+                        <span>5秒</span>
+                        <input type="range" name="interval" value="5" min="1" max="60" step="1">
+                        <span>60秒</span>
+                    </div>
+                    <div class="all">
+                        <input type="checkbox" id="rate_all_airport" value="ALL">
+                        <label for="rate_all_airport">全国机场</label>
+                    </div>
+                    <input type="radio" id="rate_fixed_show" value="0" name="chart_show2" checked>
+                    <label for="rate_fixed_show">固定显示</label>
+                    <input type="radio" id="rate_loop_show" value="1" name="chart_show2">
+                    <label for="rate_loop_show">轮询显示</label>
+                    <div class="btn confirm_btn">确定</div>
+                    <div class="btn close_btn">取消</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/controller/control.js"></script>
+</body>
+
+</html>

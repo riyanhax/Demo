@@ -1,0 +1,701 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "name": "ZSSSAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZLXYAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZLXYAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZLXYAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZLXYAR09",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZLXYAR10",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZLXYAR11",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZLXYAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZLLLAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZLLLAR07",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZLLLAR09",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR05",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR07",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR08",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR09",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR10",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR11",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR12",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR14",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR15",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR16",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR17",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR13",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR18",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR19",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR20",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR24",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZBAAAR25",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUUUAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUUUAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUUUAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUUUAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUUUAR05",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUUUAR11",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUUUAR12",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUUUAR10",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUUUAR09",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUUUAR13",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGNNAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGNNAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGNNAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZJSYAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZJSYAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZJSYAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSQDAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSQDAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSQDAR06",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGNNAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGNNAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGNNAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZJSYAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZJSYAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZJSYAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSQDAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSQDAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSQDAR06",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR15",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR16",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR17",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR13",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR18",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR19",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR12",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR11",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR08",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR07",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR06",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR05",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR20",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR23",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR24",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR25",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR28",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZPPPAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZPPPAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZPPPAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZPPPAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZPPPAR05",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZPPPAR06",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYTXAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYTXAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYTXAR06",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYTXAR07",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYTXAR08",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYTXAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYTXAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYTLAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYTLAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYTLAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR06",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR07",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR08",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR05",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR09",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR10",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR11",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR12",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR13",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR14",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR15",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR16",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR18",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR17",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR19",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR20",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR21",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR22",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR23",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR24",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR25",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR30",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR29",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZWWWAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZWWWAR05",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZWWWAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZWWWAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZWWWAR04",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZWWWAR06",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYHBAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYHBAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYHBAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZYTXAR05",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZLLLAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZULSACC",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUGYAR03",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUGYAR02",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZUGYAR01",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZSSSAR26",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZGGGAR14",
+      "type": "controlarea_height"
+    },
+    {
+      "name": "ZHCCAR01",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZLLLAR01",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZHHHAR03",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZGHAAR04",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZGHAAR03",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZHCCAR04",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSCNAR03",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZBAAAR06",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSJNAR01",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSJNAR02",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZBHHAR02",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZBYNAR01",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZBYNAR02",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSOFAR01",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSOFAR02",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZBYNAR04",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZGHAAR01",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZGHAAR02",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSCNAR01",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSCNAR02",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSAMAR01",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSAMAR02",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZHCCAR03",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZHHHAR01",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZHHHAR02",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZBYNAR03",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZBHHAR01",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSOFAR04",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZHCCAR02",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSOFAR03",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSAMAR04",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSAMAR03",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZSJNAR03",
+      "type": "controlarea_low"
+    },
+    {
+      "name": "ZBLAACC",
+      "type": "controlarea_height"
+    }
+  ]
+}

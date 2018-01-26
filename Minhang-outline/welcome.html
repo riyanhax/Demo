@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    html,body{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      background: #000;
+    }
+    .welcome-words{
+      width: 100%;
+      height: 100%;
+      font-family: "Microsoft YaHei";
+      letter-spacing: 20px;
+      font-size: 240px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+    .style1{
+        background: /*#0f1722*/ url(./assets/img/welcome/1.png) center center no-repeat;
+        color:#ff0;
+        background-size: cover;
+    }
+    .style2{
+      background: /*#0f1722*/ url(./assets/img/welcome/0.png) center center no-repeat;
+      color:#fff;
+      background-size: cover;
+    }
+    marquee{
+      line-height: 360px;
+    }
+    video{
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-words">
+    <marquee
+      id="affiche"
+      align="left"
+      behavior="scroll"
+      direction="left"
+      height="360"
+      hspace="200"
+      vspace="20"
+      loop="-1"
+      scrollamount="20"
+      scrolldelay="0">
+    </marquee>
+  </div>
+  <video src="D:/video/intro.mp4" loop id="video"></video>
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  <script>
+  var oVideo = document.getElementById('video');
+  oVideo.volume = 0.5;
+  var socket = new WebSocket('ws://127.0.0.1:8888');
+  socket.onopen = function(){
+    socket.onmessage = function(msg){
+      var data = JSON.parse(msg.data);
+      var key = data.main;
+      switch (key) {
+        case 'welcomeText_confirm':
+          $('marquee').text(data.value)
+          break;
+        case 'welcomeStyle_1':
+          $('.welcome-words').removeClass('style2').addClass('style1');
+          break;
+        case 'welcomeStyle_2':
+            $('.welcome-words').removeClass('style1').addClass('style2');
+          break;
+        case 'video_on':
+          oVideo.currentTime = 0;
+          oVideo.play();
+          $('#video').show();
+          $('.welcome-words').hide();
+        break;
+        case 'video_off':
+          oVideo.pause();
+        break;
+        case 'video_play':
+          oVideo.play();
+          break;
+        case 'video_pause':
+          oVideo.pause();
+          break;
+        case 'video_volume':
+          oVideo.volume = data.value/100;
+          break;
+        case 'welcome_on':
+          $('.welcome-words').css('display','flex');
+          $('#video').hide();
+          break;
+        default:
+
+      }
+    }
+  }
+    var classes = ['style1','style2'];
+    var SERVER = require(__dirname+'/ipconfig.json');
+
+    $.get('http://'+SERVER.ip+':'+SERVER.port+'/get_welcomewords').done(function(res){
+      var data = res.data;
+      var marquee = $('marquee');
+      marquee.text(data[0].content);
+      $('.welcome-words').addClass(classes[data[0].style]);
+    });
+  </script>
+  <script>if (window.module) module = window.module;</script>
+</body>
+</html>

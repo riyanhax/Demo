@@ -1,0 +1,1653 @@
+html,body{
+  background: #d8d8d8;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  /*min-height: ;*/
+  overflow: hidden;
+  overflow-y: scroll;
+  user-select: none;
+  -webkit-user-select:none;
+  -webkit-overflow-scrolling : touch;
+  position: relative;
+}
+#wrapper{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* Prevent native touch events on Windows */
+  -ms-touch-action: none;
+  /* Prevent the callout on tap-hold and text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Prevent text resize on orientation change, useful for web-apps */
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+#scroller{
+  min-height: 100%;
+}
+.show_all_btn{
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+*{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+ul{
+  padding: 0;
+  margin: 0;
+}
+select{
+  outline: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  padding-left: 20px;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  background: #fff;
+  height: 40px;
+  font-size: 16px;
+  -webkit-flex-shrink: 2;
+}
+
+.loop-screen-btn{
+  position: absolute;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  top: 20px;
+  left: 50%;
+  margin-left: -50px;
+  z-index: 9;
+}
+
+.weather-box .btn{
+
+}
+
+.login{
+  width: 100%;
+  height: 100%;
+  /*overflow: hidden;*/
+
+}
+.login .top{
+  width: 100%;
+  height: 20%;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  background: #0e314f;
+}
+.login .top img{
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+}
+.login .login-box{
+  width: 35%;
+  height: 30%;
+  border-radius: 10px;
+  margin: 20px auto 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -16%;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+}
+.login .login-box .text{
+  width: 100%;
+  height: 15%;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.login .login-box .btn{
+  width: 100%;
+  height: 20%;
+}
+.login .login-box .text span{
+  color: #333;
+  text-align: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 20%;
+}
+.login .login-box .text input{
+  width: 76%;
+  padding-left: 4%;
+  background: #fff;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #333;
+  border-radius: 5px;
+}
+.login .login-box .btn button{
+  width: 100%;
+  height: 100%;
+  background: #0e314f;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 0;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.system{
+  width: 100%;
+  height: 100%;
+  /*overflow-y: auto;*/
+}
+
+.top{
+  width: 100%;
+  height: 90px;
+  background: #0e314f;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.top img{
+  width: 45%;
+  height: auto;
+  display: block;
+  margin-left: 30px;
+}
+.btn-box{
+  width: 420px;
+}
+.alert_layer{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.dialog{
+  width: 540px;
+  height: 460px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -270px;
+  margin-top: -230px;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dialog .title{
+  width: 100%;
+  height: 50px;
+  background: #0e314f;
+  color: #fff;
+  line-height: 50px;
+  padding-left: 10px;
+  margin: 0;
+}
+.dialog h3{
+  padding-left: 20px;
+}
+.dialog input{
+  width: 90%;
+  height: 40px;
+  border: 1px solid #eee;
+  background: #fff;
+  outline: none;
+  padding-left: 10px;
+  margin: 0 auto;
+  display: block;
+  color: #999;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.confirm_box_btn,
+.close_box_btn{
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  background: #0e314f;
+  position: absolute;
+  bottom: 10px;
+  border-radius: 25px;
+  left: 110px;
+}
+.close_box_btn{
+  left: 280px;
+}
+.fullscreen,
+.partscreen{
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  background: #101a24;
+  color: #95aabb;
+  text-align: center;
+  line-height: 50px;
+  margin-right: 20px;
+  float: left;
+}
+
+
+.menu{
+  display: -webkit-flex;
+}
+.menu li{
+  list-style: none;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap:nowrap;
+  width: 100%;
+  background: #101a24;
+  color: #95aabb;
+  display: block;
+  font-size: 18px;
+  position: relative;
+}
+.menu li.active{
+  color: #05b6bc;
+  background: #172c41;
+}
+.menu li span{
+  position: absolute;
+  top: 2px;
+  top: 10px;
+  right: 0;
+  width: 55px;
+  height: 30px;
+  background: #172c41;
+  color: #05b6bc;
+  float: right;
+  line-height: 30px;
+}
+.menu li span.open{
+  right: 70px;
+}
+.menu li span.close{
+  right: 10px;
+}
+.menu li.active span{
+  background: #101a24;
+}
+
+
+.welcome{
+  width: 70%;
+  margin: 0 auto;
+}
+.welcome .style-box{
+  width: 100%;
+  height: 120px;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content:space-between;
+  margin-top: 5%;
+  margin-bottom: 100px;
+}
+.welcome .style1{
+  width: 240px;
+  height: 120px;
+  border-radius: 20px;
+  background: #101a24;
+  color: #95aabb;
+  text-align: center;
+  line-height:120px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.welcome .style2{
+  width: 240px;
+  height: 120px;
+  border-radius: 20px;
+  background: #101a24;
+  color: #95aabb;
+  text-align: center;
+  line-height:120px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+.welcome .welcome-box{
+  width: 100%;
+  height: 50px;
+  display: -webkit-flex;
+}
+.welcome .welcome-box .txt{
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  -webkit-flex-shrink:5;
+  color: #95aabb;
+  background: #101a24;
+  font-size: 18px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.welcome .welcome-box input{
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink:2;
+  margin: 0 ;
+  outline: none;
+  border: none;
+  padding: 0 0 0 20px;
+  font-size: 18px;
+
+}
+.welcome .welcome-box button{
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink:5;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  background: #101a24;
+  font-size: 18px;
+  color: #95aabb;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.welcome .save-btn{
+  width: 270px;
+  height: 75px;
+  background: #101a24;
+  font-size: 28px;
+  text-align: center;
+  line-height: 75px;
+  outline: none;
+  border: none;
+  border-radius: 37px;
+  margin: 100px auto 0;
+  display: block;
+  color: #95aabb;
+}
+
+
+.video{
+  display: none;
+}
+.vedio-btn{
+  width: 30%;
+  height: 100px;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  margin: 50px auto;
+}
+.video .play-btn img,
+.video .pause-btn img{
+  height: 40%;
+  margin-top: 30px;
+
+}
+.video .pause-btn,
+.video .play-btn{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  float: left;
+  border-radius: 100%;
+  background: #101a24;
+  line-height: 100px;
+}
+.video .volume{
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+/*大屏的样式*/
+.bigScreen{
+  height: 100%;
+  display: none;
+}
+.screen{
+  width: 100%;
+  height: 30%;
+  display: -webkit-flex;
+  position: relative;
+
+}
+.screen .left-screen,
+.screen .right-screen{
+  width: 100%;
+  min-height: auto;
+  height: 100%;
+  -webkit-flex-shrink:1;
+  list-style:none;
+}
+.screen  li{
+  width: 50%;
+  height: 50%;
+  float: left;
+  background: #333;
+  text-align: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+}
+.screen  li .operation-box div{
+  height: 100%;
+  font-size: 12px;
+}
+.screen .middle-screen{
+  width: 100%;
+  -webkit-flex-shrink:1;
+  background: #333;
+  text-align: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+}
+.screen .middle-screen.active{
+  background:  url('../img/control/home.png') center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.screen .middle-screen.active:before{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.4);
+  top: 0;
+  left: 0;
+  content: '';
+}
+.screen .operation-box{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  color: #fff;
+  font-size: 18px;
+  display: -webkit-flex;
+  -webkit-flex-direction:column;
+  width: 100%;
+  height: 35%;
+}
+.screen .operation-box > div{
+  width: 100%;
+  height: 50%;
+  display: -webkit-flex;
+}
+.screen .operation-box > div > div{
+  width: 100%;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit--webkit-align-items: center;
+  align-items: center;
+}
+input[type="radio"]{
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  position: relative;
+  margin-right: 10px;
+}
+input[type="radio"]::after{
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #05b6bc;
+  border-radius: 100%;
+  opacity: 0;
+  transition: all .5s ease;
+}
+input[type="radio"]:checked::after{
+  opacity: 1;
+}
+.bigScreen .screen-border{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border:2px solid yellow;
+  transition: all .2s ease-in-out;
+}
+.screen .right-screen{
+  width: 100%;
+  -webkit-flex-shrink:1;
+  list-style: none;
+}
+.screen  span.corner{
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 0 auto;
+}
+.bigScreen{
+  text-align: center;
+}
+.bigScreen .seat-box{
+  height: 45%;
+}
+.bigScreen .confirm,
+.bigScreen .cancel{
+  width: 220px;
+  height: 50px;
+  background: #101a24;
+  color: #95aabb;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  border-radius: 25px;
+}
+.bigScreen .confirm{
+  margin-right: 50px;
+}
+.bigScreen .cancel{
+  margin-left: 50px;
+}
+
+
+/* 坐席的样式 */
+.seat-box{
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  display: none;
+}
+.seat-box ol,
+.seat-box ul{
+  list-style: none;
+}
+.seat-box > div{
+  height: 20%;
+  /*overflow: hidden;*/
+  display: -webkit-flex;
+  margin-bottom: 20px;
+}
+.seat-box > div:last-child{
+  margin-bottom: 0;
+}
+.seat-box > div ul{
+  width: 100%;
+  display: -webkit-flex;
+  background: #c0c7cc;
+  border-radius: 10px;
+  overflow: hidden;
+  border:1px solid #999;
+  box-shadow: 1px 5px 15px 0px rgba(0,0,0,.3);
+}
+.seat-box > div ul > li{
+  /*width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  border-right: 1px solid #999;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;*/
+    width: 100%;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  margin-right: 0;
+  border-right: 1px solid #b0b5b8;
+}
+.seat-box > div ul > li:last-child{
+  border-right: none;
+}
+.seat-box > div ul li.active{
+  background: #dee9f2;
+}
+.seat-box > div ul li > span,
+.seat-box .wrap  span{
+  display: block;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  border: 2px solid #555;
+  color: #555;
+  margin: 0 auto;
+  line-height: 25px;
+}
+.seat-box .wrap  b{
+  color: #666;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: normal;
+}
+.group1{
+  margin-right: 20px;
+}
+.group2{
+  margin-right: 20px;
+}
+.line2 .group2{
+  margin-right: 0;
+}
+.seat-box > div ul ol{
+  width: 100%;
+  height: 70%;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 0;
+}
+.seat-box > div ul ol li{
+  width: 100%;
+  height: 50px;
+  background: url(../img/control/device-computer-icon.png) center center no-repeat;
+  background-size: 50%;
+}
+.seat-box > .line2 ul ol li{
+  background-size: 67%;
+}
+.seat-box .line3 .group1,
+.seat-box .line3 .group3{
+  -webkit-flex-shrink:5;
+}
+.seat-box .line3 .group2{
+  -webkit-flex-shrink:7;
+}
+.seat-box > .line3 ul ol li{
+  background-size: 45%;
+}
+.seat-box > .line3 .group2 ol li{
+  background-size: 50%;
+}
+.seat-box > .line3 .group1 li:last-child ol li,
+.seat-box > .line3 .group3 li:first-child ol li{
+  background-size: 67%;
+}
+.seat-box .line3 ul > li{
+  -webkit-flex-shrink: 8;
+}
+.seat-box > .line3 .group1 > li:last-child,
+.seat-box > .line3 .group3 > li:first-child{
+  -webkit-flex-shrink: 7;
+}
+.seat-box > .line4{
+  -webkit-justify-content: flex-end;
+}
+.seat-box .line4 .wrap{
+  width: 50%;
+  box-shadow:1px 5px 15px 0px rgba(0,0,0,.3);
+  display: -webkit-flex;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e0e2e3;
+  overflow: hidden;
+  border:1px solid #999;
+}
+.seat-box > .line4 .wrap > div{
+  width: 100%;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  margin-right: 0;
+  border-right: 1px solid #b0b5b8;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.seat-box > .line4 .wrap > div:last-child{
+  border: none;
+}
+.seat-box > .line4 .wrap > div.active{
+  background: #eef2f6;
+}
+
+
+/*机场区域样式*/
+.airport-box{
+  width:100%;
+  height: 40%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: none;
+}
+.airport-box .show-default{
+  width: 10%;
+  margin-right: 40px;
+  border: 1px solid #b0b5b8;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #c0c7cc;
+  -webkit-flex-shrink: 1;
+}
+.airport-box .show-default.active{
+  background: #dee9f2;
+}
+.airport-box .type{
+  display: -webkit-flex;
+  height: 50px;
+}
+.airport-box .type .name{
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink: 6;
+  color: #333;
+  margin: 0;
+  line-height:50px;
+  border-radius: 10px;
+  color: #333;
+  background: #eef2f6;
+  margin-right: 30px;
+  margin-left: 40px;
+  font-size: 18px;
+}
+.airport-box .type ul{
+  list-style: none;
+  width: 100%;
+  margin-right: 40px;
+  -webkit-flex-shrink: 3;
+  display: -webkit-flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #b0b5b8;
+  line-height: 50px;
+}
+.airport-box .type ul li{
+  width: 100%;
+  height: 100%;
+  color: #333;
+  background: #c0c7cc;
+
+}
+.airport-box .type ul li.active{
+  background: #dee9f2;
+}
+
+/*天气区域样式*/
+.weather-box{
+  width:100%;
+  height: 40%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: none;
+}
+.weather-box .show-default{
+  width: 10%;
+  margin-right: 40px;
+  border: 1px solid #b0b5b8;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #c0c7cc;
+  -webkit-flex-shrink: 1;
+}
+.weather-box .show-default.active{
+  background: #dee9f2;
+}
+.weather-box .type{
+  display: -webkit-flex;
+  height: 50px;
+}
+.weather-box .type .name{
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink: 6;
+  color: #333;
+  margin: 0;
+  line-height:50px;
+  border-radius: 10px;
+  color: #333;
+  background: #eef2f6;
+  margin-right: 30px;
+  margin-left: 40px;
+  font-size: 18px;
+}
+.weather-box .type ul{
+  list-style: none;
+  width: 100%;
+  margin-right: 40px;
+  -webkit-flex-shrink: 3;
+  display: -webkit-flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #b0b5b8;
+  line-height: 50px;
+}
+.weather-box .type ul li{
+  width: 100%;
+  height: 100%;
+  color: #333;
+  background: #c0c7cc;
+
+}
+.weather-box .type ul li.active{
+  background: #dee9f2;
+}
+/*************************************/
+.search-box{
+  /*height: 80%;*/
+  margin-bottom: 20px;
+}
+.search-box .search{
+  display: -webkit-flex;
+  height: 40px;
+  line-height: 40px;
+  margin: 20px 40px;
+}
+.search-box .search > div,
+.search-box .search > button{
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink: 5;
+  background: #101a24;
+  color: #95aabb;
+}
+.search-box .search > div{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.search-box .search > button{
+  border: 0;
+  height: 100%;
+  outline: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.search-box .search > input{
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink: 3;
+  outline: none;
+  border: 0;
+  padding: 0 0 0 20px;
+
+}
+.search-box .result{
+  height: 200px;
+  display: -webkit-flex;
+  margin: 0 40px;
+
+}
+.search-box .result p{
+  margin: 0;
+  height: 45px;
+  line-height: 45px;
+  font-size: 24px;
+  color: #333;
+  text-align: left;
+  text-indent: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: #dee9f2;
+}
+.search-box .left-result{
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.75);
+  margin-right: 40px;
+  overflow: scroll;
+}
+.search-box .right-result{
+  background: rgba(255,255,255,0.75);
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* 航路的样式 */
+.airroute-box{
+  width:100%;
+  height: 40%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: none;
+}
+.airroute-box .type{
+  display: -webkit-flex;
+  height: 50px;
+}
+.airroute-box .type .name{
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink: 3;
+  color: #333;
+  margin: 0;
+  line-height:50px;
+  border-radius: 10px;
+  color: #333;
+  background: #eef2f6;
+  margin-right: 30px;
+  margin-left: 40px;
+  font-size: 18px;
+}
+.airroute-box .type ul{
+  list-style: none;
+  width: 100%;
+  margin-right: 40px;
+  -webkit-flex-shrink: 1;
+  display: -webkit-flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #b0b5b8;
+  line-height: 50px;
+}
+.airroute-box .type ul li{
+  width: 100%;
+  height: 100%;
+  color: #333;
+  background: #c0c7cc;
+
+}
+.airroute-box .type ul li.active{
+  background: #dee9f2;
+}
+
+
+/*设备状态样式*/
+.device-box{
+  width:100%;
+  height: 40%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: none;
+}
+.device-box .type{
+  display: -webkit-flex;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.device-box .type .name{
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink: 3;
+  color: #333;
+  margin: 0;
+  line-height:50px;
+  border-radius: 10px;
+  color: #333;
+  background: #eef2f6;
+  margin-right: 30px;
+  margin-left: 40px;
+}
+.device-box .type ul{
+  list-style: none;
+  width: 100%;
+  margin-right: 40px;
+  -webkit-flex-shrink: 1;
+  display: -webkit-flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #b0b5b8;
+  line-height: 50px;
+}
+.device-box .type ul li{
+  width: 100%;
+  height: 100%;
+  color: #333;
+  background: #c0c7cc;
+
+}
+.device-box .type ul li.active{
+  background: #dee9f2;
+}
+.device-box .btn-box{
+  width: 60%;
+  display: -webkit-flex;
+  margin: 40px auto 0;
+}
+.device-box .btn-box div{
+  width: 100%;
+  height: 50px;
+  background: #101a24;
+  color: #95aabb;
+  text-align: center;
+  line-height: 50px;
+  margin-right: 20px;
+  border-radius: 25px;
+}
+.device-box .btn-box div:last-child{
+  margin: 0;
+}
+
+
+/*管制区样式*/
+.controlarea-box{
+  width:100%;
+  height: 40%;
+  /*height: 70%;*/
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: none;
+}
+.controlarea-box .type{
+  display: -webkit-flex;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.controlarea-box .type .name{
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink: 3;
+  color: #333;
+  margin: 0;
+  line-height:50px;
+  border-radius: 10px;
+  color: #333;
+  background: #eef2f6;
+  margin-right: 30px;
+  margin-left: 40px;
+  font-size: 18px;
+}
+.controlarea-box .type ul{
+  list-style: none;
+  width: 100%;
+  margin-right: 40px;
+  -webkit-flex-shrink: 1;
+  display: -webkit-flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #b0b5b8;
+  line-height: 50px;
+}
+.controlarea-box .type ul li{
+  width: 100%;
+  height: 100%;
+  color: #333;
+  background: #c0c7cc;
+}
+.controlarea-box .type ul li.active{
+  background: #dee9f2;
+}
+.controlarea-box .ctrlarea-list .ctrl-title{
+  position: relative;
+  margin-left: 40px;
+  width: 200px;
+  height:40px;
+  line-height: 40px;
+  color: #fff;
+  background: #0e314f url(../img/control/airplane.png) 10px center no-repeat;
+  background-size: contain;
+  border-radius: 5px;
+}
+
+.save_highctrlarea_list,.save_lowctrlarea_list{
+  position: absolute;
+  top:0px;
+  right: -100px;
+  color: #333;
+}
+.controlarea-box .ctrlarea-list ul{
+  padding: 20px 40px;
+  text-align: left;
+}
+
+/*.controlarea-box .ctrlarea-list .highctrlarea-shield-list ul,
+.controlarea-box .ctrlarea-list .lowctrlarea-shield-list ul
+{
+   width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}*/
+.controlarea-box .ctrlarea-list ul li{
+  list-style: none;
+  display: inline-block;
+  /*width: 12.5%;*/
+  width: 8%;
+  margin-top: 20px;
+  font-size: 18px;
+  margin-left: 40px;
+}
+.highctrlarea-shield-list ul li,
+.lowctrlarea-shield-list ul li{
+  width: auto !important;
+  margin-right: 10px;
+}
+.highctrlarea-shield-list ul li label,
+.lowctrlarea-shield-list  ul li label{
+  margin-left: 10px;
+}
+input[type=checkbox]{
+  -webkit-appearance:none;
+  appearance:none;
+  width: 20px;
+  height: 20px;
+  background:url('../img/control/unchecked_checkbox.png') center center no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  outline: none;
+}
+input[type=checkbox]:checked{
+  background-image:url('../img/control/checked_checkbox.png');
+}
+ul li input[type=checkbox]:disabled,
+ul li input[type=checkbox]:disabled + label{
+  opacity: 0.5;
+}
+.controlarea-box .btn-box{
+  width: 60%;
+  display: -webkit-flex;
+  margin: 40px auto 0;
+}
+.controlarea-box .btn-box div{
+  width: 100%;
+  height: 50px;
+  background: #101a24;
+  color: #95aabb;
+  text-align: center;
+  line-height: 50px;
+  margin-right: 20px;
+  border-radius: 25px;
+}
+.controlarea-box .btn-box div:last-child{
+  margin: 0;
+}
+
+/*机场运行态势*/
+.situation-box,
+.rate-box{
+  width:100%;
+  /*height: 70%;*/
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: none;
+  padding-bottom: 8%;
+}
+.situation-box .situation-list .situation-title,
+.rate-box  .rate-list .rate-title{
+  position: relative;
+  margin-left: 40px;
+  width: 200px;
+  height:40px;
+  line-height: 40px;
+  color: #fff;
+  background: #0e314f url(../img/control/airplane.png) 10px center no-repeat;
+  background-size: contain;
+  border-radius: 5px;
+}
+.situation-box .situation-list ul,
+.rate-box .rate-list ul{
+  padding: 20px 40px;
+  text-align: left;
+}
+.situation-box .situation-list ul li,
+.rate-box .rate-list ul li{
+  list-style: none;
+  display: inline-block;
+  /*width: 12.5%;*/
+  width: 12%;
+  margin-top: 20px;
+  font-size: 12px;
+  margin-left: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.situation-list  ul li label,
+.rate-list  ul li label{
+  margin-left: 10px;
+}
+.situation-box .btn-box,
+.rate-box .btn-box{
+  width: 100%;
+  height: 10%;
+  box-shadow:0 -0 30px 0 rgba(0,0,0,.3);
+  -webkit-box-shadow:0 -0 30px 0 rgba(0,0,0,.3);
+  display: -webkit-flex;
+  border-top: 1px solid #bbb;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #d8d8d8;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+}
+
+.loop-box .range{
+  position: static !important;
+  height: 100px !important;
+}
+.situation-box .btn-box .range,
+.rate-box .btn-box .range,
+.loop-box .range{
+  height: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #d8d8d8;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items:center;
+  color: #666;
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  overflow: hidden;
+}
+.situation-box .btn-box .range input,
+.rate-box .btn-box .range input,
+.loop-box .range input{
+  width: 50%;
+  margin: 0 10px 0 10px;
+}
+.situation-box .btn-box input[type="radio"],
+.rate-box .btn-box input[type="radio"]{
+  border-color: #000;
+  margin-left: 10px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+   display: none;
+}
+input[type="date"]::-webkit-clear-button{
+   display:none;
+}
+#date_select{
+  -webkit-appearance:none;
+  width: 100px;
+  height: 20px;
+  margin: 0 20px 0 20px;
+  background: #bbb;
+  border: 0;
+  padding: 5px;
+  color: #666;
+}
+.situation-box .btn-box label,
+.rate-box .btn-box label{
+  margin-right: 20px;
+}
+.situation-box .btn-box  input[type=checkbox],
+.rate-box .btn-box  input[type=checkbox]{
+  width: 16px;
+  height: 16px;
+}
+.situation-box .btn-box .all,
+.rate-box .btn-box .all{
+  margin-right: 20px;
+}
+.situation-box .btn-box .btn,
+.rate-box .btn-box .btn{
+  width: 150px;
+  height: 45%;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  color: #95aabb;
+  background: #101a24;
+  margin: 0 10px 0 20px;
+  border-radius: 50px;
+}
+
+
+/*天气的样式*/
+.weather-box{
+  display: none;
+}
+
+.loop-box{
+  display: none;
+}
+
+
+.operation-active{
+  display: block !important;
+}
+.hide{
+  display: none !important;
+}
+
+.button_style_1{
+  -webkit-appearance: none;
+  outline:none;
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  font-size: 20px;
+  background: #c0c7cc;
+  border: 0px;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.button_style_1:active,.button_style_1.active{
+  background-color: #dee9f2;
+
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; } input[type=range]:focus { outline: none;  }
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 36px;
+  width: 36px;
+  border-radius: 100%;
+  background: #bfc0c1;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  margin-top: -16px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #3071a9;
+  border-radius: 4.2px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 26px;
+  width: 26px;
+  background: rgba(48,113,169,.9);
+  box-shadow: none;
+  margin-top: -13px;
+  border: 6px solid rgba(255,255,255,.6);
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height: 2.4px;
+  background: #3071a9;
+  border-radius: 1.2px;
+  border: none;
+}
+.screen .operation-box{
+  font-size: 12px;
+}
+input[type="radio"]{
+  width: 15px;
+  height: 15px;
+}
+input[type="radio"]::after{
+  width: 5px;
+  height: 5px;
+}
+
+@media screen and (max-width: 750px) {
+    html, body{
+      overflow: auto;
+    }
+    .login .login-box .text{
+      font-size: 12px;
+    }
+    .login .login-box .btn button{
+      font-size: 14px;
+    }
+    .login .login-box .text input{
+      font-size: 12px;
+    }
+    .login .login-box .text{
+      height: 20%;
+    }
+    .menu li{
+      height: 40px;
+      line-height: 40px;
+      font-size: 12px;
+    }
+    .menu li span{
+      top: 10px;
+      width: 40px;
+      height: 20px;
+      line-height: 20px;
+    }
+    .menu li span.open{
+      right: 50px;
+    }
+    .menu li span.close{
+      right: 5px;
+    }
+    .top{
+      height: 60px;
+    }
+    .welcome .style1,.welcome .style2 {
+      width: 100px;
+      height: 60px;
+      border-radius: 5px;
+      line-height: 60px;
+      font-size: 16px;
+    }
+    .welcome .style-box{
+      height: 100px;
+      margin-bottom: 0;
+    }
+    .welcome .welcome-box input{
+      padding-bottom: 0;
+      padding-top: 0;
+      font-size: 14px;
+      border-radius: 0;
+    }
+    .welcome .welcome-box .txt,
+    .welcome .welcome-box button{
+      font-size: 14px;
+      line-height: 40px;
+    }
+    .welcome .welcome-box{
+      height: 40px;
+      line-height: 40px;
+    }
+    .welcome .save-btn {
+      width: 200px;
+      height: 45px;
+      font-size: 18px;
+      line-height: 45px;
+      margin: 50px auto 0;
+    }
+    .btn-box{
+      width: 200px;
+    }
+    .fullscreen, .partscreen {
+        width: 80px;
+        height: 30px;
+        border-radius: 25px;
+        line-height: 30px;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+    .video .pause-btn, .video .play-btn {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .video .play-btn img, .video .pause-btn img {
+        height: 40%;
+        margin-top: 15px;
+    }
+    .vedio-btn{
+      margin: 30px auto;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      height: 26px;
+      width: 26px;
+      background: rgba(48,113,169,.9);
+      box-shadow: none;
+      margin-top: -13px;
+      border: 6px solid rgba(255,255,255,.6);
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+      height: 2.4px;
+      background: #3071a9;
+      border-radius: 1.2px;
+      border: none;
+    }
+    .screen .operation-box{
+      font-size: 12px;
+    }
+    input[type="radio"]{
+      width: 15px;
+      height: 15px;
+    }
+    input[type="radio"]::after{
+      width: 5px;
+      height: 5px;
+    }
+    .screen  span.corner{
+      width: 20px;
+      height: 20px;
+      border: 1px solid #fff;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 20px;
+    }
+    .seat-box > div ul li > span, .seat-box .wrap  span{
+      width: 15px;
+      height: 15px;
+      font-size: 12px;
+      border-width: 1px;
+      line-height: 15px;
+    }
+    .seat-box > div{
+      margin-bottom: 10px;
+    }
+    .airport-box .type,
+    .airroute-box .type,
+    .controlarea-box .type,
+    .device-box .type,
+    .weather-box .type{
+      height: 40px;
+    }
+    .airport-box .type .name,
+    .airroute-box .type .name,
+    .controlarea-box .type .name,
+    .device-box .type .name,
+    .weather-box .type .name{
+      margin-right: 10px;
+      margin-left: 10px;
+      font-size: 16px;
+      line-height: 40px;
+    }
+    .airport-box .type ul,
+    .airroute-box .type ul,
+    .controlarea-box .type ul,
+    .device-box .type ul,
+    .weather-box .type ul{
+      line-height: 40px;
+      font-size: 12px;
+    }
+    .search-box{
+      height: 140%;
+    }
+    .search-box .search{
+      height: 30px;
+      line-height: 30px;
+      margin: 20px 10px;
+      font-size: 12px;
+    }
+    .search-box .search > button{
+      font-size: 12px;
+    }
+    .search-box .search > input{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .bigScreen .confirm, .bigScreen .cancel{
+      width: 120px;
+      height: 35px;
+      line-height: 35px;
+
+    }
+    .search-box .result p{
+      font-size: 14px;
+    }
+    .controlarea-box .type{
+      margin-bottom: 10px;
+    }
+    .controlarea-box .ctrlarea-list .ctrl-title{
+      margin-left: 10px;
+      width: 170px;
+      height: 30px;
+      line-height: 30px;
+    }
+    .controlarea-box .ctrlarea-list ul{
+      padding: 10px 10px;
+    }
+    .controlarea-box .ctrlarea-list ul li{
+      width: 12%;
+      margin-top: 10px;
+    }
+    .highctrlarea-shield-list ul li,
+    .lowctrlarea-shield-list ul li{
+      width: auto !important;
+    }
+    .button_style_1{
+      font-size: 12px;
+      border: none;
+      border-radius: 5px;
+    }
+    .controlarea-box .ctrlarea-list ul li input[type=checkbox]{
+      /*width: 16px;
+      height: 16px;*/
+      margin: -5px 0 0 0;
+    }
+    .controlarea-box .ctrlarea-list ul li label{
+      font-size: 16px;
+    }
+    .highctrlarea-shield-list ul,
+    lowctrlarea-shield-list ul{
+      padding: 0;
+    }
+    .highctrlarea-shield-list ul li,
+    .lowctrlarea-shield-list  ul li{
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+    .controlarea-box .btn-box div{
+      height: 35px;
+      line-height: 35px;
+      font-size: 16px;
+    }
+    .controlarea-box .btn-box{
+      margin-top: 20px;
+    }
+    .controlarea-box .btn-box,
+    .device-box .btn-box{
+      width: 45%;
+      margin: 20px auto 0;
+    }
+    .device-box .btn-box div{
+      height: 35px;
+      line-height: 35px;
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "lineCount": "590",
+      "lineDistance": "175124",
+      "routeCount": "49",
+      "routeDistance": "9146",
+      "sumCount": "639",
+      "sumDistance": "184270",
+      "timestamp": "1514528922573"
+    }
+  ]
+}
