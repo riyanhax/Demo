@@ -1,0 +1,11 @@
+@import "./components/until";
+@import "./components/loading";
+html,
+body {
+  @include html-body-style;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  background: #0e171c url(../img/loading.png) center center no-repeat;
+  background-size: contain;
+}

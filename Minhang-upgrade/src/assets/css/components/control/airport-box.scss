@@ -1,0 +1,75 @@
+.airport-box 
+{
+    width       :  100%;
+    height      :  40%;
+    padding     :  10px 20px;
+    box-sizing  :  border-box;
+    display     :  none;
+}
+
+.airport-box .show-default 
+{
+    width                :  10%;
+    margin-right         :  40px;
+    border               :  1px solid #b0b5b8;
+    border-radius        :  10px;
+    display              :  flex;
+    justify-content      :  center;
+    align-items          :  center;
+    padding              :  10px;
+    background           :  #c0c7cc;
+    -webkit-flex-shrink  :  1;
+}
+
+.airport-box .show-default.active 
+{
+    background  :  #dee9f2;
+}
+
+.airport-box .type 
+{
+    display  :  -webkit-flex;
+    height   :  50px;
+}
+
+.airport-box .type .name 
+{
+    width                :  100%;
+    height               :  100%;
+    -webkit-flex-shrink  :  6;
+    color                :  #333;
+    margin               :  0;
+    line-height          :  50px;
+    border-radius        :  10px;
+    color                :  #333;
+    background           :  #eef2f6;
+    margin-right         :  30px;
+    margin-left          :  40px;
+    font-size            :  18px;
+}
+
+.airport-box .type ul 
+{
+    list-style           :  none;
+    width                :  100%;
+    margin-right         :  40px;
+    -webkit-flex-shrink  :  3;
+    display              :  -webkit-flex;
+    border-radius        :  10px;
+    overflow             :  hidden;
+    border               :  1px solid #b0b5b8;
+    line-height          :  50px;
+}
+
+.airport-box .type ul li 
+{
+    width       :  100%;
+    height      :  100%;
+    color       :  #333;
+    background  :  #c0c7cc;
+}
+
+.airport-box .type ul li.active 
+{
+    background  :  #dee9f2;
+}

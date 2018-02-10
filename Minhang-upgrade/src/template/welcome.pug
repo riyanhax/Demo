@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title 欢迎词和宣传片
+    link(rel="stylesheet", href="assets/css/welcome.css")
+  body
+
+
+    // 欢迎词
+    .welcome-words
+    // 宣传片
+    video#video(src="D:/video/intro.mp4" loop="loop")
+
+
+    // 脚本
+    script.
+      if (typeof module === 'object'){
+        window.module = module; module = undefined
+      }
+        
+    script(src="assets/libs/pixi/pixi.min.js")
+    script(src="assets/libs/jquery/dist/jquery.min.js")
+    script(src="welcome.js")
+    script.
+      if (window.module) module = window.module
+      
+
+

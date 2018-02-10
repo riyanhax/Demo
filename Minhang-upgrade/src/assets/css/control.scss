@@ -1,0 +1,961 @@
+@import "components/until";
+
+
+* 
+{
+    -webkit-tap-highlight-color  :  rgba(255, 255, 255, 0);
+}
+
+html,
+body 
+{
+    @include html-body-style;
+
+    position                    :  relative;
+    overflow                    :  hidden;
+    overflow-y                  :  scroll;
+    background                  :  #d8d8d8;
+    -webkit-overflow-scrolling  :  touch;
+}
+
+#wrapper 
+{
+    width                  :  100%;
+    height                 :  100%;
+    overflow               :  hidden;
+    -ms-touch-action       :  none;
+    -webkit-touch-callout  :  none;
+
+    @include user-select-none;
+    @include text-size-adjust;
+}
+
+#scroller 
+{
+    min-height  :  100%;
+}
+
+.show_all_btn 
+{
+    margin-left    :  20px;
+    margin-right   :  20px;
+    border-radius  :  10px;
+}
+
+.hide_some_info
+{
+    margin-left    :  20px;
+    border-radius  :  10px;
+}
+
+ul 
+{
+    padding  :  0;
+    margin   :  0;
+}
+
+select 
+{
+    @include appearance-none;
+
+    height               :  40px;
+    padding              :  0;
+    font-size            :  16px;
+    background           :  #fff;
+    padding-left         :  20px;
+    -webkit-flex-shrink  :  2;
+}
+
+.loop-screen-btn 
+{
+    top            :  20px;
+    left           :  50%;
+    color          :  #fff;
+    width          :  100px;
+    height         :  40px;
+    border         :  1px solid #fff;
+    z-index        :  9;
+    position       :  absolute;
+    text-align     :  center;
+    line-height    :  40px;
+    margin-left    :  -50px;
+    border-radius  :  10px;
+}
+
+.login 
+{
+    width   :  100%;
+    height  :  100%;
+}
+
+.login .top 
+{
+    width                    :  100%;
+    height                   :  20%;
+    display                  :  -webkit-flex;
+    background               :  #0e314f;
+    align-items              :  center;
+    justify-content          :  space-between;
+    -webkit-align-items      :  center;
+    -webkit-justify-content  :  space-between;
+}
+
+.login .top img 
+{
+    width    :  70%;
+    margin   :  0 auto;
+    display  :  block;
+}
+
+.login .login-box 
+{
+    top                     :  40%;
+    left                    :  50%;
+    width                   :  35%;
+    height                  :  30%;
+    margin                  :  20px auto 0;
+    display                 :  -webkit-flex;
+    position                :  absolute;
+    margin-left             :  -16%;
+    border-radius           :  10px;
+    flex-direction          :  column;
+    -webkit-flex-direction  :  column;
+}
+
+.login .login-box .text 
+{
+    width                    :  100%;
+    height                   :  15%;
+    display                  :  -webkit-flex;
+    font-size                :  20px;
+    font-weight              :  bold;
+    margin-bottom            :  20px;
+    justify-content          :  center;
+    -webkit-justify-content  :  center;
+}
+
+.login .login-box .btn 
+{
+    width   :  100%;
+    height  :  20%;
+}
+
+.login .login-box .text span 
+{
+    width                :  20%;
+    color                :  #333;
+    display              :  -webkit-flex;
+    text-align           :  center;
+    align-items          :  center;
+    -webkit-align-items  :  center;
+}
+
+.login .login-box .text input 
+{
+    width          :  76%;
+    color          :  #333;
+    border         :  none;
+    outline        :  none;
+    font-size      :  18px;
+    background     :  #fff;
+    padding-left   :  4%;
+    border-radius  :  5px;
+}
+
+.login .login-box .btn button 
+{
+    color          :  #fff;
+    width          :  100%;
+    height         :  100%;
+    border         :  none;
+    outline        :  none;
+    padding        :  0;
+    font-size      :  20px;
+    margin-top     :  20px;
+    background     :  #0e314f;
+    border-radius  :  20px;
+}
+
+.system 
+{
+    width   :  100%;
+    height  :  100%;
+}
+
+.top {
+    width                    :  100%;
+    height                   :  90px;
+    display                  :  -webkit-flex;
+    background               :  #0e314f;
+    align-items              :  center;
+    justify-content          :  space-between;
+    -webkit-align-items      :  center;
+    -webkit-justify-content  :  space-between;
+}
+
+.top img 
+{
+    width        :  45%;
+    height       :  auto;
+    display      :  block;
+    margin-left  :  30px;
+}
+
+.btn-box 
+{
+    width  :  420px;
+}
+
+.alert_layer 
+{
+    top         :  0;
+    left        :  0;
+    width       :  100%;
+    height      :  100%;
+    position    :  absolute;
+    overflow    :  hidden;
+    background  :  rgba(0, 0, 0, .5);
+}
+
+.dialog 
+{
+    top            :  50%;
+    left           :  50%;
+    width          :  540px;
+    height         :  460px;
+    z-index        :  100;
+    position       :  absolute;
+    overflow       :  hidden;
+    background     :  #fff;
+    margin-top     :  -230px;
+    margin-left    :  -270px;
+    border-radius  :  10px;
+}
+
+.dialog .title 
+{
+    width         :  100%;
+    height        :  50px;
+    background    :  #0e314f;
+    color         :  #fff;
+    line-height   :  50px;
+    padding-left  :  10px;
+    margin        :  0;
+}
+
+.dialog h3 
+{
+    padding-left  :  20px;
+}
+
+.dialog input 
+{
+    width          :  90%;
+    color          :  #999;
+    border         :  1px solid #eee;
+    height         :  40px;
+    margin         :  0 auto;
+    display        :  block;
+    outline        :  none;
+    font-size      :  16px;
+    background     :  #fff;
+    padding-left   :  10px;
+    margin-bottom  :  5px;
+}
+
+.confirm_box_btn,
+.close_box_btn 
+{
+    left           :  110px;
+    width          :  150px;
+    color          :  #fff;
+    height         :  50px;
+    bottom         :  10px;
+    position       :  absolute;
+    background     :  #0e314f;
+    text-align     :  center;
+    line-height    :  50px;
+    border-radius  :  25px;
+}
+
+.close_box_btn 
+{
+    left  :  280px;
+}
+
+.fullscreen,
+.partscreen 
+{
+    color          :  #95aabb;
+    float          :  left;
+    width          :  120px;
+    height         :  50px;
+    background     :  #101a24;
+    text-align     :  center;
+    line-height    :  50px;
+    margin-right   :  20px;
+    border-radius  :  25px;
+}
+
+.menu 
+{
+    display  :  -webkit-flex;
+}
+
+.menu li 
+{
+    width                   :  100%;
+    color                   :  #95aabb;
+    height                  :  50px;
+    display                 :  block;
+    position                :  relative;
+    flex-wrap               :  nowrap;
+    font-size               :  18px;
+    text-align              :  center;
+    background              :  #101a24;
+    list-style              :  none;
+    line-height             :  50px;
+    flex-direction          :  row;
+    -webkit-flex-wrap       :  nowrap;
+    -webkit-flex-direction  :  row;
+}
+
+.menu li.active 
+{
+    color       :  #05b6bc;
+    background  :  #172c41;
+}
+
+.menu li span 
+{
+    // top          :  2px;
+    top          :  10px;
+    color        :  #05b6bc;
+    float        :  right;
+    right        :  0;
+    width        :  55px;
+    height       :  30px;
+    position     :  absolute;
+    background   :  #172c41;
+    line-height  :  30px;
+}
+
+.menu li span.open 
+{
+    right  :  70px;
+}
+
+.menu li span.close 
+{
+    right  :  10px;
+}
+
+.menu li.active span 
+{
+    background  :  #101a24;
+}
+
+.welcome 
+{
+    width   :  70%;
+    margin  :  0 auto;
+}
+
+.welcome .style-box 
+{
+    width                    :  100%;
+    height                   :  120px;
+    display                  :  -webkit-flex;
+    margin-top               :  5%;
+    margin-bottom            :  100px;
+    flex-direction           :  row;
+    justify-content          :  space-between;
+    -webkit-justify-content  :  space-between;
+    -webkit-flex-direction   :  row;
+}
+
+.welcome .style1 
+{
+    width          :  240px;
+    color          :  #95aabb;
+    height         :  120px;
+    font-size      :  36px;
+    text-align     :  center;
+    background     :  #101a24;
+    margin-left    :  50px;
+    line-height    :  120px;
+    border-radius  :  20px;
+}
+
+.welcome .style2 
+{
+    width          :  240px;
+    height         :  120px;
+    background     :  #101a24;
+    color          :  #95aabb;
+    text-align     :  center;
+    line-height    :  120px;
+    font-size      :  36px;
+    margin-right   :  50px;
+    border-radius  :  20px;
+}
+
+.welcome .welcome-box 
+{
+    width    :  100%;
+    height   :  50px;
+    display  :  -webkit-flex;
+}
+
+.welcome .welcome-box .txt 
+{
+    color                      :  #95aabb;
+    width                      :  100%;
+    height                     :  100%;
+    font-size                  :  18px;
+    text-align                 :  center;
+    background                 :  #101a24;
+    flex-shrink                :  5;
+    line-height                :  50px;
+    -webkit-flex-shrink        :  5;
+    border-top-left-radius     :  10px;
+    border-bottom-left-radius  :  10px;
+}
+
+.welcome .welcome-box input 
+{
+    width                :  100%;
+    height               :  100%;
+    border               :  none;
+    margin               :  0;
+    outline              :  none;
+    padding              :  0 0 0 20px;
+    font-size            :  18px;
+    flex-shrink          :  2;
+    -webkit-flex-shrink  :  2;
+}
+
+.welcome .welcome-box button 
+{
+    color                       :  #95aabb;
+    width                       :  100%;
+    height                      :  100%;
+    margin                      :  0;
+    border                      :  0;
+    outline                     :  none;
+    display                     :  block;
+    padding                     :  0;
+    font-size                   :  18px;
+    background                  :  #101a24;
+    flex-shrink                 :  5;
+    -webkit-flex-shrink         :  5;
+    border-top-right-radius     :  10px;
+    border-bottom-right-radius  :  10px;
+}
+
+.welcome .save-btn 
+{
+    color          :  #95aabb;
+    width          :  270px;
+    margin         :  100px auto 0;
+    border         :  none;
+    height         :  75px;
+    outline        :  none;
+    display        :  block;
+    font-size      :  28px;
+    text-align     :  center;
+    background     :  #101a24;
+    line-height    :  75px;
+    border-radius  :  37px;
+}
+
+.video 
+{
+    display  :  none;
+}
+
+.vedio-btn 
+{
+    width                    :  30%;
+    height                   :  100px;
+    margin                   :  50px auto;
+    display                  :  -webkit-flex;
+    justify-content          :  space-between;
+    -webkit-justify-content  :  space-between;
+}
+
+.video .play-btn img,
+.video .pause-btn img 
+{
+    height      :  40%;
+    margin-top  :  30px;
+}
+
+.video .pause-btn,
+.video .play-btn 
+{
+    float          :  left;
+    width          :  100px;
+    height         :  100px;
+    background     :  #101a24;
+    text-align     :  center;
+    line-height    :  100px;
+    border-radius  :  100%;
+}
+
+.video .volume 
+{
+    width   :  70%;
+    margin  :  0 auto;
+}
+
+/*大屏的样式*/
+@import "components/control/screen";
+
+/* 坐席的样式 */
+@import "components/control/seat-box";
+
+
+/*机场区域样式*/
+@import "components/control/airport-box";
+
+
+/*天气区域样式*/
+@import "components/control/weather-box";
+
+// 全局搜索框
+@import "components/control/search-box";
+
+/* 航路的样式 */
+@import "components/control/airroute-box";
+
+
+/*设备状态样式*/
+@import "components/control/device-box";
+
+
+/*管制区样式*/
+@import "components/control/controlarea-box";
+
+
+/*机场运行态势*/
+@import "components/control/situation-box";
+
+
+/*天气的样式*/
+
+.weather-box 
+{
+    display  :  none;
+}
+
+.loop-box 
+{
+    display  :  none;
+}
+
+.operation-active 
+{
+    display  :  block !important;
+}
+
+.hide 
+{
+    display  :  none !important;
+}
+
+.button_style_1 
+{
+    width               :  auto;
+    height              :  auto;
+    border              :  0px;
+    padding             :  5px 10px;
+    outline             :  none;
+    font-size           :  20px;
+    box-shadow          :  none;
+    background          :  #c0c7cc;
+    border-radius       :  10px;
+    -webkit-appearance  :  none;
+}
+
+.button_style_1:active,
+.button_style_1.active 
+{
+    background-color  :  #dee9f2;
+}
+
+input[type=range] 
+{
+    width               :  100%;
+    -webkit-appearance  :  none;
+}
+
+input[type=range]::-webkit-slider-thumb 
+{
+    -webkit-appearance  :  none;
+}
+
+input[type=range]:focus 
+{
+    outline  :  none;
+}
+
+input[type=range]::-webkit-slider-thumb 
+{
+    width               :  36px;
+    height              :  36px;
+    cursor              :  pointer;
+    background          :  #bfc0c1;
+    box-shadow          :  1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    margin-top          :  -16px;
+    border-radius       :  100%;
+    -webkit-appearance  :  none;
+}
+
+input[type=range]::-webkit-slider-runnable-track 
+{
+    width            :  100%;
+    height           :  8.4px;
+    cursor           :  pointer;
+    border           :  0.2px solid #010101;
+    background       :  #3071a9;
+    border-radius    :  4.2px;
+    -webkit-animate  :  0.2s;
+}
+
+input[type=range]::-webkit-slider-thumb 
+{
+    width       :  26px;
+    height      :  26px;
+    border      :  6px solid rgba(255, 255, 255, .6);
+    box-shadow  :  none;
+    margin-top  :  -13px;
+    background  :  rgba(48, 113, 169, .9);
+}
+
+input[type=range]::-webkit-slider-runnable-track 
+{
+    height         :  2.4px;
+    border         :  none;
+    background     :  #3071a9;
+    border-radius  :  1.2px;
+}
+
+.screen .operation-box 
+{
+    font-size  :  12px;
+}
+
+input[type="radio"] 
+{
+    width   :  15px;
+    height  :  15px;
+}
+
+input[type="radio"]::after 
+{
+    width   :  5px;
+    height  :  5px;
+}
+
+@media screen and (max-width: 750px) 
+{
+    html,
+    body 
+    {
+        overflow  :  auto;
+    }
+    .login .login-box .text 
+    {
+        font-size  :  12px;
+    }
+    .login .login-box .btn button 
+    {
+        font-size  :  14px;
+    }
+    .login .login-box .text input 
+    {
+        font-size  :  12px;
+    }
+    .login .login-box .text 
+    {
+        height  :  20%;
+    }
+    .menu li 
+    {
+        height       :  40px;
+        font-size    :  12px;
+        line-height  :  40px;
+    }
+    .menu li span 
+    {
+        top          :  10px;
+        width        :  40px;
+        height       :  20px;
+        line-height  :  20px;
+    }
+    .menu li span.open 
+    {
+        right  :  50px;
+    }
+    .menu li span.close 
+    {
+        right  :  5px;
+    }
+    .top 
+    {
+        height  :  60px;
+    }
+    .welcome .style1,
+    .welcome .style2 
+    {
+        width          :  100px;
+        height         :  60px;
+        font-size      :  16px;
+        line-height    :  60px;
+        border-radius  :  5px;
+    }
+    .welcome .style-box 
+    {
+        height: 100px;
+        margin-bottom: 0;
+    }
+    .welcome .welcome-box input 
+    {
+        padding-bottom: 0;
+        padding-top: 0;
+        font-size: 14px;
+        border-radius: 0;
+    }
+    .welcome .welcome-box .txt,
+    .welcome .welcome-box button 
+    {
+        font-size: 14px;
+        line-height: 40px;
+    }
+    .welcome .welcome-box 
+    {
+        height: 40px;
+        line-height: 40px;
+    }
+    .welcome .save-btn 
+    {
+        width: 200px;
+        height: 45px;
+        font-size: 18px;
+        line-height: 45px;
+        margin: 50px auto 0;
+    }
+    .btn-box 
+    {
+        width: 200px;
+    }
+    .fullscreen,
+    .partscreen 
+    {
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+        margin-right: 10px;
+        border-radius: 25px;
+    }
+    .video .pause-btn,
+    .video .play-btn 
+    {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .video .play-btn img,
+    .video .pause-btn img 
+    {
+        height      :  40%;
+        margin-top  :  15px;
+    }
+    .vedio-btn 
+    {
+        margin  :  30px auto;
+    }
+    input[type=range]::-webkit-slider-thumb 
+    {
+        width       :  26px;
+        height      :  26px;
+        border      :  6px solid rgba(255, 255, 255, .6);
+        background  :  rgba(48, 113, 169, .9);
+        box-shadow  :  none;
+        margin-top  :  -13px;
+    }
+    input[type=range]::-webkit-slider-runnable-track 
+    {
+        height         :  2.4px;
+        border         :  none;
+        background     :  #3071a9;
+        border-radius  :  1.2px;
+    }
+    .screen .operation-box 
+    {
+        font-size  :  12px;
+    }
+    input[type="radio"] 
+    {
+        width   :  15px;
+        height  :  15px;
+    }
+    input[type="radio"]::after 
+    {
+        width   :  5px;
+        height  :  5px;
+    }
+    .screen span.corner 
+    {
+        width        :  20px;
+        height       :  20px;
+        border       :  1px solid #fff;
+        font-size    :  14px;
+        font-weight  :  normal;
+        line-height  :  20px;
+    }
+    .seat-box>div ul li>span,
+    .seat-box .wrap span 
+    {
+        width         :  15px;
+        height        :  15px;
+        font-size     :  12px;
+        line-height   :  15px;
+        border-width  :  1px;
+    }
+    .seat-box>div 
+    {
+        margin-bottom  :  10px;
+    }
+    .airport-box .type,
+    .airroute-box .type,
+    .controlarea-box .type,
+    .device-box .type,
+    .weather-box .type 
+    {
+        height  :  40px;
+    }
+    .airport-box .type .name,
+    .airroute-box .type .name,
+    .controlarea-box .type .name,
+    .device-box .type .name,
+    .weather-box .type .name 
+    {
+        font-size     :  16px;
+        margin-right  :  10px;
+        margin-left   :  10px;
+        line-height   :  40px;
+    }
+    .airport-box .type ul,
+    .airroute-box .type ul,
+    .controlarea-box .type ul,
+    .device-box .type ul,
+    .weather-box .type ul 
+    {
+        line-height  :  40px;
+        font-size    :  12px;
+    }
+    .search-box {
+        height  :  140%;
+    }
+    .search-box .search 
+    {
+        height       :  30px;
+        margin       :  20px 10px;
+        font-size    :  12px;
+        line-height  :  30px;
+    }
+    .search-box .search>button 
+    {
+        font-size  :  12px;
+    }
+    .search-box .search>input 
+    {
+        padding-top     :  0;
+        padding-bottom  :  0;
+    }
+    .bigScreen .confirm,
+    .bigScreen .cancel 
+    {
+        width        :  120px;
+        height       :  35px;
+        line-height  :  35px;
+    }
+    .search-box .result p 
+    {
+        font-size  :  14px;
+    }
+    .controlarea-box .type 
+    {
+        margin-bottom  :  10px;
+    }
+    .controlarea-box .ctrlarea-list .ctrl-title 
+    {
+        width        :  170px;
+        height       :  30px;
+        margin-left  :  10px;
+        line-height  :  30px;
+    }
+    .controlarea-box .ctrlarea-list ul 
+    {
+        padding  :  10px 10px;
+    }
+    .controlarea-box .ctrlarea-list ul li 
+    {
+        width       :  12%;
+        margin-top  :  10px;
+    }
+    .highctrlarea-shield-list ul li,
+    .lowctrlarea-shield-list ul li 
+    {
+        width  :  auto !important;
+    }
+    .button_style_1 
+    {
+        border         :  none;
+        font-size      :  12px;
+        border-radius  :  5px;
+    }
+    .controlarea-box .ctrlarea-list ul li input[type=checkbox] 
+    {
+        margin  :  -5px 0 0 0;
+    }
+    .controlarea-box .ctrlarea-list ul li label 
+    {
+        font-size  :  16px;
+    }
+    .highctrlarea-shield-list ul,
+    lowctrlarea-shield-list ul 
+    {
+        padding  :  0;
+    }
+    .highctrlarea-shield-list ul li,
+    .lowctrlarea-shield-list ul li 
+    {
+        margin-right   :  20px;
+        margin-bottom  :  10px;
+    }
+    .controlarea-box .btn-box div 
+    {
+        height       :  35px;
+        font-size    :  16px;
+        line-height  :  35px;
+    }
+    .controlarea-box .btn-box 
+    {
+        margin-top  :  20px;
+    }
+    .controlarea-box .btn-box,
+    .device-box .btn-box 
+    {
+        width   :  45%;
+        margin  :  20px auto 0;
+    }
+    .device-box .btn-box div 
+    {
+        height       :  35px;
+        line-height  :  35px;
+    }
+}

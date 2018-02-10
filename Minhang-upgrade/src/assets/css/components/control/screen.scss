@@ -1,0 +1,168 @@
+.bigScreen 
+{
+    height      :  100%;
+    display     :  none;
+    text-align  :  center;
+
+    .seat-box 
+    {
+        height  :  45%;
+    }
+
+    .confirm,
+    .cancel 
+    {
+        width          :  220px;
+        height         :  50px;
+        background     :  #101a24;
+        color          :  #95aabb;
+        text-align     :  center;
+        line-height    :  50px;
+        display        :  inline-block;
+        border-radius  :  25px;
+    }
+
+    .confirm 
+    {
+        margin-right  :  50px;
+    }
+
+    .screen-border 
+    {
+        position    :  absolute;
+        top         :  0;
+        left        :  0;
+        border      :  2px solid yellow;
+        transition  :  all .2s ease-in-out;
+    }
+
+}
+
+.screen 
+{
+    width     :  100%;
+    height    :  30%;
+    display   :  -webkit-flex;
+    position  :  relative;
+
+    .left-screen,
+    .right-screen 
+    {
+        width                :  100%;
+        min-height           :  auto;
+        height               :  100%;
+        -webkit-flex-shrink  :  1;
+        list-style           :  none;
+    }
+
+    li 
+    {
+        width                :  50%;
+        height               :  50%;
+        float                :  left;
+        background           :  #333;
+        text-align           :  center;
+        display              :  -webkit-flex;
+        -webkit-align-items  :  center;
+        align-items          :  center;
+        position             :  relative;
+    }
+
+    .operation-box 
+    {
+        div
+        {
+            height     :  100%;
+            font-size  :  12px;
+        }
+        
+        >div 
+        {
+            width    :  100%;
+            height   :  50%;
+            display  :  -webkit-flex;
+            
+            >div 
+            {
+                width                        :  100%;
+                display                      :  -webkit-flex;
+                -webkit-justify-content      :  center;
+                justify-content              :  center;
+                -webkit--webkit-align-items  :  center;
+                align-items                  :  center;
+            }
+        }
+
+        position                :  absolute;
+        bottom                  :  0;
+        left                    :  0;
+        z-index                 :  99;
+        color                   :  #fff;
+        font-size               :  18px;
+        display                 :  -webkit-flex;
+        -webkit-flex-direction  :  column;
+        flex-direction          :  column;
+        width                   :  100%;
+        height                  :  35%;
+    }
+
+    .middle-screen 
+    {
+        width                :  100%;
+        -webkit-flex-shrink  :  1;
+        flex-shrink          :  1;
+        background           :  #333;
+        text-align           :  center;
+        display              :  -webkit-flex;
+        -webkit-align-items  :  center;
+        align-items          :  center;
+        position             :  relative;
+    }
+
+    .middle-screen.active 
+    {
+        background       :  url('../img/control/home.png') center center no-repeat;
+        background-size  :  cover;
+        position         :  relative;
+    }
+
+    .middle-screen.active:before
+    {
+        position    :  absolute;
+        width       :  100%;
+        height      :  100%;
+        background  :  rgba(0, 0, 0, .4);
+        top         :  0;
+        left        :  0;
+        content     :  '';
+    }
+
+    .right-screen 
+    {
+        width                :  100%;
+        -webkit-flex-shrink  :  1;
+        flex-shrink          :  1;
+        list-style           :  none;
+    }
+
+    span.corner 
+    {
+        display        :  inline-block;
+        border         :  2px solid #fff;
+        border-radius  :  100%;
+        width          :  40px;
+        height         :  40px;
+        text-align     :  center;
+        line-height    :  40px;
+        color          :  #fff;
+        font-size      :  24px;
+        font-weight    :  bolder;
+        margin         :  0 auto;
+    }
+}
+
+
+// 单选按钮的样式
+@import "input-radio.scss";
+
+

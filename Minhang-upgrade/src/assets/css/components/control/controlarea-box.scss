@@ -1,0 +1,155 @@
+.controlarea-box 
+{
+    width       :  100%;
+    height      :  40%;
+    padding     :  10px 20px;
+    box-sizing  :  border-box;
+    display     :  none;
+}
+
+.controlarea-box .type 
+{
+    display        :  -webkit-flex;
+    height         :  50px;
+    margin-bottom  :  20px;
+}
+
+.controlarea-box .type .name 
+{
+    width                :  100%;
+    height               :  100%;
+    -webkit-flex-shrink  :  3;
+    color                :  #333;
+    margin               :  0;
+    line-height          :  50px;
+    border-radius        :  10px;
+    color                :  #333;
+    background           :  #eef2f6;
+    margin-right         :  30px;
+    margin-left          :  40px;
+    font-size            :  18px;
+}
+
+.controlarea-box .type ul 
+{
+    list-style           :  none;
+    width                :  100%;
+    margin-right         :  40px;
+    -webkit-flex-shrink  :  1;
+    display              :  -webkit-flex;
+    border-radius        :  10px;
+    overflow             :  hidden;
+    border               :  1px solid #b0b5b8;
+    line-height          :  50px;
+}
+
+.controlarea-box .type ul li 
+{
+    width       :  100%;
+    height      :  100%;
+    color       :  #333;
+    background  :  #c0c7cc;
+}
+
+.controlarea-box .type ul li.active 
+{
+    background  :  #dee9f2;
+}
+
+.controlarea-box .ctrlarea-list .ctrl-title 
+{
+    position         :  relative;
+    margin-left      :  40px;
+    width            :  200px;
+    height           :  40px;
+    line-height      :  40px;
+    color            :  #fff;
+    background       :  #0e314f url(../img/control/airplane.png) 10px center no-repeat;
+    background-size  :  contain;
+    border-radius    :  5px;
+}
+
+.save_highctrlarea_list,
+.save_lowctrlarea_list 
+{
+    position  :  absolute;
+    top       :  0px;
+    right     :  -100px;
+    color     :  #333;
+}
+
+.controlarea-box .ctrlarea-list ul 
+{
+    padding     :  20px 40px;
+    text-align  :  left;
+}
+
+.controlarea-box .ctrlarea-list ul li 
+{
+    list-style   :  none;
+    display      :  inline-block;
+    width        :  8%;
+    margin-top   :  20px;
+    font-size    :  18px;
+    margin-left  :  40px;
+}
+
+.highctrlarea-shield-list ul li,
+.lowctrlarea-shield-list ul li 
+{
+    width         :  auto !important;
+    margin-right  :  10px;
+}
+
+.highctrlarea-shield-list ul li label,
+.lowctrlarea-shield-list ul li label 
+{
+    margin-left  :  10px;
+}
+
+input[type=checkbox] 
+{
+    -webkit-appearance  :  none;
+    appearance          :  none;
+    width               :  20px;
+    height              :  20px;
+    background          :  url('../img/control/unchecked_checkbox.png') center center no-repeat;
+    background-size     :  contain;
+    vertical-align      :  middle;
+    outline             :  none;
+}
+
+input[type=checkbox]:checked 
+{
+    background-image  :  url('../img/control/checked_checkbox.png');
+}
+
+ul li input[type=checkbox]:disabled,
+ul li input[type=checkbox]:disabled+label 
+{
+    opacity  :  0.5;
+}
+
+.controlarea-box .btn-box 
+{
+    width    :  60%;
+    display  :  -webkit-flex;
+    margin   :  40px auto 0;
+}
+
+.controlarea-box .btn-box div
+{
+    width          :  100%;
+    height         :  50px;
+    background     :  #101a24;
+    color          :  #95aabb;
+    text-align     :  center;
+    line-height    :  50px;
+    margin-right   :  20px;
+    border-radius  :  25px;
+}
+
+.controlarea-box .btn-box div:last-child 
+{
+    margin  :  0;
+}

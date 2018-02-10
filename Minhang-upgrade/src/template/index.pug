@@ -1,0 +1,112 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title 民航项目
+        link(rel="stylesheet" href="assets/libs/cesium/Widgets/widgets.css")
+        link(rel="stylesheet" href="assets/css/main.css")
+        link(rel="stylesheet" href="assets/css/airportOperSituAndMeteoInfoScene.css")
+        link(rel="stylesheet" href="assets/css/AirRouteStatus.css")
+    body
+        script.
+            if (typeof module === 'object'){
+                window.module = module
+                module = undefined
+            }
+               
+        script(src="assets/libs/cesium/Cesium.js")
+        script(src="assets/libs/jquery/dist/jquery.min.js")
+        script(src="assets/js/core/Preload.js")
+        script(src="assets/js/core/Director.js")
+        script(src="assets/js/util/ParseData.js")
+        script(src="assets/js/util/MyGeoJsonDataSource.js")
+        script(src="assets/js/util/location2coordinate.js")
+        script(src="assets/js/controller/SwitchSceneController.js")
+        script(src="assets/js/scenes/AirportOperSituAndMeteoInfoScene.js")
+        script(src="assets/js/scenes/AirrouteOperSituScene.js")
+        script(src="assets/js/scenes/AirportControlAreaScene.js")
+        script(src="assets/js/scenes/AirportRouteStatusScene.js")
+        script(src="assets/js/scenes/MapScene.js")
+        script(src="assets/js/core/App.js")
+
+        script.
+            if (window.module) module = window.module
+            
+        #container
+        #uiContainer
+            .topLogo
+            .date
+            .title
+        .airport_info_layer
+            .airport
+                .title 机场
+                ul
+                    li
+                        .name 名称
+                        .desc
+                    li
+                        .name 容量
+                        .desc
+            .sorties
+                .title 飞行架次
+                ul
+                    li
+                        .name 实际飞行
+                        .desc 
+                            strong
+                            span 架
+                    li
+                        .name 飞行计划
+                        .desc 
+                            strong
+                            span 架
+            
+            .weather
+                .title 气象信息
+                ul
+                    li
+                        .name 天气现象
+                        .desc 
+                            strong
+                    li
+                        .name 能见度
+                        .desc 
+                            strong
+                            span 米
+                    li
+                        .name 风向风速
+                        .desc 
+                            strong
+            .working
+                .title 前1小时运行效率
+                ul
+                    li
+                        .name 实际起飞
+                        .desc 
+                            strong
+                            span 架
+                    li
+                        .name 实际降落
+                        .desc 
+                            strong
+                            span 架
+                    li
+                        .name 平均出港延误时间
+                        .desc 
+                            strong
+                            span 分钟
+                    li
+                        .name 平均出港滑行时间
+                        .desc 
+                            strong
+                            span 分钟
+                    li
+                        .name 平均进港滑行时间
+                        .desc 
+                            strong
+                            span 分钟
+    
+    .notice
+        .horn
+            img(src="./assets/img/airport/notice.png", alt="")
+        .content

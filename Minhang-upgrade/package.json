@@ -1,0 +1,22 @@
+{
+  "name": "minhang",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start-dev": "set NODE_ENV=development && electron ./build",
+    "start-build": "set NODE_ENV=production && electron ./build",
+    "dev": "set NODE_ENV=development && gulp",
+    "build": "set NODE_ENV=production && gulp",
+    "packager": "electron-packager ./build minhang --platform=win32 --arch=x64 --out ../../ --version 1.6.10 --overwrite --icon=./app.ico --asar"
+  },
+  "devDependencies": {
+    "coffeescript": "1.7.0",
+    "gulp": "3.9.1",
+    "gulp-coffee": "3.0.2",
+    "gulp-pug": "3.3.0",
+    "gulp-sass": "3.1.0"
+  },
+  "dependencies": {
+    "ws": "3.3.2"
+  }
+}

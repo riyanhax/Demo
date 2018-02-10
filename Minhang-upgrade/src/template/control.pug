@@ -1,0 +1,448 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='utf-8')
+        meta(name="apple-mobile-web-app-capable" content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style" content="black")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(rel="apple-touch-icon-precomposed" sizes="72x72" href="./apple-touch-icon-precomposed.png")
+        link(rel="stylesheet" href="assets/libs/date-select/zepto.mdatetimer.css")
+        link(rel="stylesheet" href="assets/css/control.css")
+        title 中国民航总局运行监控中心大屏幕控制系统
+    
+    body
+        //- 矩阵配置弹窗 开始
+        .alert_layer.hide
+            .dialog
+                h2.title 矩阵配置
+                h3 全屏模式
+                input.fullscreen_model_1
+                input.fullscreen_model_2
+                h3 分屏模式
+                input.partscreen_model_1
+                input.partscreen_model_2
+                .confirm_box_btn 确认
+                .close_box_btn 关闭
+        //- 矩阵配置弹窗 开始
+
+        audio#audio(src="./assets/audio/type.mp3")
+        
+        //- 登录页面  开始
+        .login
+            .top
+                img(src="assets/img/logo.png", alt="")
+            .login-box
+                .text
+                    span 登录IP:
+                    input#login_ip
+                .text
+                    span 端口号:
+                    input#login_port
+                .btn
+                    button#login_btn 登录系统
+        //- 登录页面  结束
+
+        //- 进入系统页面 开始
+        .system.hide
+            //- 顶部logo 开始
+            .top
+                img(src="assets/img/logo.png" alt="")
+                .btn-box
+                    #matrix.fullscreen 矩阵配置
+                    #fullscreen.fullscreen 全屏模式
+                    #partscreen.partscreen 分屏模式
+            //- 顶部logo 结束
+
+            //- 选项卡按钮 开始
+            ul.menu
+                li.active 欢迎词
+                    span#welcome_on.open 开启
+                    span#welcome_off.close 关闭
+                li 宣传片
+                    span#video_on.open 开启
+                    span#video_off.close 关闭
+                li 大屏幕
+                    span#largeScreen_on.open 开启
+                    span#largeScreen_off.close 关闭
+            //- 选项卡按钮 结束
+
+            //-  首页 开始
+            .welcome.box
+                .style-box
+                    #welcomeStyle_1.style1 样式一
+                    #welcomeStyle_2.style2 样式二
+                .welcome-box
+                    .txt 欢迎词
+                    input#welcome_text
+                    button#welcomeText_confirm 确认
+                #welcomeText_save.save-btn 保存
+            //- 首页 结束
+
+            //- 调节音量结构 开始
+            .video.box
+                .vedio-btn
+                    #video_play.pause-btn
+                        img(src="assets/img/pause.png" alt="")
+                    #video_pause.play-btn
+                        img(src="assets/img/play.png" alt="")
+                .volume
+                    .icon
+                    input#video_volume(type="range" max="100" min="0") 
+            //- 调节音量结构 结束
+
+            //- 第三选项卡大屏 开始
+            .bigScreen.box
+                //- 上方屏幕
+                #screen.screen
+                    ul.left-screen
+                        li.screen_select(data-num="4" data-selected="leftT")
+                            span.corner
+                            .operation-box
+                                div
+                                    .hide.rate-screen-control
+                                        input#rate(type="radio" name="screen-view" value="rate")
+                                        label(for="rate") 正常率
+                                    .hide.section-screen-control
+                                        input#ctrlarea(type="radio" name="screen-view" value="controlarea")
+                                        label(for="ctrlarea") 扇区
+                        li.screen_select(data-num="6" data-selected="leftT1")
+                            span.corner
+                            .operation-box
+                                div
+                                    .hide.rate-screen-control
+                                        input#situation(type="radio" name="screen-view" value="situation")
+                                        label(for="situation") 态势
+                                    .hide.rate-screen-control
+                                        input#rate(type="radio" name="screen-view" value="rate")
+                                        label(for="rate") 正常率
+                                    .hide.section-screen-control
+                                        input#ctrlarea(type="radio" name="screen-view" value="controlarea")
+                                        label(for="ctrlarea") 扇区
+                        li.screen_select(data-num="5" data-selected="leftB")
+                            span.corner
+                            .operation-box
+                                div
+                                    .hide.rate-screen-control
+                                        input#rate(type="radio" name="screen-view" value="rate")
+                                        label(for="rate") 正常率
+                                    .hide.section-screen-control
+                                        input#ctrlarea(type="radio" name="screen-view" value="controlarea")
+                                        label(for="ctrlarea") 扇区
+                        li.screen_select(data-num="7" data-selected="leftB1")
+                            span.corner
+                            .operation-box
+                                div
+                                    .hide.rate-screen-control
+                                        input#rate(type="radio" name="screen-view" value="rate")
+                                        label(for="rate") 正常率
+                                    .hide.section-screen-control
+                                        input#ctrlarea(type="radio" name="screen-view" value="controlarea")
+                                        label(for="ctrlarea") 扇区
+                    .middle-screen.active.screen_select.selected(data-num="2" data-selected="leftM")
+                        .loop-screen-btn 循环播放
+                        span.corner
+                        .operation-box
+                            div
+                                .hide.rate-screen-control
+                                    input#rate(type="radio" name="screen-view" value="rate")
+                                    label(for="rate") 正常率
+                            div
+                                div 
+                                    input#airport(type="radio" name="screen-view" value="airport")
+                                    label(for="airport") 机场
+                                div 
+                                    input#weather(type="radio" name="screen-view" value="weather")
+                                    label(for="weather") 天气
+                                div 
+                                    input#device(type="radio" name="screen-view" value="device")
+                                    label(for="device") 设备
+                            div
+                                div
+                                    input#ctrlarea(type="radio" name="screen-view" value="controlarea" data-middle="middle")
+                                    label(for="ctrlarea") 扇区
+                                div
+                                    input#airroute(type="radio" name="screen-view" value="airroute"  data-middle="middle")
+                                    label(for="airroute") 航路
+                                div
+                                    input#reset(type="radio" name="screen-view" value="seat" hidden)
+                                    label(for="reset") 矩阵操作
+                    ul.right-screen
+                        li.screen_select(data-num="8" data-selected="rightT")
+                            span.corner
+                            .operation-box
+                                div
+                                    .hide.rate-screen-control
+                                        input#airroute(type="radio" name="screen-view" value="airroute")
+                                        label(for="airroute") 航路
+                                    .hide.rate-screen-control
+                                        input#rate(type="radio" name="screen-view" value="rate")
+                                        label(for="rate") 正常率
+                                    .hide.section-screen-control
+                                        input#ctrlarea(type="radio" name="screen-view" value="controlarea")
+                                        label(for="ctrlarea") 扇区
+                        li.screen_select(data-num="10" data-selected="rightT1")
+                            span.corner
+                            .operation-box
+                                div
+                                    .hide.rate-screen-control
+                                        input#rate(type="radio" name="screen-view" value="rate")
+                                        label(for="rate") 正常率
+                                    .hide.section-screen-control
+                                        input#ctrlarea(type="radio" name="screen-view" value="controlarea")
+                                        label(for="ctrlarea") 扇区
+                        li.screen_select(data-num="9" data-selected="rightB")
+                            span.corner
+                            .operation-box
+                                div
+                                    .hide.rate-screen-control
+                                        input#rate(type="radio" name="screen-view" value="rate")
+                                        label(for="rate") 正常率
+                                    .hide.section-screen-control
+                                        input#ctrlarea(type="radio" name="screen-view" value="controlarea")
+                                        label(for="ctrlarea") 扇区
+                        li.screen_select(data-num="11" data-selected="rightB1")
+                            span.corner
+                            .operation-box
+                                div
+                                    .hide.rate-screen-control
+                                        input#rate(type="radio" name="screen-view" value="rate")
+                                        label(for="rate") 正常率
+                                    .hide.section-screen-control
+                                        input#ctrlarea(type="radio" name="screen-view" value="controlarea")
+                                        label(for="ctrlarea") 扇区
+                    //- 选区边框
+                    .screen-border
+                //- 上方屏幕 结束
+
+                //- 下面屏幕对应的盒子 开始
+
+                //- 1、坐席盒子 开始
+                .seat-box.operation-active
+                    .line.line1
+                        - var n = 1
+                        ul.group1
+                            while n < 5
+                                li.seat_select(data-num=n)
+                                    span= n++
+                        - n = 5
+                        ul.group2
+                            while n < 9
+                                li.seat_select(data-num=n)
+                                    span= n++
+                        - n = 9
+                        ul.group2
+                            while n < 13
+                                li.seat_select(data-num=n)
+                                    span= n++
+                    .line.line2
+                        - var n = 13
+                        ul.group1
+                            while n < 17
+                                li.seat_select(data-num=n)
+                                    span= n++
+                        - n = 17
+                        ul.group2
+                            while n < 21
+                                li.seat_select(data-num=n)
+                                    span= n++
+                    .line.line3
+                        - var n = 21
+                        ul.group1
+                            while n < 25
+                                li.seat_select(data-num=n)
+                                    span= n++
+                        ul.group2
+                            li.seat_select(data-num="25")
+                                span 25
+                        - n = 26
+                        ul.group3
+                            while n < 30
+                                li.seat_select(data-num=n)
+                                    span= n++
+                    .line.line4
+                        .wrap
+                            - var n = [{num:39,txt:'航班运行态势'},{num:40,txt:'机场运行态势'},{num:41,txt:'航路运行态势'},{num:49,txt:'历史正常率'},{num:50,txt:'扇区运行态势'}]
+                                each val in n
+                                    .seat_select(data-num=val.num)
+                                        span= val.num
+                                        b= val.txt
+                    span#bigScreen_confirm.confirm 确认
+                    span#bigScreen_cancel.cancel 取消
+                //- 坐席盒子 结束
+
+                //- 2、机场选项 开始
+                .airport-box
+                    .type
+                        h2.name 机场分类显示：
+                        ul
+                            - var values = ['三千万级','两千万级','一千万级','其他'];
+                                each val,index in values
+                                    if index>1
+                                        li(data-index=index)= val
+                                    else
+                                        li.active(data-index=index)= val
+                        #showDefault.show-default.active 显示默认机场
+                    .search-box
+                        .search
+                            div 关舱门等待时间
+                            select#time_set(style="width:92%")
+                                option(value="0") 30分钟以上
+                                option(value="1") 1小时以上
+                                option(value="2") 2小时以上
+                            .hide_some_info 
+                                span 隐藏专机要客
+                                input(type="checkbox", name="hide-some-info", hidden)
+                            .show_all_btn 打开高空扇区
+                        .search
+                            div 机场/航空公司名称
+                            input#search_world
+                            button#search_airport 搜索
+                        .result
+                            #search_result_box.left-result
+                            #search_result_selected_box.right-result
+                    #airport_open.confirm 打开
+                    #airport_close.cancel 关闭
+
+                //- 机场选项 结束
+            
+                //- 3、航路选项 开始
+                .airroute-box
+                    .type
+                        h2.name 显示航路分类
+                        ul
+                            li.active(data-index="ABGRLMNPWYV") 国际航路
+                            li.active(data-index="HZJX") 国内航路
+                //- 航路选项 结束
+
+                //- 4、设备选项 开始
+                .device-box
+                    .type
+                        h2.name 显示设备分类
+                        ul
+                            li.active.device(data-index="radar") 雷达
+                            li.active.device(data-index="VOR") VOR
+                            li.active.device(data-index="NDB") NDB
+                    .type
+                        h2.name 异常设备
+                        ul
+                            li.device_err(data-index="err_radar") 雷达
+                            li.device_err(data-index="err_VOR") VOR
+                            li.device_err(data-index="err_NDB") NDB
+                            li.active.err_ALL(data-index="err_ALL") 全部
+                    .btn-box
+                        #device_open.open-btn 确认
+                //- 设备选项 结束
+
+                //- 5、管制区选项 开始
+                .controlarea-box
+                    .type
+                        h2.name 显示管制区分类
+                        ul
+                            li.controlarea_height.active 高空管制区
+                            li.controlarea_low 中低空管制区
+                    .highctrlarea-list.ctrlarea-list
+                        .ctrl-title 高空管制区
+                        form#highctrlarea-form
+                            ul
+                        //- 屏蔽区域
+                        .highctrlarea-shield-list
+                            .ctrl-title 可选显示区域
+                            form#highctrlarea-shield-form
+                                ul
+                    .lowctrlarea-list.ctrlarea-list.hide
+                        .ctrl-title 低空管制区
+                        form#lowctrlarea-form
+                            ul
+                        //- 屏蔽区域
+                        .lowctrlarea-shield-list
+                            .ctrl-title 可选显示区域
+                                .save_lowctrlarea_list.hide
+                                    input#save_lowctrlarea_list(type="checkbox")
+                                    label(for="svae_lowctrlarea_list") 是否保存
+                            form#lowctrlarea-shield-form
+                                ul
+                    .btn-box
+                        #controlarea_open.open-btn 打开
+                        #controlarea_close.close-btn 关闭
+                        #controlarea_reset.close-btn 重置
+                //- 管制区选项 结束
+
+                //- 6、循环播放 开始
+                .loop-box
+                    .range
+                        span 1分钟
+                        input(type="range" name="interval" value="1" min="1" max="5" step="1")
+                        span 5分钟
+                    .btn.confirm 启动
+                    .btn.cancel 停止
+                //- 循环播放 结束
+
+                //- 7、天气选项 开始
+                .weather-box
+                    .type
+                        h2.name 天气分类显示：
+                        ul
+                            li.active(data-index="1") 三千万级
+                            li.active(data-index="2") 两千万级
+                            li.active(data-index="3") 一千万级
+                            li.active(data-index="4") 其他
+                //- 天气选项 结束
+
+                //- 8、机场运行态势选项 开始
+                .situation-box
+                    .search-box
+                        .search
+                            div 机场/航空公司名称
+                            input(type="text")
+                            button(type="button" name="situation") 搜索
+                        .result
+                            .left-result
+                            .right-result
+                    .btn-box
+                        .range
+                            span 5秒
+                            input(type="range" name="interval" value="5" min="1" max="60" step="1")
+                            span 60秒
+                        .all
+                            input#all_airport(type="checkbox" value="ALL")
+                            label(for="all_airport") 全国机场
+                        input#date_select(type="date")
+                        input#fixed_show(type="radio" value="0" name="chart_show" checked)
+                        label(for="fixed_show") 固定显示
+                        input#loop_show(type="radio" alue="1" name="chart_show")
+                        label(for="loop_show") 轮询显示
+                        .btn.confirm_btn 确定
+                        .btn.close_btn 取消
+                //- 机场运行态势选项 结束
+
+                //- 9、机场正常率 开始
+                .rate-box
+                    .search-box
+                        .search
+                            div 机场/航空公司名称
+                            input(type="text")
+                            button(type="button" name="rate") 搜索
+                        .result
+                            .left-result
+                            .right-result
+                    .btn-box
+                        .range
+                            span 5秒
+                            input(type="range" name="interval" value="5" min="1" max="60" step="1")
+                            span 60秒
+                        .all
+                            input#rate_all_airport(type="checkbox" value="ALL")
+                            label(for="rate_all_airport") 全国机场
+                        input#rate_fixed_show(type="radio" value="0" name="chart_show2" checked)
+                        label(for="rate_fixed_show") 固定显示
+                        input#rate_loop_show(type="radio" value="1" name="chart_show2" checked)
+                        label(for="rate_loop_show") 轮询显示
+                        .btn.confirm_btn 确定
+                        .btn.close_btn 取消
+                //- 机场正常率 结束
+            //- 第三选项卡大屏 结束
+
+        script(src="assets/libs/jquery/dist/jquery.min.js")
+        script(src="assets/js/controller/control.js")
+

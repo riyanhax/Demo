@@ -1,0 +1,37 @@
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Document
+		link(rel="stylesheet", href="assets/css/operation.css")
+	body
+		header
+			img.logo(src="assets/img/data_logo.png", alt="")
+		table
+			tr
+				td
+					h2 1、机场静态数据
+				td
+					button(data-type="airport") 更新机场
+			tr 
+				td
+					h2 2、航路静态数据
+				td
+					button(data-type="airroute") 更新航路
+			tr
+				td
+					h2 3、扇区静态数据
+				td 
+					button(data-type="section") 更新扇区
+			tr
+				td
+					h2 4、正常率导入
+				td(style="color:#999")
+					input(type="text" readonly) 
+					span 一
+					input(type="text" readonly)
+					button(data-type="regular") 导入正常率
+		script(src="assets/libs/jquery/dist/jquery.min.js")
+		script(src="operation.js")
+

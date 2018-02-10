@@ -1,0 +1,162 @@
+.situation-box,
+.rate-box 
+{
+    width           :  100%;
+    padding         :  10px 20px;
+    box-sizing      :  border-box;
+    display         :  none;
+    padding-bottom  :  8%;
+}
+
+.situation-box .situation-list .situation-title,
+.rate-box .rate-list .rate-title 
+{
+    position         :  relative;
+    margin-left      :  40px;
+    width            :  200px;
+    height           :  40px;
+    line-height      :  40px;
+    color            :  #fff;
+    background       :  #0e314f url(../img/control/airplane.png) 10px center no-repeat;
+    background-size  :  contain;
+    border-radius    :  5px;
+}
+
+.situation-box .situation-list ul,
+.rate-box .rate-list ul 
+{
+    padding     :  20px 40px;
+    text-align  :  left;
+}
+
+.situation-box .situation-list ul li,
+.rate-box .rate-list ul li 
+{
+    list-style     :  none;
+    display        :  inline-block;
+    width          :  12%;
+    margin-top     :  20px;
+    font-size      :  12px;
+    margin-left    :  40px;
+    text-overflow  :  ellipsis;
+    white-space    :  nowrap;
+    overflow       :  hidden;
+}
+
+.situation-list ul li label,
+.rate-list ul li label 
+{
+    margin-left  :  10px;
+}
+
+.situation-box .btn-box,
+.rate-box .btn-box 
+{
+    width                    :  100%;
+    height                   :  10%;
+    box-shadow               :  0 -0 30px 0 rgba(0, 0, 0, .3);
+    -webkit-box-shadow       :  0 -0 30px 0 rgba(0, 0, 0, .3);
+    display                  :  -webkit-flex;
+    border-top               :  1px solid #bbb;
+    position                 :  fixed;
+    bottom                   :  0;
+    left                     :  0;
+    background               :  #d8d8d8;
+    -webkit-justify-content  :  center;
+    -webkit-align-items      :  center;
+}
+
+.loop-box .range 
+{
+    position  :  static !important;
+    height    :  100px !important;
+}
+
+.situation-box .btn-box .range,
+.rate-box .btn-box .range,
+.loop-box .range 
+{
+    height                   :  0;
+    width                    :  100%;
+    position                 :  absolute;
+    top                      :  0;
+    left                     :  0;
+    background               :  #d8d8d8;
+    display                  :  -webkit-flex;
+    -webkit-justify-content  :  center;
+    -webkit-align-items      :  center;
+    color                    :  #666;
+    transition               :  all .2s ease;
+    -webkit-transition       :  all .2s ease;
+    overflow                 :  hidden;
+}
+
+.situation-box .btn-box .range input,
+.rate-box .btn-box .range input,
+.loop-box .range input 
+{
+    width   :  50%;
+    margin  :  0 10px 0 10px;
+}
+
+.situation-box .btn-box input[type="radio"],
+.rate-box .btn-box input[type="radio"] 
+{
+    border-color  :  #000;
+    margin-left   :  10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator 
+{
+    display  :  none;
+}
+
+input[type="date"]::-webkit-clear-button 
+{
+    display  :  none;
+}
+
+#date_select 
+{
+    -webkit-appearance  :  none;
+    width               :  100px;
+    height              :  20px;
+    margin              :  0 20px 0 20px;
+    background          :  #bbb;
+    border              :  0;
+    padding             :  5px;
+    color               :  #666;
+}
+
+.situation-box .btn-box label,
+.rate-box .btn-box label 
+{
+    margin-right  :  20px;
+}
+
+.situation-box .btn-box input[type=checkbox],
+.rate-box .btn-box input[type=checkbox] 
+{
+    width   :  16px;
+    height  :  16px;
+}
+
+.situation-box .btn-box .all,
+.rate-box .btn-box .all 
+{
+    margin-right  :  20px;
+}
+
+.situation-box .btn-box .btn,
+.rate-box .btn-box .btn 
+{
+    width                    :  150px;
+    height                   :  45%;
+    display                  :  -webkit-flex;
+    -webkit-justify-content  :  center;
+    -webkit-align-items      :  center;
+    color                    :  #95aabb;
+    background               :  #101a24;
+    margin                   :  0 10px 0 20px;
+    border-radius            :  50px;
+}
