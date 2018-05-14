@@ -1,0 +1,16 @@
+{
+  "name": "SJZShow2018",
+  "version": "1.0.1",
+  "author": "www.zoolon.com.cn",
+  "description": "SJZShow2018 by zoolon",
+  "main": "./bin/Main.js",
+  "scripts": {
+    "package": "electron-packager ./ SJZShow2018 --out=../Release --win  --electron-version 2.0.0-beta.4 --ignore=test  --arch=x64  --overwrite --icon=./zoolon.ico",
+    "package-Linux": "electron-packager ./ SJZShow2018 --out=../Release --asar --platform=linux   --electron-version 1.8.1 --ignore=test  --arch=x64  --overwrite --icon=./zoolon.ico",
+    "run": "electron ./ -dev 1"
+  },
+  "dependencies": {
+    "properties": "^1.2.1",
+    "socket.io": "^2.0.4"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="containter">
+        <div class="title">设备故障状态统计<span>&nbsp;&nbsp;&nbsp;&nbsp;EQUIPMENT FALURE STATUS STATISTICS</span></div>
+        <div class="wrap"></div>
+    </div>
+    <div class="containter containter2">
+        <div class="title">报警信息列表<span>&nbsp;&nbsp;&nbsp;&nbsp;ALARM INFORMATION LIST</span></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>详情</th>
+                    <th>区域</th>
+                    <th>等级</th>
+                    <th>时间</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        if(typeof module == 'object'){
+            window.module = module;
+            module = undefined
+        }
+    </script>
+    <script src="../../../../assets/libs/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../../../assets/libs/echarts/echarts.min.js"></script>
+    <script src="../../../../assets/libs/zrender/zrender.min.js"></script>
+    <script src="script.js"></script>
+    <script>if(window.module) module = window.module</script>
+</body>
+</html>

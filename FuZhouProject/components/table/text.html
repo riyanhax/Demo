@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格</title>
+    <style>
+    	*{
+    		margin:0;
+    		padding:0;
+    	}
+        html,body,div,.containter{
+            width: 100%;
+            height: 100%;
+            color:#297f99;
+            text-align: center;
+            font-size: 16px;
+            background: #000;
+        }
+        tr:nth-child(2n+1){
+        	background: -webkit-linear-gradient(left,rgba(7, 75, 92, 0.2),rgba(7, 75, 90, 0.8),rgba(7, 75, 90, 0.2));
+        }
+        tr:nth-child(1){
+        	background: -webkit-linear-gradient(top,rgba(7, 75, 90, 0.8),rgba(0, 0, 0, 0.4));
+        }
+        table tr td{ border-top:#2b8ba6 solid 1px} 
+        tr:nth-last-child(1) td{border-bottom:#2b8ba6 solid 1px}
+        tr:hover{
+        	background: -webkit-linear-gradient(left,rgba(136, 107, 42, 0.2),rgba(136, 107, 42, 0.8),rgba(136, 107, 42, 0.2));
+        }
+    </style>
+</head>
+<body>
+    <div>
+    	<table class="containter" border="0" cellpadding="0" cellspacing="0">
+    		
+    	</table>
+    </div>   
+    <script src="../../assets/libs/jquery/jquery-2.1.1.min.js"></script>
+    <script src="./table.js"></script>
+    <script>
+        new Table({
+            el:$('.containter')
+        });
+        $(".containter td").mouseenter(function(){
+	    	var index=$(this).parent().index();
+	    	var indexs=$(".containter tr:nth-last-child(1)").index();	    	
+	    	if(index==indexs){
+	    		$(this).parent().find("td").css({"border-top":"rgb(136, 107, 42) solid 1px","border-bottom":"rgb(136, 107, 42) solid 1px"});
+	    	}else{
+	    		$(this).parent().find("td").css({"border-top":"rgb(136, 107, 42) solid 1px"});
+	    		$(this).parent().next().find("td").css({"border-top":"rgb(136, 107, 42) solid 1px"});
+	    	}
+	    	
+	    });
+	    $(".containter td").mouseleave(function(){
+	    	var index=$(this).parent().index();
+	    	var indexs=$(".containter tr:nth-last-child(1)").index();	    	
+	    	if(index==indexs){
+	    		$(this).parent().find("td").css({"border-top":"#2b8ba6 solid 1px","border-bottom":"#2b8ba6 solid 1px"});
+	    	}else{
+	    		$(this).parent().find("td").css({"border-top":"#2b8ba6 solid 1px"});
+	    		$(this).parent().next().find("td").css({"border-top":"#2b8ba6 solid 1px"});
+	    	}
+	    	
+	    });
+    </script>
+</body>
+</html>

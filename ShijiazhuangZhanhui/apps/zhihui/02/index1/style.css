@@ -1,0 +1,46 @@
+html,body{
+    width: 1920px;
+    margin: 0;
+    background: #000 url('./img/zhuangshi.png') 103% center no-repeat;
+}
+.containter{
+    width: 1853px;
+    height: 1035px;
+    background: url('./img/bk.png') center center no-repeat;
+    background-size: contain;
+    /* margin: 30px 0 0 40px; */
+    margin: 30px 0 0 0;
+    position: relative;
+}
+.title{
+    color: #0a7cff;
+    font-size: 39px;
+    position: absolute;
+    top: 93px;
+    left: 118px;
+}
+.title span{
+    font-weight: lighter;
+}
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.containter2{
+    background: url('./img/bk2.png') center center no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.charts-box{
+    width: 1602px;
+    height: 363px;
+    position: absolute;
+    top: 250px;
+    left:78px;
+}
+
+.charts-box-one{
+    top: 634px;
+}

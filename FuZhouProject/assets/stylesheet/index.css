@@ -1,0 +1,8 @@
+html,
+body,
+.containter{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a0d10 url('../imgs/bg.png') center center;
+}

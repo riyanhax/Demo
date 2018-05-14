@@ -1,0 +1,283 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 1920px;
+	height: 1080px;
+	overflow: hidden;
+	background-color: #000;
+	color: #FFF;
+	font-family: "微软雅黑";
+}
+.body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #000;
+}
+.contentBox{
+	width: 1839px;
+	height: 1001px;
+	margin-left: 44px;
+	margin-top: 32px;
+	background-image: url(../img/leftTop.png);
+}
+.contentBoxTop{
+	width: 100%;
+	height: 80px;
+}
+.contentBoxTop .contentBoxTittle{
+	width: 490px;
+	height: 100%;
+	float: left;
+	padding-left: 36px;
+	padding-top: 26px;
+}
+.contentBoxTop .contentBoxTittle span{
+	display: inline-block;
+	font-size: 25px;
+}
+.contentBoxTop .contentBoxTittle i{
+	display: inline-block;
+	width: 30px;
+	height: 2px;
+	margin: 0 8px;
+	vertical-align: middle;
+    margin-top: -10px;
+	background: #FFF;
+}
+.contentBoxTop .contentBoxTittle span:nth-last-child(1){
+	color: #fec901;
+}
+.contentBoxTop .contentBoxImg{
+	width: 880px;
+	height: 100%;
+	float: right;
+}
+.contentBoxTop .contentBoxImg p{
+	float: left;
+	height: 100%;
+	text-align: center;
+	width: 450px;
+	line-height: 80px;
+	font-size: 20px;
+	color: #b3b3b3;
+}
+.contentBoxTop .contentBoxImg img{
+	width: 430px;
+	height: 14px;
+	margin-top: 34px;
+	display: inline-block;
+}
+.contentBoxBot{
+	width: 100%;
+	height: 921px;
+	position: relative;
+}
+.contentBoxBot .contentBoxList{
+	width: 100%;
+	height: 168px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	padding-top: 56px;
+	box-sizing: border-box;
+}
+.contentBoxBot .contentBoxList .contentBoxLists{
+	width: 33.22%;
+	height: 56px;
+	border-right: solid 3px rgba(90,90,90,0.8);
+	float: left;
+}
+.contentBoxBot .contentBoxList .contentBoxLists:nth-last-child(1){
+	border: none;
+}
+.contentBoxBot .contentBoxList .contentBoxLists .imgList{
+	width: 44px;
+	height: 53px;
+	display: inline-block;
+	float: left;
+	margin: 2px 30px 1px 90px;
+}
+.contentBoxBot .contentBoxList .contentBoxCent .imgList{
+	width: 48px;
+	height: 49px;
+	display: inline-block;
+	float: left;
+	margin: 2px 30px 1px 115px;
+}
+.contentBoxBot .contentBoxList .contentBoxRight .imgList{
+	width: 48px;
+	height: 49px;
+	display: inline-block;
+	float: left;
+	margin: 2px 30px 1px 115px;
+}
+.contentBoxBot .contentBoxList .contentBoxLists div{
+	float: left;
+	font-size: 26px;
+}
+.contentBoxBot .contentBoxList .contentBoxLists div span{
+	line-height: 56px;
+	float: left;
+	display: inline-block;
+}
+.contentBoxBot .contentBoxList .contentBoxLists div p{
+	display: inline-block;
+	float: left;
+	width: 63px;
+	height: 45px;
+	margin: 5px 20px 5px 30px;
+	background-image:url(../img/indexNum.png);
+}
+.contentBoxBot .contentBoxList .contentBoxLists div p span{
+	display: inline-block;
+	width: 30px;
+	height: 100%;
+	float: left;
+	text-align: center;
+	line-height: 44px;
+	font-size: 28px;
+}
+.contentBoxBot .contentBoxList .contentBoxLists div p span:nth-last-child(1){
+	margin-left: 3px;
+}
+.contentUlList{
+	width: 100%;
+	height: 753px;
+	overflow: hidden;
+	position: absolute;
+	top: 168px;
+}
+.contentUlList li{
+	width: 100%;
+	height: 90px;
+	padding-left: 84px;
+	border-top: solid 2px rgba(58,58,58,0.8);
+}
+.contentUlList li div:nth-child(2){
+	position: relative;
+}
+.contentUlList li div:nth-child(2)::before{
+	content: '';
+	position: absolute;
+	height: 0px;
+	border:1px solid #ffc800;
+	border-color: inherit;
+	width: 98%;
+	top: 12px;
+	z-index: 0;
+}
+.contentUlList li div:nth-child(2)::after{
+	content: '';
+	position: absolute;
+	border:2px solid #ffc800;
+	border-color: inherit;
+	width: 0px;
+	height: 14px;
+	left: 98%;
+	top: 4px;
+	z-index: 0;
+}
+.contentUlList li .content{
+	float: left;
+	height: 100%;
+	width: 350px;
+	font-size: 22px;
+}
+.contentUlList li .content p{
+	position: relative;
+	z-index: 1;
+}
+.contentUlList li .content p:before{
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 100%;
+	background: green;
+}
+.contentUlList li .content p:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	width: 8px;
+	height: 100%;
+	background: green;
+}
+
+.green p::before,
+.green p::after
+{
+	background: #ffc800 !important;
+}
+.contentUlList li .content div{
+	width: 46px;
+	height: 46px;
+	margin-top: 22px;
+	position: relative;
+	float: left;
+	margin-right: 20px;
+}
+.contentUlList li .content div img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.contentUlList li:nth-child(1) .content div img{
+	margin-left: -19px;
+	margin-top: -15px;
+}
+.contentUlList li:nth-child(2) .content div img{
+	margin-left: -18px;
+	margin-top: -18px;
+}
+.contentUlList li:nth-child(3) .content div img{
+	width: 33px;
+	height: 39px;
+	margin-left: -16px;
+	margin-top: -20px;
+}
+.contentUlList li:nth-child(4) .content div img{
+	margin-left: -20px;
+	margin-top: -16px;
+}
+.contentUlList li:nth-child(5) .content div img{
+	margin-left: -18px;
+	margin-top: -21px;
+}
+.contentUlList li:nth-child(6) .content div img{
+	margin-left: -23px;
+	margin-top: -18px;
+}
+.contentUlList li:nth-child(7) .content div img{
+	margin-left: -18px;
+	margin-top: -18px;
+}
+.contentUlList li:nth-child(8) .content div img{
+	margin-left: -18px;
+	margin-top: -16px;
+}
+.contentUlList li .content span{
+	display: inline-block;
+	height: 100%;
+	line-height: 90px;
+}
+.contentUlList li .contentCent{
+	width: 1190px;
+	height: 26px;
+	margin-top: 32px;
+	border: solid 1px #ffc801;
+	box-sizing: border-box;
+}
+.contentUlList li .contentCent p{
+	width: 50%;
+	height: 100%;
+	background: #ffc801;
+}
+.contentUlList li .contentRight{
+	display: inline-block;
+	line-height: 90px;
+	width: auto;
+	margin-left: 20px;
+}

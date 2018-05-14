@@ -1,0 +1,148 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 1920px;
+	height: 1080px;
+	overflow: hidden;
+	background-color: #011E3C;
+}
+.head{
+	height: 137px;
+	width: 100%;
+	background-image: url(../img/img1.png);
+}
+.head .title{
+	color: #fff;
+	font-size: 40px;
+	margin-left: 45px;
+	line-height: 137px;
+	float: left;
+}
+.head .subtitle{
+	color: #9BC0D3;
+	margin-left: 15px;
+	font-size: 26px;
+	float: left;
+	margin-top: 58px;
+}
+.left{
+	width: 530px;
+	margin: 20px 0 0 20px;
+	float: left;
+}
+.left .title{
+	height: 70px;
+	width: 100%;
+	background-image: url(../img/img2.png);
+}
+.left .title .title-left{
+	color: #fff;
+	float: left;
+	font-size: 30px;
+	line-height: 70px;
+	margin-left: 20px;
+}
+.left .title .title-right{
+	color: #fff;
+	float: right;
+	font-size: 24px;
+	margin-right: 20px;
+	margin-top: 35px;
+	
+}
+.left .img{
+	width: 100%;
+	height: 677px;
+	background-color: #00679E;
+	margin-top: 10px;
+}
+.left .img img{
+	height: 657px;
+	width: 510px;
+	margin: 10px 0 0 10px;
+}
+.left .text{
+	height: 140px;
+	width: 100%;
+	margin-top: 10px;
+}
+.left .text .header{
+	height: 42px;
+	width: 100%;
+	background-color: #008BD0;
+	border-bottom: 1px solid #000;
+}
+.left .header .text-title{
+	float: left;
+	width: 33.33%;
+	height: 100%;
+	box-sizing: border-box;
+	color: #fff;
+	text-align: center;
+	line-height: 42px;
+}
+.left .header .text-title p{
+	font-size: 18px;
+}
+.left .header .text-title span{
+	font-size: 16px;
+}
+.left .border{
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+}
+.left .text .val{
+	width: 100%;
+	height: 95px;
+	background-color: #01416F;
+}
+.left .text .text-val{
+	float: left;
+	width: 33.33%;
+	height: 100%;
+	box-sizing: border-box;
+	color: #fff;
+	text-align: center;
+	line-height: 95px;
+	font-size: 45px;
+}
+.right{
+	width: 1360px;
+	height: 904px;
+	float: right;
+	margin-top: 20px;
+}
+.right th{
+	height: 70px;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 100;
+	border:2px solid black;
+	border-top: none;
+	background: linear-gradient(#0089CD, #014674);
+}
+.right .serial{
+	width: 88px;
+	border-left: none;
+}
+.right table{
+    border-collapse: collapse;
+}
+.right td {
+	height: 102px;
+	width: 190px;
+    border:2px solid black;
+    text-align: center;
+    color: #009FE8;
+    font-size: 21px;
+    line-height: 102px;
+}
+.right tr:nth-child(2n+1){
+	background-color: #00335A;
+}
+.right .yellow {
+	background: linear-gradient(#DC8622, #846E47);
+	color: #fff;
+}

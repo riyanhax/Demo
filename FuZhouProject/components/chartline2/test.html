@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>折线图</title>
+    <style>
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+        html,body,.containter{
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="containter"></div>
+    <script src="../../assets/libs/echarts/echarts.min.js"></script>
+    <script src="../../assets/libs/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../assets/libs/zrender/zrender.min.js"></script>
+    <script src="./chartline2.js"></script>
+    <script>
+        var chart = new Chartline2({
+            el:$('.containter').get(0)
+        })
+    </script>
+</body>
+</html>

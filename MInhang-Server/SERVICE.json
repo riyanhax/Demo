@@ -1,0 +1,7 @@
+{
+  "apps" : [{
+    "name"        : "minhang",
+    "script"      : "bin/www",
+    "watch"       : true
+  }]
+}

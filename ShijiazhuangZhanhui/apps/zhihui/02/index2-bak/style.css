@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+}
+.containter{
+    width: 1853px;
+    height: 1035px;
+    background: #010716 url('./img/bg-border.png') center center no-repeat;
+    background-size: contain;
+    margin: 30px 0 0 40px;
+    overflow: hidden;
+}
+.title{
+    color: #fff;
+    font-size: 36px;
+    position: absolute;
+    top: 51px;
+    left: 54px;
+}
+.charts-box{
+    width: 1745px;
+    height: 447px;
+    margin-left: 57px;
+    position: relative;
+}
+
+.charts-box-one{
+    height: 478px;
+    margin-top: 108px;
+}
+.title-info{
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #0750a7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+}
+.title-info span{
+    display: block;
+    width: 154px;
+    height: 40px;
+    color: #0a7cff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #0750a7;
+    border-bottom: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}

@@ -1,0 +1,175 @@
+var rectData = [{
+    bgColor:'#021a3b',
+    borderColor:'#0866d3',
+    x:776,
+    y:231,
+    text:'董事会'
+},
+{
+    bgColor:'#07353b',
+    borderColor:'#1da8a4',
+    x:1130,
+    y:231,
+    text:'监事会'
+},
+{
+    bgColor:'#07353b',
+    borderColor:'#1da8a4',
+    x:151,
+    y:290,
+    text:'董事会秘书室'
+},
+{
+    bgColor:'#07353b',
+    borderColor:'#1da8a4',
+    x:431,
+    y:290,
+    text:'审计部'
+},
+{
+    bgColor:'#07353b',
+    borderColor:'#1da8a4',
+    x:1407,
+    y:453,
+    text:'总监'
+},
+{
+    bgColor:'#07353b',
+    borderColor:'#1da8a4',
+    x:1130,
+    y:453,
+    text:'副总经理'
+},
+{
+    bgColor:'#021a3b',
+    borderColor:'#0866d3',
+    x:776,
+    y:365,
+    text:'总经理'
+},
+{
+    bgColor:'#16241a',
+    borderColor:'#7bb22f',
+    x:151,
+    y:625,
+    text:'行政事务部'
+},
+{
+    bgColor:'#16241a',
+    borderColor:'#7bb22f',
+    x:431,
+    y:625,
+    text:'质量安全部（保卫部）'
+},
+{
+    bgColor:'#16241a',
+    borderColor:'#7bb22f',
+    x:151,
+    y:695,
+    text:'规划发展部'
+},
+{
+    bgColor:'#16241a',
+    borderColor:'#7bb22f',
+    x:431,
+    y:695,
+    text:'服务品质部'
+},
+{
+    bgColor:'#16241a',
+    borderColor:'#7bb22f',
+    x:151,
+    y:765,
+    text:'财务部'
+},
+{
+    bgColor:'#16241a',
+    borderColor:'#7bb22f',
+    x:431,
+    y:765,
+    text:'法律事务部'
+},
+{
+    bgColor:'#16241a',
+    borderColor:'#7bb22f',
+    x:151,
+    y:835,
+    text:'人力资源部'
+},
+{
+    bgColor:'#16241a',
+    borderColor:'#7bb22f',
+    x:431,
+    y:835,
+    text:'党群工作部'
+},
+{
+    bgColor:'#29221b',
+    borderColor:'#f9b232',
+    x:785,
+    y:625,
+    text:'飞行区管理部'
+},
+{
+    bgColor:'#29221b',
+    borderColor:'#f9b232',
+    x:785,
+    y:695,
+    text:'航站楼东区管理部'
+},
+{
+    bgColor:'#29221b',
+    borderColor:'#f9b232',
+    x:785,
+    y:765,
+    text:'航站楼西区管理部'
+},
+{
+    bgColor:'#29221b',
+    borderColor:'#f9b232',
+    x:785,
+    y:835,
+    text:'公共区管理部'
+},
+{
+    bgColor:'#082136',
+    borderColor:'#2c9fd5',
+    x:1407,
+    y:625,
+    text:'市场部'
+},
+{
+    bgColor:'#082136',
+    borderColor:'#2c9fd5',
+    x:1407,
+    y:695,
+    text:'运行控制中心'
+},
+{
+    bgColor:'#082136',
+    borderColor:'#2c9fd5',
+    x:1128,
+    y:625,
+    text:'技术采购部'
+},
+{
+    bgColor:'#082136',
+    borderColor:'#2c9fd5',
+    x:1407,
+    y:765,
+    text:'机场建设部'
+},
+{
+    bgColor:'#082136',
+    borderColor:'#2c9fd5',
+    x:1128,
+    y:695,
+    text:'信息技术部'
+},
+{
+    bgColor:'#082136',
+    borderColor:'#2c9fd5',
+    x:1407,
+    y:835,
+    text:'消防支队'
+}]

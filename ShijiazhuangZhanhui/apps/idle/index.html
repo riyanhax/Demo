@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空闲态</title>
+    <link rel="stylesheet" href="../../assets/css/style.css?a=1">
+    <link rel="stylesheet" href="./style.css?a=1">
+
+
+</head>
+<body onload="Tools.fitScreen(7680,2160)">
+<div class="container" id="background">
+    <div class="header">
+        <div class="center">
+            <div class="button b0" data-index="0">城市火眼</div>
+            <div class="button b1" data-index="1">快展</div>
+           <!-- <div class="button b2" data-index="2">能源</div>-->
+        </div>
+        <div class="headList">
+        	<p>快展+安全</p>
+        	<p>快展+交管</p>
+        	<p>快展+空管</p>
+        	<p>快展+机场</p>
+        	<p>快展+煤矿</p>
+        	<p>快展+新能源</p>
+        	<p>快展+金融</p>
+        	<p>快展+电商</p>
+        </div>
+        <div class="desc ">
+            <div class="arrow"></div>
+            <div class="content">
+
+            </div>
+        </div>
+        <div class="logo"></div>
+        <div class="date">
+            <div class="year">2018.4</div>
+            <div class="day">
+                <div class="date">周三 周四 周五</div>
+                <div class="week">11&nbsp;&nbsp;/&nbsp;&nbsp;12&nbsp;/&nbsp;&nbsp;13</div>
+            </div>
+        </div>
+    </div>
+
+    <video class="container" id="videobg" style="z-index: 0"></video>
+
+</div>
+
+
+<div class="animate cityLeft normal"></div>
+<div class="animate cityLeft loop"></div>
+<div class="animate cityRight normal"></div>
+<div class="animate cityRight loop"></div>
+
+<script>if (typeof module === 'object') {
+    window.module = module;
+    module = undefined;
+}</script>
+<script src="../../assets/libs/jquery/jquery-2.1.1.min.js"></script>
+<script src="../../assets/libs/zoolon/Tools.js"></script>
+<script src="../../assets/libs/zoolon/DaemonClient.js"></script>
+
+<script src="script.js"></script>
+<script>if (window.module) module = window.module;</script>
+</body>
+</html>

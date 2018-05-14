@@ -1,0 +1,201 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 1920px;
+	height: 1080px;
+	overflow: hidden;
+	background-color: #000;
+	color: #FFF;
+	font-family: "微软雅黑";
+}
+.body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #000;
+}
+.contentBox{
+	width: 1839px;
+	height: 1002px;
+	margin-left: 44px;
+	margin-top: 32px;
+	background-image: url(../img/leftBot.png);
+}
+.contentBoxTop{
+	width: 100%;
+	height: 80px;
+}
+.contentBoxTop .contentBoxTittle{
+	width: 540px;
+	height: 100%;
+	float: left;
+	padding-left: 36px;
+	padding-top: 26px;
+	box-sizing: border-box;
+}
+.contentBoxTop .contentBoxTittle span{
+	display: inline-block;
+	font-size: 25px;
+}
+.contentBoxTop .contentBoxTittle i{
+	display: inline-block;
+	width: 30px;
+	height: 2px;
+	margin: 0 8px;
+	vertical-align: middle;
+    margin-top: -10px;
+	background: #FFF;
+}
+.contentBoxTop .contentBoxTittle span:nth-last-child(1){
+	color: #fec901;
+}
+.contentBoxTop .contentBoxImg{
+	width: 880px;
+	height: 100%;
+	float: right;
+}
+.contentBoxTop .contentBoxImg p{
+	float: left;
+	height: 100%;
+	text-align: center;
+	width: 450px;
+	line-height: 80px;
+	font-size: 20px;
+	color: #b3b3b3;
+}
+.contentBoxTop .contentBoxImg img{
+	width: 430px;
+	height: 14px;
+	margin-top: 34px;
+	display: inline-block;
+}
+.contentBoxBot{
+	width: 100%;
+	height: 921px;
+	position: relative;
+}
+.contentBoxBot .contentBoxList{
+	width: 100%;
+	height: 94px;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-bottom: solid 2px rgba(128,128,128,0.8);
+}
+.contentBoxList p{
+	float: left;
+	height: 94px;
+	width: 15%;
+	line-height: 92px;
+	font-size: 22px;
+	text-align: center;
+}
+.contentBoxList p:nth-last-child(1){
+	width: 40%;	
+}
+.contentUlList{
+	width: 100%;
+	height: 827px;
+	overflow: hidden;
+}
+.contentUlList li{
+	width: 100%;
+	height: 90px;
+	border-bottom: solid 2px rgba(58,58,58,0.8);
+	cursor: pointer;
+}
+.contentUlList li:hover{
+	background: #333333;
+}
+.contentUlList li:nth-last-child(1){
+	border: none;
+}
+.contentUlList div{
+	width: 15%;
+	float: left;
+	height: 92px;
+	line-height: 90px;
+	text-align: center;
+	font-size: 22px;
+}
+.contentUlList div:nth-last-child(1){
+	width: 40%;
+}
+.contentCent p{
+	width: 320px;
+	height: 26px;
+	box-sizing: border-box;
+	margin-top: 32px;
+	float: left;
+	margin-left: 200px;
+	position: relative;
+}
+.contentCent p:before{
+	content: '';
+	position: absolute;
+	height: 0px;
+	border:1px solid #ffc800;
+	width: 100%;
+	left: 0;
+	top: 12px;
+	z-index: 0;
+}
+.contentCent p:after{
+	content: '';
+	position: absolute;
+	border:2px solid #ffc800;
+	width: 0px;
+	height: 14px;
+	left: 100%;
+	top: 4px;
+	z-index: 0;
+}
+.contentCent p i{
+	display: inline-block;
+	height: 100%;
+	width: 50%;
+	float: left;
+	background: #ffc801;
+	position: relative;
+}
+.contentCent p i:before{
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	background: green;
+}
+.contentCent p i:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	width: 8px;
+	height: 100%;
+	background: green;
+}
+.contentCent span{
+	display: inline-block;
+	height: 92px;
+	line-height: 90px;
+	float: left;
+	margin-left: 20px;
+}
+
+.contentUlList li.green{
+	color: green;
+}
+.contentUlList li.green .contentCent i
+{
+	background: green !important;
+}
+.contentUlList li.green .contentCent p:after,
+.contentUlList li.green .contentCent p:before{
+	border-color:green;
+}
+.contentUlList li.green .contentCent i:after,
+.contentUlList li.green .contentCent i:before{
+	background:#ffc801 !important;
+}
