@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>开始Electron</title>
+	<link rel="stylesheet" type="text/css" href="./public/css/botstrap.min.css">
+</head>
+<body>
+	<div class="container" id="app"> 
+
+		<ul class="list-group">
+		  <li class="list-group-item" v-for="msg in message">{{msg.msg}}</li>
+		</ul>
+
+		<textarea cass="form-control" rows="3" v-model="content"></textarea>
+		<button class="btn btn-default" @click="sendMsg">发送</button>
+
+	</div>
+</body>
+<script src="public/js/vue.min.js"></script>
+<script src="http://cdn.bootcss.com/socket.io/1.7.3/socket.io.min.js"></script>
+<script>
+  var socket = io('http://localhost:8888');
+
+  var app = new Vue({
+  	el:'#app',
+  	data:{
+  		message:[],
+  		content:''
+  	},
+  	methods:{
+  		sendMsg:function(){
+  			var message = { msg: this.content };
+  			socket.emit('listen', message);
+  			this.message.push(message);
+  			this.content = '';
+  		}
+  	},
+  	mounted:function(){
+  		var _this = this;
+  		this.$nextTick(function(){
+  			socket.on('say', function (data) {
+  			  _this.message.push(data)
+  			});
+  		})
+  	}
+  });
+</script>
+</html>

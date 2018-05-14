@@ -1,0 +1,12 @@
+{
+	"code":"200",
+	"message":"success",
+	"data":[
+		{
+			"present":"81.74",
+			"totalCount":"3286",
+			"successCount":"2686",
+			"useTime":"0.0170"
+		}
+	]
+}

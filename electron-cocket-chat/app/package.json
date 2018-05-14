@@ -1,0 +1,19 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "main": "main.js",
+  "scripts":{
+    "start":"electron .",
+    "packager":"electron-packager ./ app --win32-x64 --out ../ --version 1.4.13 --overwrite"
+  },
+  "dependencies": {
+    "koa": "^2.2.0",
+    "koa-router": "3.4.0",
+    "koa-views": "^4.1.0",
+    "koa-static": "2.0.0",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.6.0"
+  }
+}

@@ -1,0 +1,1 @@
+{"code":"200","message":"success","data":[{"sourceType":"Hive","persent":"17.00"},{"sourceType":"HBase","persent":"21.00"},{"sourceType":"Mongo","persent":"15.00"},{"sourceType":"ES","persent":"23.00"},{"sourceType":"Gluster","persent":"25.00"}]}

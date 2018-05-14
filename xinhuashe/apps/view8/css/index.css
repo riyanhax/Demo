@@ -1,0 +1,24 @@
+html,body{
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	background: #000014;
+}
+
+.chart-top{
+	width: 1800px;
+	height: 250px;
+	background: #000014;
+	position: absolute;
+	top:117px;
+	left:60px;
+}
+
+.chart-bottom{
+	width: 1800px;
+	height: 625px;
+	background: #131126;
+	position: absolute;
+	left: 60px;
+	bottom:63px;
+}

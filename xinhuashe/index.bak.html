@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin:0;padding: 0;}
+		body{
+			width: 100%;
+			height: 100%;
+			background: #000;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="factory" width="2500" height="1406"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById('factory');
+		var ctx = canvas.getContext('2d');
+		var imgs = [];
+		var imgsrc = [];
+
+		var p = new Promise(function(resolve,reject){
+
+			var total = 0;
+			for(var i=0;i<168;i++){
+
+				var name = getImgName(i);
+				imgsrc.push(name);
+			}
+
+			for(var i=0;i<imgsrc.length;i++){
+				var img = new Image();
+				img.src = imgsrc[i];
+				img.onload = function(){
+					imgs.push(this);
+					total++;
+					ctx.beginPath();
+					ctx.clearRect(0,0,canvas.width,canvas.height);
+					ctx.fillStyle = '#fff';
+					ctx.textAlign = 'center';
+					ctx.font = '30px Microsoft YaHei';
+					ctx.fillText('加载中...'+~~(total/168*100)+'%',1250,703);
+					if(total>=168){
+						ctx.clearRect(0,0,canvas.width,canvas.height);
+						ctx.fillText('加载中...100%',1250,703);
+						resolve('ok')
+					}
+				}
+
+				
+			}
+		});
+		
+
+		function getImgName(index){
+
+			var num = 5-index.toString().length;
+			var str = '';
+
+			for(var i=0;i<num;i++){
+				str+='0';
+			}
+			return './shuchu/zuizhong_00000_'+str+index+'.png';
+		}
+
+		p.then(function(msg){
+			var index = 0;
+			setInterval(function(){
+				index++;
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+				ctx.drawImage(imgs[index%168],0,0,canvas.width,canvas.height);
+			},1000/60)
+		});
+
+		
+	</script>
+</body>
+</html>
