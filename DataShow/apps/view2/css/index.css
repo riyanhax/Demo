@@ -1,0 +1,67 @@
+body{
+	width: 100%;
+	height:100%;
+	background: #000014;
+	overflow: hidden;
+	font-family: 'Microsoft YaHei';
+}
+
+.chart-top{
+	width: 1835px;
+	height:565px;
+	position: absolute;
+	top:152px;
+	left:58px;
+}
+
+.chart-text{
+	position: absolute;
+	width: 100%;
+	height:565px;
+	color:#fff;
+	padding: 0;
+	margin:0;
+}
+
+.chart-text li{
+	list-style: none;
+	display: block;
+	float: left;
+	width: 290px;
+	margin-top: 160px;
+	margin-right: 19px;
+	text-align: center;
+	font-size: 42px;
+}
+.chart-text li span{
+	font-size: 32px;
+}
+
+.chart-text li:last-child{
+	margin-right: 0;
+}
+
+.chart-title{
+	width: 595px;
+	height:65px;
+	position: absolute;
+	top:70px;
+	left:50%;
+	margin-left: -297.5px;
+	color:#fff;
+	text-align: center;
+	line-height: 65px;
+	font-size: 24px;
+}
+
+.chart-title span{
+	font-size: 50px;
+}
+
+.chart-bottom{
+	width: 1835px;
+	height: 285px;
+	position: absolute;
+	left: 58px;
+	bottom: 62px;
+}

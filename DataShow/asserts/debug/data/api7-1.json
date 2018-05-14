@@ -1,0 +1,12 @@
+{
+    "code":"200",
+    "message":"success",
+    "data":[
+        {
+            "userSeqId":"CH_201704134100903970",
+            "groupName":"其他",
+            "groupID":null,
+            "number":"1"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "code":"200",
+    "message":"success",
+    "data":[
+        {
+            "number":26,
+            "mediaTypeName":"文本"
+        },
+        {
+            "number":7,
+            "mediaTypeName":"多媒体"
+        },
+        {
+            "number":7,
+            "mediaTypeName":"图片"
+        },
+        {
+            "number":3,
+            "mediaTypeName":"视频"
+        },
+        {
+            "number":2,
+            "mediaTypeName":"图表"
+        },
+        {
+            "number":1,
+            "mediaTypeName":"音频"
+        }
+    ]
+}

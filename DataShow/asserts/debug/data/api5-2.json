@@ -1,0 +1,28 @@
+{
+    "code":"200",
+    "message":"success",
+    "data":{
+        "accessTime":[
+            {
+                "label_value":"7点-9点",
+                "cover_num":21
+            },
+            {
+                "label_value":"2点-6点",
+                "cover_num":24
+            },
+            {
+                "label_value":"21点-1点",
+                "cover_num":43
+            },
+            {
+                "label_value":"10点-12点",
+                "cover_num":168
+            },
+            {
+                "label_value":"17点-20点",
+                "cover_num":219
+            }
+        ]
+    }
+}

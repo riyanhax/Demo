@@ -1,0 +1,137 @@
+{
+  "code": "200",
+  "message": "success",
+  "data": {
+    "totalcount": 397259,
+    "count": [
+      {
+        "subscription": [
+          {
+            "apiId": 10043,
+            "apiName": "获取单篇稿件详情",
+            "url": "/data/dataService/getRes",
+            "apiType": "数据订阅服务",
+            "accessCount": 74599,
+            "useTime": 19,
+            "accessDay": "2017-04-26",
+            "dayCount": 0
+          },
+          {
+            "apiId": 10044,
+            "apiName": "获取单篇稿件流转记录",
+            "url": "/data/dataService/getResProcess",
+            "apiType": "数据订阅服务",
+            "accessCount": 38153,
+            "useTime": 40,
+            "accessDay": "2017-04-26",
+            "dayCount": 0
+          },
+          {
+            "apiId": 10046,
+            "apiName": "获取分类",
+            "url": "/data/dataService/getAllCatgory",
+            "apiType": "数据订阅服务",
+            "accessCount": 35996,
+            "useTime": 26,
+            "accessDay": "2017-04-26",
+            "dayCount": 0
+          }
+        ],
+        "tag": [],
+        "thirdparty": [],
+        "semantic": [
+          {
+            "apiId": 10077,
+            "apiName": "敏感词检测",
+            "url": "/data/semanticAnalysisService/SensitiveRec",
+            "apiType": "基础中文语义分析",
+            "accessCount": 112325,
+            "useTime": 56,
+            "accessDay": "2017-04-26",
+            "dayCount": 0
+          },
+          {
+            "apiId": 10011,
+            "apiName": "主题词",
+            "url": "/data/semanticAnalysisService/TextTopicwords",
+            "apiType": "基础中文语义分析",
+            "accessCount": 11690,
+            "useTime": 618,
+            "accessDay": "2017-04-26",
+            "dayCount": 77
+          },
+          {
+            "apiId": 10006,
+            "apiName": "分词,词性标注",
+            "url": "/data/semanticAnalysisService/LexicalAnalysis",
+            "apiType": "基础中文语义分析",
+            "accessCount": 6939,
+            "useTime": 1123,
+            "accessDay": "2017-04-26",
+            "dayCount": 92
+          }
+        ],
+        "retrieval": [
+          {
+            "apiId": 10003,
+            "apiName": "社内稿件全文检索",
+            "url": "/data/searchService/multiSearch",
+            "apiType": "全文检索服务",
+            "accessCount": 6665,
+            "useTime": 77,
+            "accessDay": "2017-04-26",
+            "dayCount": 1236
+          },
+          {
+            "apiId": 10054,
+            "apiName": "互联网全文检索",
+            "url": "/data/searchService/internetMultiSearch",
+            "apiType": "全文检索服务",
+            "accessCount": 3669,
+            "useTime": 24,
+            "accessDay": "2017-04-26",
+            "dayCount": 1112
+          },
+          {
+            "apiId": 10073,
+            "apiName": "智能检索-检索词纠错",
+            "url": "/data/searchService/suggest",
+            "apiType": "全文检索服务",
+            "accessCount": 430,
+            "useTime": 61,
+            "accessDay": "2017-04-26",
+            "dayCount": 0
+          }
+        ],
+        "recommendCount": 331,
+        "subscriptionCount": 186147,
+        "semanticCount": 161081,
+        "retrievalCount": 11101,
+        "recommend": [
+          {
+            "apiId": 10013,
+            "apiName": "稿件内容推荐",
+            "url": "/data/recommendedService/getRecommendedByContent",
+            "apiType": "推荐引擎服务",
+            "accessCount": 187,
+            "useTime": 487,
+            "accessDay": "2017-04-26",
+            "dayCount": 0
+          },
+          {
+            "apiId": 10032,
+            "apiName": "用户行为推荐",
+            "url": "/data/recommendedService/getRecommendedByAction",
+            "apiType": "推荐引擎服务",
+            "accessCount": 144,
+            "useTime": 38,
+            "accessDay": "2017-04-26",
+            "dayCount": 0
+          }
+        ],
+        "thirdpartyCount": 0,
+        "tagCount": 0
+      }
+    ]
+  }
+}

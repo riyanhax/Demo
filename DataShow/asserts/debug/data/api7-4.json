@@ -1,0 +1,18 @@
+{
+    "code":"200",
+    "message":"success",
+    "data":[
+        {
+            "number":1,
+            "TAG":"less"
+        },
+        {
+            "number":0,
+            "TAG":"often"
+        },
+        {
+            "number":0,
+            "TAG":"occasionally"
+        }
+    ]
+}

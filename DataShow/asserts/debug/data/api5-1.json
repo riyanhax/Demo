@@ -1,0 +1,24 @@
+{
+    "code":"200",
+    "message":"success",
+    "data":{
+        "accessFrequent":[
+            {
+                "label_value":"偶尔",
+                "cover_num":56
+            },
+            {
+                "label_value":"经常",
+                "cover_num":79
+            },
+            {
+                "label_value":"很少",
+                "cover_num":131
+            },
+            {
+                "label_value":"频繁",
+                "cover_num":252
+            }
+        ]
+    }
+}

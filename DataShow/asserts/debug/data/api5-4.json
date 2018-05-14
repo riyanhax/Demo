@@ -1,0 +1,26 @@
+{
+    "code":"200",
+    "message":"success",
+    "data":[
+        {
+            "province":"北京",
+            "number":28
+        },
+        {
+            "province":"南京",
+            "number":6
+        },
+        {
+            "province":"天津",
+            "number":1
+        },
+        {
+            "province":"QT",
+            "number":28295
+        },
+        {
+            "province":"湖北省",
+            "number":1
+        }
+    ]
+}

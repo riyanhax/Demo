@@ -1,0 +1,9 @@
+{
+  "version": "0.0.0",
+  "name": "xinhuashe",
+  "main": "main.js",
+  "scripts":{
+    "start":"electron .",
+    "packager":"electron-packager ./ app --platform=win32 --arch=x64 --out ../ --version 1.6.10 --overwrite --asar"
+  }
+}

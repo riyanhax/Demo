@@ -1,0 +1,30 @@
+{
+    "code":"200",
+    "message":"success",
+    "data":[
+        {
+            "time":"0点-6点",
+            "number":1
+        },
+        {
+            "time":"7点-9点",
+            "number":1
+        },
+        {
+            "time":"10点-12点",
+            "number":0
+        },
+        {
+            "time":"13点-16点",
+            "number":0
+        },
+        {
+            "time":"17点-20点",
+            "number":0
+        },
+        {
+            "time":"21点-24点",
+            "number":0
+        }
+    ]
+}

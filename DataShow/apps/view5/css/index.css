@@ -1,0 +1,126 @@
+body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #000014;
+	font-family: 'Microsoft YaHei';
+}
+
+.chart-left{
+	position: absolute;
+	top:116px;
+	left: 60px;
+	width: 898px;
+	height:907px;
+}
+
+.chart-left .top{
+	position: relative;
+	height: 482px;
+}
+
+.chart-left .bottom{
+	width: 100%;
+	height: 405px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #131126;
+}
+
+.chart-left .bottom .title{
+	width: 100%;
+	height: 205px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.chart-left .bottom .chart{
+	width: 100%;
+	height: 280px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.chart-left .top .left{
+	width: 310px;
+	height: 100%;
+	background: #131126;
+
+}
+
+.chart-left .top .right{
+	width: 570px;
+	height: 100%;
+	position: absolute;
+	top:0;
+	right:0;
+	background: #131126;
+}
+
+.chart-right{
+	position: absolute;
+	top:116px;
+	right: 30px;
+	width: 898px;
+	height:907px;
+}
+
+.chart-right .top{
+	position: relative;
+	height: 482px;
+}
+
+.chart-right .top .left{
+	width: 570px;
+	height: 100%;
+	background: #131126;
+}
+
+.chart-right .top .right{
+	width: 310px;
+	height: 100%;
+	background: #131126;
+	position: absolute;
+	top:0;
+	right: 0;
+}
+
+.chart-right .bottom{
+	width: 100%;
+	height: 405px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #131126;
+}
+
+.chart-right .bottom .title,.chart-left .bottom .title,.chart-left .top .title,.chart-right .top .title{
+	width: 100%;
+	height: 97px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.chart-right .bottom .chart{
+	width: 100%;
+	height: 280px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.rose-chart{
+	width: 100%;
+	height: 373px;
+	position: absolute;
+	left:0;
+	bottom: 0;
+}
+
+.chart-left .top .left,.chart-right .top .left{
+	position: relative;
+}

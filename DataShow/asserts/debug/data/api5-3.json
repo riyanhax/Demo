@@ -1,0 +1,24 @@
+{
+    "code":"200",
+    "message":"success",
+    "data":{
+        "averageStayLength":[
+            {
+                "label_value":"短",
+                "cover_num":22
+            },
+            {
+                "label_value":"长",
+                "cover_num":42
+            },
+            {
+                "label_value":"很短",
+                "cover_num":189
+            },
+            {
+                "label_value":"很长",
+                "cover_num":265
+            }
+        ]
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "code":"200",
+    "message":"success",
+    "data":[
+        {
+            "number":14,
+            "columnCategoryName":"其它"
+        },
+        {
+            "number":12,
+            "columnCategoryName":"未知栏目"
+        },
+        {
+            "number":9,
+            "columnCategoryName":"体育"
+        },
+        {
+            "number":7,
+            "columnCategoryName":"时政"
+        },
+        {
+            "number":7,
+            "columnCategoryName":"经济"
+        },
+        {
+            "number":5,
+            "columnCategoryName":"国际"
+        },
+        {
+            "number":5,
+            "columnCategoryName":"社会"
+        }
+    ]
+}

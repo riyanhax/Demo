@@ -1,0 +1,26 @@
+{
+    "code":"200",
+    "message":"success",
+    "data":[
+        {
+            "productCategoryName":"通稿新闻线路",
+            "number":21,
+            "productCategoryId":"c0030002"
+        },
+        {
+            "productCategoryName":"对外中文专线",
+            "number":12,
+            "productCategoryId":"c0030015"
+        },
+        {
+            "productCategoryName":"中文亚太线",
+            "number":12,
+            "productCategoryId":"c0030017"
+        },
+        {
+            "productCategoryName":"新媒体专线",
+            "number":8,
+            "productCategoryId":"c0030173"
+        }
+    ]
+}
