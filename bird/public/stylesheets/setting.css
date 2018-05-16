@@ -1,0 +1,175 @@
+.setting-wrap{
+  width: 497px;
+  height: 477px;
+  background: rgba(0,0,0,0.9) url(../images/setting-border.png) center center no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -238px 0 0 -248px;
+  border-radius: 20px;
+  animation:scale .5s;
+}
+.setting-wrap .caption{
+  margin-top: 15px;
+  margin-left: 35px;
+  color: #ea5514;
+  position: relative;
+}
+.setting-wrap .caption::after{
+  content: '';
+  display: block;
+  width: 5px;
+  height: 20px;
+  background:  #ea5514;
+  position: absolute;
+  top: 2px;
+  left: -15px;
+}
+.setting-wrap .close-btn{
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
+.setting-wrap dl{
+  margin: 15px 0 0 35px;
+  font-size: 14px;
+}
+.setting-wrap dl dt{
+  color: #EA5514;
+  margin-bottom: 20px;
+}
+.setting-wrap dl dd{
+  color: #0A7CFF;
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+.setting-wrap dl dd.range{
+  margin-bottom: 4px;
+}
+.setting-wrap dl dd.muilt-range input:nth-child(2),
+.setting-wrap dl dd.muilt-range input:nth-child(3){
+  margin-left: 0;
+}
+.setting-wrap dl dd.last-range{
+  margin-bottom: 20px;
+}
+.setting-wrap dl dd > div{
+  float: left;
+}
+.setting-wrap dl dd .name{
+  width: 140px;
+  height: 22px;
+  line-height: 22px;
+}
+.setting-wrap dl dd .value input.number{
+  width: 75px;
+  height: 22px;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #0A7CFF;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #00ADFE;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+.setting-wrap dl dd .value input{
+  color: #00ADFE;
+  padding-left: 5px;
+  box-sizing: border-box;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #0A7CFF;
+  width: 56px;
+  height: 22px;
+  margin-left: 18px;
+  outline: none;
+}
+.setting-wrap dl dd .value input.grid{
+  width: 95px;
+}
+.setting-wrap dl dd .value{
+  position: relative;
+}
+.setting-wrap dl dd .value select{
+  width: 47px;
+  height: 22px;
+  line-height: 22px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #0A7CFF;
+  text-align: right;
+}
+.setting-wrap dl dd .value select option{
+  background:#000;
+  border: none !important;
+  outline: none;
+}
+.setting-wrap dl dd .value .arrow-up{
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid #00ADFE;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  position: absolute;
+  top: 2px;
+  left: 75px;
+  cursor: pointer;
+}
+.setting-wrap dl dd .value .arrow-down{
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 4px solid #00ADFE;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  position: absolute;
+  bottom: 0;
+  left: 75px;
+  cursor: pointer;
+}
+.setting-wrap .confirm,
+.setting-wrap .cancel{
+  width: 56px;
+  height: 22px;
+  border: 1px solid #0A7CFF;
+  border-radius: 5px;
+  color: #0A7CFF;
+  position: absolute;
+  bottom: 15px;
+  left: 178px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 22px;
+  cursor: pointer;
+}
+.setting-wrap .cancel{
+  left: 258px;
+}
+@keyframes scale
+{
+  from {transform: scale(0);opacity: 0;}
+  to {transform: scale(1);opacity: 1;}
+}
+@keyframes scale-out
+{
+  from {transform: scale(1);opacity: 1;}
+  to {transform: scale(0);opacity: 0;}
+}
+.scale-out{
+  animation:scale-out .5s;
+  transform: scale(0);opacity: 0;
+}

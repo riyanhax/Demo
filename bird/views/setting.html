@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/setting.css">
+</head>
+<body>
+  <div class="setting-wrap" id="setting-wrap">
+    <div class="caption">
+      系统设置
+    </div>
+    <div class="close-btn" id="close-btn">
+      <img src="../images/close.png" alt="">
+    </div>
+    <dl>
+      <dt>报警阈值设置</dt>
+      <dd>
+        <div class="name">煤气炮气罐压力</div>
+        <div class="value">≤<span class="arrow-up"></span><input type="text" value="11" class="number pressure"/><span class="arrow-down"></span>MPa</div>
+      </dd>
+      <dd>
+        <div class="name">设备电压</div>
+        <div class="value">≤<span class="arrow-up"></span><input type="text" readonly value="11" class="number voltage"/><span class="arrow-down"></span>V</div>
+      </dd>
+      <dt>驱鸟设备作用范围</dt>
+      <dd class="range">
+        <div class="name">煤气炮</div>
+        <div class="value"><input type="text" value="11" class="scope_meiqipao" />米</div>
+      </dd>
+      <dd class="range">
+        <div class="name">移动式太阳能声波驱鸟器</div>
+        <div class="value"><input type="text" value="11" class="scope_yidongshengbo" />米</div>
+      </dd>
+      <dd class="range">
+        <div class="name">全向声波驱鸟器</div>
+        <div class="value"><input type="text" value="11" class="scope_quanxiangshengbo" />米</div>
+      </dd>
+      <dd class="range muilt-range">
+        <div class="name">定向声波驱鸟器</div>
+        <div class="value"><input type="text" value="11" class="scope_dingxiangshengbo" />米   半角 <input type="text" value="11" class="scope_dingxiangshengbo_banjiao"/>° 方位角 <input type="text" value="11" class="scope_dingxiangshengbo_fangweijiao"/>°</div>
+      </dd>
+      <dd class="range last-range">
+        <div class="name">声音驱鸟系统</div>
+        <div class="value"><input type="text" value="11" class="scope_shengyin" />米</div>
+      </dd>
+      <dt class="hide">网格大小</dt>
+      <dd class="hide">
+        <div class="name">网格线间隔</div>
+        <div class="value">
+            <input type="text" value="" class="grid grid_interval" />
+            <select class="" name="">
+              <option value="0">米</option>
+              <option value="1">厘米</option>
+            </select>
+        </div>
+      </dd>
+    </dl>
+    <div class="confirm" id="confirm">确认</div>
+    <div class="cancel" id="cancel">取消</div>
+  </div>
+  <script type="text/javascript" src="../javascripts/common.js"></script>
+  <script src="/javascripts/setting.js"></script>
+</body>
+</html>

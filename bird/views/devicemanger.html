@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/devicemanger.css">
+</head>
+<body>
+    <div class="divice-wrap" id="device-wrap">
+
+      <div class="caption">
+        设备管理
+      </div>
+      <div class="close-btn" id="close-btn">
+        <img src="../images/close.png" alt="">
+      </div>
+
+      <ul>
+        <li>
+            <div class="title">
+              <div class="left">
+                <img src="../images/device-title01.png" alt="">
+              </div>
+              煤气炮
+              <div class="right"></div>
+            </div>
+            <div class="addBtn">添加设备</div>
+            <ol>
+            </ol>
+        </li>
+        <li>
+            <div class="title">
+              <div class="left">
+                <img src="../images/device-title02.png" alt="">
+              </div>
+              移动式太阳能声波驱鸟
+              <div class="right"></div>
+            </div>
+            <div class="addBtn">添加设备</div>
+            <ol>
+
+            </ol>
+        </li>
+        <li>
+            <div class="title">
+              <div class="left">
+                <img src="../images/device-title03.png" alt="">
+              </div>
+              全向声波驱鸟器
+              <div class="right"></div>
+            </div>
+            <div class="addBtn">添加设备</div>
+            <ol>
+
+            </ol>
+        </li>
+        <li>
+            <div class="title">
+              <div class="left">
+                <img src="../images/device-title04.png" alt="">
+              </div>
+              定向声波驱鸟器
+              <div class="right"></div>
+            </div>
+            <div class="addBtn">添加设备</div>
+            <ol>
+
+            </ol>
+        </li>
+        <li>
+            <div class="title">
+              <div class="left">
+                <img src="../images/device-title05.png" alt="">
+              </div>
+              声音驱鸟系统
+              <div class="right"></div>
+            </div>
+            <div class="addBtn">添加设备</div>
+            <ol>
+
+            </ol>
+        </li>
+      </ul>
+    </div>
+    <script id="device-tml" type="text/template">
+      <div class="device-name">
+        <span>名称</span>
+        <input type="text" value="" readonly>
+      </div>
+      <div class="device-id">
+        <span>ID</span>
+        <input type="text" value="" readonly>
+      </div>
+      <div class="btn-edit"></div>
+      <div class="btn-remove"></div>
+      <div class="btn-save"></div>
+    </script>
+    <script type="text/javascript" src="../javascripts/common.js"></script>
+    <script src="/javascripts/devicemanger.js"></script>
+</body>
+</html>

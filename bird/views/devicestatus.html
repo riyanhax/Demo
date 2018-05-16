@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/devicestatus.css">
+</head>
+<body>
+    <div class="status-wrap" id="status-wrap">
+        <ul class="top-menu">
+          <li class="active">煤气炮</li>
+          <li>移动式太阳能声波驱鸟器</li>
+          <li>全向声波驱鸟器</li>
+          <li>定向声波驱鸟</li>
+          <li>声音驱鸟系统</li>
+          <li>发射器及席位主机</li>
+          <li>全部设备</li>
+        </ul>
+        <ul class="device-list">
+
+        </ul>
+        <div class="close-btn" id="close-btn">
+          <img src="../images/close.png" alt="">
+        </div>
+    </div>
+    <script type="text/template" id="template">
+      <div class="info">
+        <div>
+          <span class="name">名称</span>
+          <span class="content"></span>
+        </div>
+        <div>
+          <span class="name">ID</span>
+          <span class="content"></span>
+        </div>
+        <div>
+            <span class="name">电压</span>
+            <span class="content">225.37(v)</span>
+        </div>
+        <div>
+            <span class="name">气压</span>
+            <span class="content"></span>
+        </div>
+      </div>
+      <div class="status fault">运行</div>
+    </script>
+    <script type="text/javascript" src="../javascripts/common.js"></script>
+    <script src="/javascripts/devicestatus.js"></script>
+</body>
+</html>

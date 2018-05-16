@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/info.css">
+</head>
+<body>
+  <div class="info-wrap">
+    <img src="../images/info-close.png" alt="" class="close-btn">
+    <dl>
+      <dt>UI设计</dt>
+      <dd class="full">孙鹏</dd>
+      <dt>软件开发</dt>
+      <div class="full">
+        <dd>路铭</dd>
+        <dd>王凤权</dd>
+        <dd>刘倩</dd>
+        <dd>王宏宇</dd>
+        <dd>王帅</dd>
+      </div>
+      <dt>技术支持</dt>
+      <dd class="full">北京祝融视觉科技股份有限公司</dd>
+    </dl>
+  </div>
+  <script type="text/javascript" src="../javascripts/common.js"></script>
+  <script type="text/javascript">
+    document.querySelector('.close-btn').onclick = function(){
+      document.querySelector('.info-wrap').classList.add('scale-out');
+      setTimeout(function(){
+        location.hash = '{closeWindow:true}';
+      },500);
+    }
+  </script>
+</body>
+</html>

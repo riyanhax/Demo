@@ -1,0 +1,354 @@
+.bird-wrap{
+  width: 1600px;
+  height: 670px;
+  background:rgba(1,9,25,0.9);
+  margin: -335px auto 0;
+  position: relative;
+  top:50%;
+  border: 1px solid #006dff;
+  border-radius: 20px;
+  position: relative;
+  transform-origin: bottom center;
+  animation: scaleIn .3s;
+}
+.bird-wrap .caption{
+  margin-top: 15px;
+  margin-left: 35px;
+  color: #ea5514;
+  position: relative;
+}
+.bird-wrap .caption::after{
+  content: '';
+  display: block;
+  width: 5px;
+  height: 20px;
+  background:  #ea5514;
+  position: absolute;
+  top: 2px;
+  left: -15px;
+}
+.bird-wrap .close-btn{
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
+.bird-wrap ul.bird-manger{
+  position: absolute;
+  top:50px;
+  bottom: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+.bird-wrap ul.bird-manger >li{
+  width: 290px;
+  padding: 0;
+  height: 100%;
+  margin: 0 15px;
+  overflow-y: auto;
+  border-radius: 10px;
+  position: relative;
+  float: left;
+  background: url(../images/device-list-border.png) center center no-repeat;
+}
+
+.bird-wrap ul.bird-manger li .title{
+  width: 100%;
+  height: 45px;
+  color:#0a7cff;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+  background: url(../images/device-title-line.png) center bottom no-repeat;
+  font-size: 14px;
+}
+.bird-wrap ul.bird-manger li .title div{
+  width: 65px;
+  height: 45px;
+  line-height: 50px;
+  color: #0a7cff;
+  position: absolute;
+  top: 0;
+}
+.bird-wrap ul.bird-manger li .title .left input{
+  vertical-align:middle
+}
+.bird-wrap ul.bird-manger li .title .left img{
+  margin-left: 5px;
+  vertical-align:middle;
+}
+
+.bird-wrap ul.bird-manger li .title .left{
+  left: 7px;
+}
+.bird-wrap ul.bird-manger li .title .right{
+  right: 0;
+}
+input{margin:0;padding: 0;}
+input[type=radio] {
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0 !important;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+input[type=radio]:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10px;
+  font-size: 20px;
+  color: #fff;
+  border: 1px solid #0a7cff;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+input[type=radio]:checked:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background-color: #0a7cff;
+}
+input[type=checkbox] {
+  -webkit-appearance:none;
+  border:0;
+  outline: 0 !important;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #0a75f1;
+  cursor: pointer;
+  position: relative;
+}
+input[type=checkbox]:disabled{
+  opacity: 0.5;
+  cursor: default;
+}
+input[type=checkbox]:checked:after{
+  content: "\2713";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -1px;
+  left: -2px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  color: #0a75f1;
+}
+.bird-wrap ul.bird-manger li ol{
+  overflow: hidden;
+  padding: 0;
+}
+.bird-wrap ul.bird-manger li ol li{
+  margin: 0;
+  list-style: none;
+  margin-top: 10px;
+}
+.bird-wrap ul.bird-manger li ol li input{
+  margin-left: -30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -11px;
+}
+.bird-wrap ul.bird-manger li ol li .bird-device{
+  width: 225px;
+  height: 80px;
+  border-radius: 15px;
+  margin-left: 40px;
+  position: relative;
+  border: 1px solid #014ab8;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.3);
+}
+.bird-wrap ul.bird-manger li ol li .bird-device div{
+  width: 200px;
+  height: 30px;
+  border-bottom: 1px dashed #0a7cff;
+  line-height: 30px;
+  margin-left: 10px;
+}
+.bird-wrap ul.bird-manger li ol li .bird-device div:last-child{
+  border-bottom: none;
+}
+.bird-wrap ul.bird-manger li ol li .bird-device div .name{
+  text-align: left;
+  background: transparent;
+  color: #0974ef;
+  display: inline-block;
+  width: 65px;
+}
+.bird-wrap ul.bird-manger li ol li .bird-device div .value{
+  text-align: left;
+  background: transparent;
+  color: #0298de;
+  display: inline-block;
+  width: 130px;
+  height:30px;
+  line-height: 30px;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bird-wrap ul.bird-manger li ol li .bird-device div .value .time{
+  width: 65px;
+  height: 25px;
+  display: inline-block;
+  background: #021127;
+  margin-top: 5px;
+  line-height: 25px;
+  text-indent: 5px;
+}
+.bird-wrap ul.bird-manger li ol li .bird-device div .value .time-up{
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 5px solid #00adfe;
+  border-top: 4px solid transparent;
+  cursor: pointer;
+  position: absolute;
+  left: 50px;
+  top: 5px;
+}
+.bird-wrap ul.bird-manger li ol li .bird-device div .value .time-down{
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-top: 5px solid #00adfe;
+  cursor: pointer;
+  position: absolute;
+  left: 50px;
+  top: 20px;
+}
+.bird-wrap ul.bird-manger li ol li .bird-device div .value input{
+  width: 65px;
+  height: 22px;
+  background: rgba(10,124,255,.1);
+  outline: none;
+  border: none;
+  margin-left: 5px;
+  box-sizing: border-box;
+  padding-left: 5px;
+  color: #00EAFC;
+  vertical-align: middle;
+}
+.bird-wrap ul.bird-manger li ol li .bird-device div .value .util{
+  margin-left: 80px;
+  color: #00EAFC;
+}
+.bird-wrap ul.bird-manger li ol li .bird-device div .value .arrow-up{
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid #00ADFE;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  position: absolute;
+  top: 2px;
+  left: 60px;
+  cursor: pointer;
+}
+.bird-wrap ul.bird-manger li ol li .bird-device div .value .arrow-down{
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 4px solid #00ADFE;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  position: absolute;
+  bottom: 2px;
+  left: 60px;
+  cursor: pointer;
+}
+.hide{
+  display: none;
+}
+
+@keyframes scaleIn {
+  0%{
+    transform: scale(0);
+
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.scale-out{
+  transition:all .3s ease-in-out;
+  transform: scale(0);
+  opacity: 0;
+}
+.bird-wrap .switch-btn:active{
+
+}
+.bird-wrap .switch-btn{
+  width: 90px;
+  height: 25px;
+  border-radius: 20px;
+  background:linear-gradient(to right,#0a7cff,#00225b);
+  position: absolute;
+  top: 13px;
+  right: 75px;
+  cursor: pointer;
+}
+.bird-wrap .switch-btn:before{
+  content: "ON     OFF";
+  position: absolute;
+  width: 86px;
+  height: 23px;
+  border-radius: 10px;
+  background: #292929;
+  top: 1px;
+  left: 2px;
+  color: #fff;
+  font-size: 12px;
+  white-space: pre-wrap;
+  text-align: center;
+  line-height: 23px;
+}
+
+.bird-wrap .switch-btn:after{
+  content: "";
+  width: 50px;
+  height: 21px;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom,#0aa0fb, #0553a6);
+}
+.check-text{
+  position: absolute;
+  top: 15px;
+  right: 180px;
+  color: #00ADFE;
+}
+#switch-box:checked ~ .switch-btn:after{
+  left: 36px;
+}
+#switch-box:checked ~ .switch-btn:before{
+  background: linear-gradient(to right,#8FC31F,#22C000);
+}

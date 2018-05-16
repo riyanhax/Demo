@@ -1,0 +1,86 @@
+form{
+    width:545px;
+    height:291px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-top: -145px;
+    margin-left: -272px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+}
+
+.checkin{
+    width:545px;
+    height:291px;
+    background: url(../images/login-border.png) center center no-repeat;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+.off{
+    width:32px;
+    height:32px;
+    position:absolute;
+    top:13px;
+    right:16px;
+    background: url(../images/close.png) center center no-repeat;
+    cursor: pointer;
+}
+.content{
+    width:365px;
+    height:219px;
+    margin:0 auto ;
+    box-sizing:content-box;
+
+}
+.logo{
+    width:149px;
+    height:34px;
+    margin:0 auto;
+}
+input{
+    width:365px;
+    height:33px;
+    color:#0A7CFF;
+    background:#fff;
+    margin:0 auto;
+    margin-top:25px;
+    margin-bottom:19px;
+    border:none;
+    display:block;
+    outline-style:none;
+    font-size: 13px;
+    padding-left:17px;
+    box-sizing: border-box;
+}
+input::-webkit-input-placeholder {
+    color:#0A7CFF;
+}
+input[type=text]:focus,
+input[type=password]:focus{
+  transition: all .2s ease-in;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 0 15px 0px rgba(10,124,255,.8);
+}
+.sinin{
+    width:365px;
+    height:36px;
+    background:#0A7CFF;
+    margin-top:36px;
+    position:relative;
+    color:#fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .1s ease-in;
+
+}
+.sinin:active{
+  background:#114a8c;
+}
+.sinin .sinin-ico {
+    width: 17px;
+    height:17px;
+    position:absolute;
+    top:8px;
+    right:18px;
+}

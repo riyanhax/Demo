@@ -1,0 +1,194 @@
+.warn-wrap{
+  width: 1600px;
+  height: 670px;
+  background: rgba(1,8,24,0.9) url(../images/panel-border.png) center center no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -800px;
+  margin-top: -335px;
+  border-radius: 20px;
+  animation: scaleIn .5s;
+}
+.warn-wrap .close-btn{
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
+.warn-wrap .top-menu{
+  position: absolute;
+  top: -35px;
+  height: 35px;
+  left: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.warn-wrap .top-menu li{
+  width: 150px;
+  height: 35px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: rgba(1,8,24,0.9);
+  text-align: center;
+  line-height: 35px;
+  color: #0A7CFF;
+  margin-right: 8px;
+  float: left;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #0A7CFF;
+  border-bottom: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+
+}
+.warn-wrap .top-menu li.active{
+  background: url(../images/menu-active.png) center center no-repeat;
+  background-size: cover;
+  color: #EA5514;
+  border: 2px solid #EA5514;
+  border-bottom: 0;
+
+}
+.warn-wrap .top-menu li .warn-num{
+  display: block;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: linear-gradient(to right,#b1001d,#f3002e);
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  border: 1px solid #000;
+  display: none;
+}
+
+.warn-wrap .device-list{
+  position: absolute;
+  top:50px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.warn-wrap .device-list li{
+  width: 252px;
+  height: 217px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  margin-bottom: 100px;
+  margin-right: 55px;
+  list-style: none;
+  float: left;
+  position: relative;
+  border: 1px solid #0A7CFF;
+  box-sizing: border-box;
+}
+.warn-wrap .device-list li:nth-child(5n){
+  margin-right: 0;
+}
+
+.warn-wrap .device-list li.active{
+  border: 1px solid #EA5514;
+  box-sizing: border-box;
+}
+.warn-wrap .device-list li.fault{
+  background: url(../images/fault.png) center center no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+}
+.warn-wrap .device-list li .info{
+  width: 220px;
+  padding-left: 10px;
+  float: left;
+}
+.warn-wrap .device-list li .info div{
+  width: 232px;
+  height: 35px;
+  border-bottom: 1px dashed #0A7CFF;
+}
+.warn-wrap .device-list li .info div:last-child{
+  border: 0;
+}
+.warn-wrap .device-list li .info div .name{
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  color: #0A7CFF;
+  white-space:nowrap;
+  vertical-align: middle;
+}
+.warn-wrap .device-list li .info div .content{
+  color: #00ADFE;
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.warn-wrap .device-list li .status{
+  width: 55px;
+  height: 35px;
+  position: absolute;
+  line-height: 35px;
+  text-align: center;
+  font-size: 16px;
+  right: 0;
+  top: 0;
+}
+.warn-wrap .device-list li .info div.badbreak{
+  background: url(../images/bad.png) right center no-repeat;
+}
+.warn-wrap .device-list li .status.fault{
+  color: #d62d40;
+}
+.warn-wrap .device-list li .confirm-btn{
+  width: 58px;
+  height: 22px;
+  border-radius: 5px;
+  border: 1px solid #0A7CFF;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  margin-left: -29px;
+  line-height: 22px;
+  text-align: center;
+  color: #0A7CFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+.scale-out{
+  transition: transform .3s ease-in-out,opacity .3s ease-in-out;
+  transform: scale(0);
+  transform-origin: center bottom;
+  opacity: 0;
+}
+@keyframes scaleIn {
+  0%{
+    transform: scale(0);
+    transform-origin: bottom center;
+
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+    transform-origin: bottom center;
+  }
+}

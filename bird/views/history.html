@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="libs/laydate/skins/molv/laydate.css">
+    <link rel="stylesheet" href="libs/select2/css/select2.css">
+    <link rel="stylesheet" href="libs/select2/css/select2.thems.driverbird.css">
+    <link rel="stylesheet" href="/stylesheets/history.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="list">
+        <ul id="uls">
+            <li class="active">煤气炮气罐压力查询</li>
+            <li>设备电压查询</li>
+            <li>操作查询</li>
+            <li>设备报警查询</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="put-all">
+            <div class="put1">
+                <span>时间范围</span>
+                <div class="current-data">
+                    <input placeholder="请选择时间" class="laydate-icon" id="start">
+                </div>
+                <span>至</span>
+                <div class="to-data">
+                    <input placeholder="请选择时间" class="laydate-icon" id="end">
+                </div>
+            </div>
+            <div class="put2" style="display:none;">
+                <span class="label">设备类型</span>
+                <select name="" id="device_type_query">
+                    <option value="10">移动式太阳能声波驱鸟器</option>
+                    <option value="08">全向声波驱鸟器</option>
+                    <option value="05" selected>煤气炮</option>
+                    <option value="07">定向声波驱鸟器</option>
+                    <option value="06">塔式声波驱鸟系统</option>
+                    <option value="09">坐席</option>
+                </select>
+                <i class="arrow-ico"></i>
+            </div>
+            <div class="put3">
+                <span class="label">操作员</span>
+                <select name="" id="operate_user" style="width: 110px">
+
+                </select>
+            </div>
+            <div class="put5">
+                <span>设备名称</span>
+                <select name="" id="device_query">
+
+                </select>
+            </div>
+            <div class="put6">
+                <span>设备列表</span>
+                <select name="" id="device_list_query">
+
+                </select>
+            </div>
+            <div class="put2 search-btn">
+              确定
+            </div>
+            <div class="put2 remove-btn">
+              删除
+            </div>
+            </div>
+        <div class="print" id="print"></div>
+        <div class="close" id="close"></div>
+
+        <div class="tb">
+            <div id="chart" style="width:1550px;height:550px;"></div>
+        </div>
+        <div class="tb hide">
+            <table  cellspacing="0">
+                <thead>
+                  <tr class="history_title">
+                    <th ><input type="checkbox" name=""><span>设备名称</span></th>
+                    <th ><span>ID</span></th>
+                    <th ><span>设备类型</span></th>
+                    <th ><span>操作员</span></th>
+                    <th ><span>时间</span></th>
+                  </tr>
+                </thead>
+            </table>
+            <div class="tbody_box">
+              <table class="tbody">
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+        </div>
+     </div>
+</div>
+<iframe src="/loading/print" id="iframe"></iframe>
+<script type="text/javascript" src="../javascripts/common.js"></script>
+<script src="libs/jquery/jquery-3.2.1.min.js"></script>
+<script src="libs/select2/js/select2.js"></script>
+<script src="libs/laydate/laydate.js"></script>
+<script src="libs/echarts.common.min.js"></script>
+<script src="javascripts/history.js"></script>
+</body>
+</html>

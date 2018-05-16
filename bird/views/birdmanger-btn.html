@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/birdmanger-btn.css">
+</head>
+<body>
+  <div class="bottom-btn">
+    <div class="addgroup">
+      <ul disabled>
+        <li class="base" id="addgroupBtn">添加编组</li>
+
+      </ul>
+    </div>
+    <div class="handle-menu">
+      <ul>
+        <li class="active">单独驱鸟</li>
+        <li>成组驱鸟</li>
+        <li>全部驱鸟</li>
+      </ul>
+      <!-- <div class="intervalTime hide">
+        <span class="name">持续时间</span>
+        <span class="value">
+          <input type="text" value="0" style="display:block">
+          <span class="arrow-up"></span>
+          <span class="arrow-down"></span>
+          <span class="util">秒</span>
+        </span>
+        <span class="confirm-btn">确认</span>
+      </div> -->
+      <input type="checkbox" id="switch-box" class="switch-box" checked>
+      <div class="switch-btn" id="switch-btn"></div>
+      <div class="start-btn" id="start-btn"></div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../javascripts/common.js"></script>
+  <script type="text/javascript" src="../javascripts/birdmanger-btn.js"></script>
+</body>
+</html>

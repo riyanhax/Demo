@@ -1,0 +1,206 @@
+.wrap{
+  width: 1600px;
+  height: 670px;
+  background: rgba(1,8,24,0.9);
+  border-radius: 20px;
+  border: 1px solid #006dff;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -800px;
+  margin-top: -335px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.wrap .caption{
+  margin-top: 15px;
+  margin-left: 35px;
+  color: #ea5514;
+  position: relative;
+}
+.wrap .caption::after{
+  content: '';
+  display: block;
+  width: 5px;
+  height: 20px;
+  background:  #ea5514;
+  position: absolute;
+  top: 2px;
+  left: -15px;
+}
+.wrap .close-btn{
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
+.wrap ul{
+  margin: 0 auto 0;
+  padding: 0;
+  width: 1600px;
+  height: 600px;
+  position: relative;
+}
+.wrap ul li{
+  width: 230px;
+  height: 278px;
+  position: relative;
+  float: left;
+  list-style: none;
+  margin-right: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all .3s ease-in;
+  background: url(../images/user-border.png) center center no-repeat;
+}
+.wrap ul li:nth-child(6n){
+  margin-right: 0;
+}
+.wrap ul li:nth-child(6n+1){
+  margin-left: 50px;
+}
+
+.wrap ul li.base{
+  background: url(../images/user-add-border.png) center center no-repeat;
+}
+
+.wrap ul li.base::after{
+  content: "+";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 200px;
+  text-align: center;
+  color: #0A7CFF;
+  font-size: 150px;
+  font-weight:lighter;
+}
+
+.wrap ul li.base::before{
+  content: "添加新用户";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 400px;
+  text-align: center;
+  color: #0A7CFF;
+  font-size: 25px;
+}
+
+.wrap ul li.active{
+    background: url(../images/user-border-active.png) center center no-repeat;
+}
+
+.wrap ul li.active .user-info .name{
+  color: #EA5514;
+}
+
+.wrap ul li.active .user-info input{
+    color: #EA5514;
+}
+
+.wrap ul li.active .hr{
+    background: #EA5514;
+}
+
+.wrap ul li.active .user-info{
+  border-bottom: 1px solid #EA5514;
+}
+
+.wrap ul li .head-pic{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: #fff;
+  margin: 17px auto 0;
+  background-image: url(../images/user-head.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120% 120%;
+}
+.wrap ul li .hr{
+  width: 200px;
+  height: 1px;
+  background: #0A7CFF;
+  margin: 20px auto 0;
+}
+.wrap ul li .user-info{
+  width: 150px;
+  height: 30px;
+  border-bottom: 1px solid #0A7CFF;
+  margin-left:20px;
+  font-size: 14px;
+}
+.wrap ul li .user-info .name{
+  color: #0A7CFF;
+  margin: 0;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+}
+.wrap ul li .user-info input{
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 30px;
+  line-height: 30px;
+  width: 85px;
+  float: right;
+  color: #0A7CFF;
+  font-size: 16px;
+}
+
+.wrap ul li .btn-edit{
+  width: 35px;
+  height: 40px;
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  background-image: url(../images/user-edit.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+}
+.wrap ul li .btn-save{
+  width: 35px;
+  height: 40px;
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  background-image: url(../images/user-save.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.wrap ul li .btn-remove{
+  width: 35px;
+  height: 40px;
+  position: absolute;
+  top: 185px;
+  right: 10px;
+  background: url(../images/user-remove.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none ;
+}
+.wrap ul li.active .btn-edit,
+.wrap ul li.active .btn-remove{
+  display: block ;
+}
+.noborder{
+  border: none !important;
+}
+
+.fade{
+  transition: transform .3s ease-in-out,opacity .3s ease-in-out;
+  transform: scale(0);
+  transform-origin: center bottom;
+  opacity: 0;
+}

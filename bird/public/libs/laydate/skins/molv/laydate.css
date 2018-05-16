@@ -1,0 +1,57 @@
+﻿/**
+
+ @Name： laydate皮肤：墨绿
+ @Author：贤心
+ @Site：http://sentsin.com/layui/laydate
+
+**/
+
+.laydate-icon{outline-style:none;border:none;}
+.laydate_body .laydate_bottom #laydate_hms,
+.laydate_body .laydate_time{border:1px solid #ccc;}
+.laydate_body .laydate_box,
+.laydate_body .laydate_ym .laydate_yms,
+.laydate_body .laydate_time{box-shadow: 2px 2px 5px rgba(0,0,0,.1);}
+.laydate_body .laydate_box{border:1px solid #bababa; border-top:none; background-color:#fff; color:#81898c;}
+.laydate_body .laydate_box input{background:none!important; color:#fff;}
+.laydate_body .laydate_box .laydate_void{color:#00E8D7!important;}
+.laydate_body .laydate_box a, .laydate_body .laydate_box a:hover{;}
+.laydate_body .laydate_box a:hover{color:#666;}
+.laydate_body .laydate_click{background-color:#009F95; color:#fff!important;}
+.laydate_body .laydate_top{width:150px;height:24px; background-color:#2b2b2b}
+.laydate_body .laydate_top label{display: none;}
+.laydate_body .laydate_ym .laydate_yms{ background-color:#009F95; color:#fff;}
+.laydate_body .laydate_y .laydate_yms a{border-bottom:1px solid #009F95;}
+.laydate_body .laydate_y .laydate_yms .laydate_chdown{border-top:1px solid #009F95; border-bottom:none;}
+.laydate_body .laydate_chprev{border-left:none}
+.laydate_body .laydate_choose:hover,
+.laydate_body .laydate_y .laydate_yms a:hover{background-color:#00C1B3;}
+.laydate_body .laydate_chtop cite{border-bottom-color:#fff;}
+.laydate_body .laydate_chdown cite{border-top-color:#fff;}
+.laydate_body .laydate_ym label{border-top-color:#fff;}
+.laydate_body .laydate_chprev cite{border-right-style:solid; border-right-color:#fff;}
+.laydate_body .laydate_chnext cite{border-left-style:solid; border-left-color:#fff;}
+.laydate_body .laydate_table{width: 150px!important; margin: 0!important; border-bottom:1px solid #ccc; }
+.laydate_body .laydate_table td{border:none;  height:20px!important; line-height:20px!important; background-color:#fff; color:#6b7473;}
+.laydate_body .laydate_table .laydate_nothis{color:#999;}
+.laydate_body .laydate_table thead{ height:19px!important; line-height:19px!important;background:#dde1e2}
+.laydate_body .laydate_table thead th{}
+.laydate_body .laydate_bottom #laydate_hms{background-color:#fff;width:138px;height:27px;display:block;}
+.laydate_body .laydate_time{background-color:#fff;}
+.laydate_body .laydate_time1{width: 187px!important; height: 144px!important;}
+.laydate_body .laydate_bottom .laydate_sj{width:37px!important;height:27px; background-color:#fff;border-right:1px solid #ccc;line-height:27px;line-height:27px;}
+.laydate_body .laydate_bottom input{background-color:#fff; color:#5f696b;}
+.laydate_body .laydate_bottom .laydte_hsmtex{border-bottom:1px solid #ccc;}
+.laydate_body .laydate_bottom .laydate_btn{height:28px;}
+.laydate_body .laydate_bottom .laydate_v{color:#999}
+.laydate_body .laydate_bottom .laydate_btn a{border: 1px solid #ccc;border-radius:4px; background-color:#fff;color:#5f696b;}
+.laydate_body .laydate_bottom .laydate_btn a:hover{background-color:#F6F6F6; color:#00625A;}
+#laydate_clear {margin-top:4px;margin-right:4px;}
+#laydate_today {margin-top:4px;margin-right:4px;}
+#laydate_ok {margin-top:4px;margin-left:3px;}
+.laydate_body .laydate_m .laydate_yms span:hover,
+.laydate_body .laydate_time .laydate_hmsno span:hover,
+.laydate_body .laydate_y .laydate_yms ul li:hover,
+.laydate_body .laydate_table td:hover{background-color:#00C1B3; color:#fff;}
+
+/* 代码整理：懒人之家 www.lanrenzhijia.com */

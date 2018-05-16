@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/devicewarning.css">
+</head>
+<body>
+    <div class="warn-wrap" id="warn-wrap">
+        <ul class="top-menu">
+          <li class="active">煤气炮<span class="warn-num"></span></li>
+          <li>移动式太阳能声波驱鸟器<span class="warn-num"></span></li>
+          <li>全向声波驱鸟器<span class="warn-num"></span></li>
+          <li>定向声波驱鸟<span class="warn-num"></span></li>
+          <li>声音驱鸟系统<span class="warn-num"></span></li>
+          <li>发射器及席位主机<span class="warn-num"></span></li>
+          <li>全部设备<span class="warn-num"></span></li>
+        </ul>
+        <ul class="device-list">
+
+        </ul>
+        <div class="close-btn" id="close-btn">
+          <img src="../images/close.png" alt="">
+        </div>
+    </div>
+    <audio id="alarm" src="../images/warn.wav" style="display:none" loop>
+
+    </audio>
+    <script type="text/template" id="template">
+      <div class="info">
+        <div>
+          <span class="name">名称</span>
+          <span class="content">xxxx</span>
+        </div>
+        <div>
+          <span class="name">ID</span>
+          <span class="content">1111111</span>
+        </div>
+        <div>
+            <span class="name">电压</span>
+            <span class="content">225.37(v)</span>
+        </div>
+        <div>
+            <span class="name">气压</span>
+            <span class="content">225.37(v)</span>
+        </div>
+        <div>
+            <span class="name">无线通信板</span>
+            <span class="content"></span>
+        </div>
+        <div>
+            <span class="name">设备状态</span>
+            <span class="content"></span>
+        </div>
+      </div>
+      <div class="status fault">(故障)</div>
+      <div class="confirm-btn">确认</div>
+    </script>
+    <script type="text/javascript" src="../javascripts/common.js"></script>
+    <script src="/javascripts/devicewarning.js"></script>
+</body>
+</html>
